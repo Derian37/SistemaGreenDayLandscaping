@@ -38,8 +38,8 @@ namespace CapaPresentacion
                 using (GestorUsuario elGestorUsuario = new GestorUsuario())
                 {
                     cbx_usuario_nombre.DataSource = elGestorUsuario.ListarUsuarios();
-                    cbx_usuario_nombre.ValueMember = "cedula";
-                    cbx_usuario_nombre.DisplayMember = "nombre";
+                    cbx_usuario_nombre.ValueMember = "id_user";
+                    cbx_usuario_nombre.DisplayMember = "name";
                 }
             }
             catch (Exception e)

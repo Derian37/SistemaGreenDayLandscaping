@@ -154,9 +154,9 @@ namespace ProyectoOptica.CapaLogica.Servicio
         public DataTable ListarUsuarios()
         {
             miComando = new MySqlCommand();
-            Console.WriteLine("Gestor ListarUsuarios");
+            Console.WriteLine("Gestor list_users");
 
-            miComando.CommandText = "listar_usuarios";
+            miComando.CommandText = "list_users";
 
             DataSet elUsuario = new DataSet();
             this.abrirConexion();

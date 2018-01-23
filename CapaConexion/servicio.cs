@@ -30,7 +30,7 @@ namespace ProyectoOptica.CapaConexion
             builder.Server = "localhost";
             builder.UserID = "root";
             builder.Password = "1234";
-            builder.Database = "bd_optica";
+            builder.Database = "bd_greendaylandscaping";
             conexion = new MySqlConnection(builder.ToString());
         }
 
