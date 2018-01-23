@@ -44,8 +44,8 @@ namespace ProyectoOptica.CapaLogica.Servicio
 
             miComando.CommandText = "insertar_venta";
 
-            miComando.Parameters.Add("@id_cliente", MySqlDbType.Int16);
-            miComando.Parameters["@id_cliente"].Value = elVenta.Id_cliente;
+            miComando.Parameters.Add("@code", MySqlDbType.Int16);
+            miComando.Parameters["@code"].Value = elVenta.Id_cliente;
 
             miComando.Parameters.Add("@id_usuario", MySqlDbType.Int16);
             miComando.Parameters["@id_usuario"].Value = elVenta.Id_usuario;

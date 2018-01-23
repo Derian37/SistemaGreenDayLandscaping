@@ -46,8 +46,8 @@ namespace CapaPresentacion
                 dgvExpediente.DataSource = expediente.ListarExpediente();
 
                 dgvExpediente.Columns["id_cliente"].Visible = false;
-                dgvExpediente.Columns["cedula"].HeaderText = "Cedula";
-                dgvExpediente.Columns["nombre"].HeaderText = "Nombre";
+                dgvExpediente.Columns["cedula"].HeaderText = "Name";
+                dgvExpediente.Columns["nombre"].HeaderText = "LastName";
                 dgvExpediente.Columns["apellido1"].HeaderText = "Apellido 1°";
                 dgvExpediente.Columns["apellido2"].HeaderText = "apellido 2°";
                 dgvExpediente.Columns["direccion"].HeaderText = "Direccion";
@@ -136,6 +136,11 @@ namespace CapaPresentacion
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

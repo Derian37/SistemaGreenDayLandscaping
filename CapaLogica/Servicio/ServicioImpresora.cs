@@ -37,8 +37,8 @@ namespace CapaLogica.Servicio
 
             miComando.CommandText = "insertar_impresora";
 
-            miComando.Parameters.Add("@nombre", MySqlDbType.VarChar);
-            miComando.Parameters["@nombre"].Value = elImpresora.nombre;
+            miComando.Parameters.Add("@lastName", MySqlDbType.VarChar);
+            miComando.Parameters["@lastName"].Value = elImpresora.nombre;
 
             miComando.Parameters.Add("@tipo", MySqlDbType.VarChar);
             miComando.Parameters["@tipo"].Value = elImpresora.tipo;
@@ -65,8 +65,8 @@ namespace CapaLogica.Servicio
             miComando.Parameters.Add("@id_impresora", MySqlDbType.Int16);
             miComando.Parameters["@id_impresora"].Value = elImpresora.id_Impresora;
 
-            miComando.Parameters.Add("@nombre", MySqlDbType.VarChar);
-            miComando.Parameters["@nombre"].Value = elImpresora.nombre;
+            miComando.Parameters.Add("@lastName", MySqlDbType.VarChar);
+            miComando.Parameters["@lastName"].Value = elImpresora.nombre;
 
             miComando.Parameters.Add("@tipo", MySqlDbType.VarChar);
             miComando.Parameters["@tipo"].Value = elImpresora.tipo;

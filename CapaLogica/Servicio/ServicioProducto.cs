@@ -46,8 +46,8 @@ namespace ProyectoOptica.CapaLogica.Servicio
             miComando.Parameters.Add("@codigo", MySqlDbType.VarChar);
             miComando.Parameters["@codigo"].Value = elProducto.codigo;
 
-            miComando.Parameters.Add("@nombre", MySqlDbType.VarChar);
-            miComando.Parameters["@nombre"].Value = elProducto.nombre;
+            miComando.Parameters.Add("@lastName", MySqlDbType.VarChar);
+            miComando.Parameters["@lastName"].Value = elProducto.nombre;
 
             miComando.Parameters.Add("@detalle", MySqlDbType.VarChar);
             miComando.Parameters["@detalle"].Value = elProducto.detalle;
@@ -173,7 +173,7 @@ namespace ProyectoOptica.CapaLogica.Servicio
 
             return miDataSet;
         }
-        //metodo para el SP de Consultar Producto por nombre
+        //metodo para el SP de Consultar Producto por lastName
         public DataSet ConsultarProductoNombre(string nom)
         {
             string nomb = "%"+nom+"%";

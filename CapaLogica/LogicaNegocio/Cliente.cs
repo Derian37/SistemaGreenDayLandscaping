@@ -9,24 +9,22 @@ namespace CapaLogica.LogicaNegocio
     public class Cliente
     {
         #region ATRIBUTOS
-        private int id_cliente;
-        private string cedula;
-        private string nombre;
-        private string apellido1;
-        private string apellido2;
-        private string direccion;
-        private string telefono;
-        private int deuda;
+        private int code;
+        private string name;
+        private string lastName;
+        private string telephone;
+        private string address;
+        private string postalCode;
+      
  
 
-        public int Id_cliente { get => id_cliente; set => id_cliente = value; }
-        public string Cedula { get => cedula; set => cedula = value; }
-        public string Nombre { get => nombre; set => nombre = value; }
-        public string Apellido1 { get => apellido1; set => apellido1 = value; }
-        public string Apellido2 { get => apellido2; set => apellido2 = value; }
-        public string Direccion { get => direccion; set => direccion = value; }
-        public string Telefono { get => telefono; set => telefono = value; }
-        public int Deuda { get => deuda; set => deuda = value; }
+        public int Code { get => code; set => code = value; }
+        public string Name { get => name; set => name = value; }
+        public string LastName { get => lastName; set => lastName = value; }
+        public string Telephone { get => telephone; set => telephone = value; }
+        public string Address { get => address; set => address = value; }
+        public string PostalCode { get => postalCode; set => postalCode = value; }
+        
       
         #endregion ATRIBUTOS
 
@@ -34,34 +32,31 @@ namespace CapaLogica.LogicaNegocio
         {
         }
 
-        public Cliente(string Pcedula, string Pnombre, string Papellido1, string Papellido2, string Pdireccion, string Ptelefono, int Pdeuda)
+        public Cliente(string name, string lastname, string telephone, string address, string postalCode)
         {
-            Id_cliente = 0;
-            Cedula = Pcedula;
-            Nombre = Pnombre;
-            Apellido1 = Papellido1;
-            Apellido2 = Papellido2;
-            Direccion = Pdireccion;
-            Telefono = Ptelefono;
-            Deuda = Pdeuda;
+            Name = name;
+            LastName = lastname;
+            Telephone = telephone;
+            Address = address;
+            PostalCode = postalCode;
+      
             
         }
 
-        public Cliente(int Pid_cedula, string Pcedula, string Pnombre, string Papellido1, string Papellido2, string Pdireccion, string Ptelefono, int Pdeuda)
+        public Cliente(int code, string name, string lastname, string telephone, string address, string postalCode)
         {
-            Id_cliente = Pid_cedula;
-            Cedula = Pcedula;
-            Nombre = Pnombre;
-            Apellido1 = Papellido1;
-            Apellido2 = Papellido2;
-            Direccion = Pdireccion;
-            Telefono = Ptelefono;
-            Deuda = Pdeuda;
+            Code = code;
+            Name = name;
+            LastName = lastname;
+            Telephone = telephone;
+            Address = address;
+            PostalCode = postalCode;
+
         }
 
-        public Cliente(int id_cliente)
+        public Cliente(int code)
         {
-            this.Id_cliente = id_cliente;
+            this.Code = code;
         }
 
 

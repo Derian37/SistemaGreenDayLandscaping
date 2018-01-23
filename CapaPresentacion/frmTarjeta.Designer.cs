@@ -232,7 +232,7 @@
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(72, 19);
             this.lblUser.TabIndex = 0;
-            this.lblUser.Text = "Nombre: ";
+            this.lblUser.Text = "LastName: ";
             // 
             // pcbAdmi
             // 

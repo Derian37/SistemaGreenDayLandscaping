@@ -46,8 +46,8 @@ namespace ProyectoOptica.CapaLogica.Servicio
             miComando.Parameters.Add("@fecha", MySqlDbType.DateTime);
             miComando.Parameters["@fecha"].Value = elRecibo.Fecha;
 
-            miComando.Parameters.Add("@id_cliente", MySqlDbType.Int16);
-            miComando.Parameters["@id_cliente"].Value = elRecibo.Id_cliente;
+            miComando.Parameters.Add("@code", MySqlDbType.Int16);
+            miComando.Parameters["@code"].Value = elRecibo.Id_cliente;
 
             miComando.Parameters.Add("@id_usuario", MySqlDbType.Int16);
             miComando.Parameters["@id_usuario"].Value = elRecibo.Id_usuario;
@@ -87,8 +87,8 @@ namespace ProyectoOptica.CapaLogica.Servicio
             miComando.Parameters.Add("@fecha", MySqlDbType.DateTime);
             miComando.Parameters["@fecha"].Value = elRecibo.Fecha;
 
-            miComando.Parameters.Add("@id_cliente", MySqlDbType.Int16);
-            miComando.Parameters["@id_cliente"].Value = elRecibo.Id_cliente;
+            miComando.Parameters.Add("@code", MySqlDbType.Int16);
+            miComando.Parameters["@code"].Value = elRecibo.Id_cliente;
 
             miComando.Parameters.Add("@id_usuario", MySqlDbType.Int16);
             miComando.Parameters["@id_usuario"].Value = elRecibo.Id_usuario;

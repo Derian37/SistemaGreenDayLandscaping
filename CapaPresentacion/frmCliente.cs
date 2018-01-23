@@ -32,8 +32,8 @@ namespace CapaPresentacion
 
         private void volverToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmExpediente frm_Expediente = new frmExpediente(id_usuario, usuario, cargo);
-            frm_Expediente.Show();
+            frmPrincipal principal = new frmPrincipal(id_usuario, usuario, cargo);
+            principal.Show();
             this.SetVisibleCore(false);
         }
 
@@ -42,17 +42,17 @@ namespace CapaPresentacion
             CargarGridCliente();
             //CargarComboCliente();
             //CargarComboOjo();
-            defecto();
+            //defecto();
 
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txtCedula.Text != "" && txtNombre.Text != "" && txtApellido1.Text != "" && txtApellido2.Text != ""  && txtDireccion.Text != "" && txtTelefono.Text != "" && txtDeuda.Text != "")
+            if (txtName.Text != "" && txtLatName.Text != ""  && txtTelephone.Text != "" && txtAddress.Text != "" && txtPostalCode.Text != "")
             {
                 using (GestorCliente elCliente = new GestorCliente())
                 {
-                    elCliente.InsertarCliente(txtCedula.Text, txtNombre.Text, txtApellido1.Text, txtApellido2.Text, txtDireccion.Text, txtTelefono.Text, int.Parse(txtDeuda.Text));
+                    elCliente.InsertarCliente(txtName.Text, txtLatName.Text, txtTelephone.Text, txtAddress.Text, txtPostalCode.Text);
                 }
             }
             else
@@ -67,11 +67,11 @@ namespace CapaPresentacion
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            if (txtBuscar.Text != null && txtCedula.Text != "" && txtNombre.Text != "" && txtApellido1.Text != "" && txtApellido2.Text != "" && txtTelefono.Text != "" && txtDireccion.Text != "" && txtTelefono.Text != "" && txtDeuda.Text != "")
+            if (txtName.Text != "" && txtLatName.Text != "" && txtAddress.Text != "" && txtTelephone.Text != "" && txtPostalCode.Text != "")
             {
                 using (GestorCliente elCliente = new GestorCliente())
                 {
-                    elCliente.ModificarCliente(int.Parse(txtBuscar.Text.ToString()), txtCedula.Text, txtNombre.Text, txtApellido1.Text, txtApellido2.Text, txtTelefono.Text, txtDireccion.Text, int.Parse(txtDeuda.Text));
+                    elCliente.ModificarCliente(int.Parse(lblCode.Text.ToString()), txtName.Text, txtLatName.Text, txtTelephone.Text, txtAddress.Text, txtPostalCode.Text);
                 }
             }
             else
@@ -79,8 +79,6 @@ namespace CapaPresentacion
                 MessageBox.Show("¡ Debe rellenar todos los espacios ! ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             CargarGridCliente();
-            //CargarComboCliente();
-            //CargarComboOjo();
             defecto();
 
         }
@@ -102,7 +100,7 @@ namespace CapaPresentacion
 
         private void defecto()
         {
-            txtBuscar.Text = null;
+            //txtBuscar.Text = null;
 
         }
 
@@ -133,14 +131,13 @@ namespace CapaPresentacion
             using (GestorCliente elCliente = new GestorCliente())
             {
                 dgvCliente.DataSource = elCliente.ListarCliente();
-                dgvCliente.Columns["id_cliente"].Visible = false;
-                dgvCliente.Columns["cedula"].HeaderText = "Cedula";
-                dgvCliente.Columns["nombre"].HeaderText = "Nombre";
-                dgvCliente.Columns["apellido1"].HeaderText = "PrimerApellido";
-                dgvCliente.Columns["apellido2"].HeaderText = "SegundoApellido";
-                dgvCliente.Columns["direccion"].HeaderText = "Direccion";
-                dgvCliente.Columns["telefono"].HeaderText = "Telefono";
-                dgvCliente.Columns["deuda"].HeaderText = "Deuda";
+                dgvCliente.Columns["code"].Visible = false;
+                dgvCliente.Columns["name"].HeaderText = "Name";
+                dgvCliente.Columns["lastName"].HeaderText = "Last Name";
+                dgvCliente.Columns["telephone"].HeaderText = "Telephone";
+                dgvCliente.Columns["address"].HeaderText = "Address";
+                dgvCliente.Columns["postalCode"].HeaderText = "Postal Code";
+
 
             }
         }
@@ -167,61 +164,56 @@ namespace CapaPresentacion
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if (txtBuscar.Text != "")
-            {
+            //if (txtBuscar.Text != "")
+            //{
 
 
 
-                if (txtBuscar.Text != null)
-                {
+            //    if (txtBuscar.Text != null)
+            //    {
 
-                    using (GestorCliente Cliente = new GestorCliente())
-                    {
-                        this.dsCliente = Cliente.ConsultarClienteCedula(txtBuscar.Text);
-                        this.dtCliente = this.dsCliente.Tables[0];
+            //        using (GestorCliente Cliente = new GestorCliente())
+            //        {
+            //            this.dsCliente = Cliente.ConsultarClienteCedula(txtBuscar.Text);
+            //            this.dtCliente = this.dsCliente.Tables[0];
 
-                    }
+            //        }
                     CargarGridCliente();
                     // CargarComboCliente();
                     //CargarComboOjo();
                     // defecto();
-                }
-                else
-                {
-                    MessageBox.Show("¡ Debe insertar una cedula ! ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("¡ Debe insertar una cedula ! ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                }
+            //    }
 
-                CargarDatosCliente();
-            }
-            else
-            {
-                MessageBox.Show("¡ Debe insertar una cedula ! ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    CargarDatosCliente();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("¡ Debe insertar una cedula ! ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-            }
+            //}
         }
 
-        
+
 
         private void CargarDatosCliente()
         {
             //cbxCliente.SelectedValue = this.dtCliente.Rows[0]["id_cliente"].ToString();
-            txtCedula.Text = this.dtCliente.Rows[0]["cedula"].ToString();
-            txtNombre.Text = this.dtCliente.Rows[0]["nombre"].ToString();
-            txtApellido1.Text = this.dtCliente.Rows[0]["apellido1"].ToString();
-            txtApellido2.Text = this.dtCliente.Rows[0]["apellido2"].ToString();
-            txtDireccion.Text = this.dtCliente.Rows[0]["direccion"].ToString();
-            txtTelefono.Text = this.dtCliente.Rows[0]["telefono"].ToString();
-            txtDeuda.Text = this.dtCliente.Rows[0]["deuda"].ToString();
+            //txtCedula.Text = this.dtCliente.Rows[0]["cedula"].ToString();
+            //txtNombre.Text = this.dtCliente.Rows[0]["nombre"].ToString();
+            //txtApellido1.Text = this.dtCliente.Rows[0]["apellido1"].ToString();
+            //txtApellido2.Text = this.dtCliente.Rows[0]["apellido2"].ToString();
+            //txtDireccion.Text = this.dtCliente.Rows[0]["direccion"].ToString();
+            //txtTelefono.Text = this.dtCliente.Rows[0]["telefono"].ToString();
+            //txtDeuda.Text = this.dtCliente.Rows[0]["deuda"].ToString();
 
         }
 
         private void cbxCliente_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
@@ -258,13 +250,12 @@ namespace CapaPresentacion
 
         private void dgvCliente_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtCedula.Text = dgvCliente.CurrentRow.Cells[1].Value.ToString();
-            txtNombre.Text = dgvCliente.CurrentRow.Cells[2].Value.ToString();
-            txtApellido1.Text = dgvCliente.CurrentRow.Cells[3].Value.ToString();
-            txtApellido2.Text = dgvCliente.CurrentRow.Cells[4].Value.ToString();
-            txtDireccion.Text = dgvCliente.CurrentRow.Cells[5].Value.ToString();
-            txtTelefono.Text = dgvCliente.CurrentRow.Cells[6].Value.ToString();
-            txtDeuda.Text = dgvCliente.CurrentRow.Cells[7].Value.ToString();
+            lblCode.Text= dgvCliente.CurrentRow.Cells[0].Value.ToString();
+            txtName.Text = dgvCliente.CurrentRow.Cells[1].Value.ToString();
+            txtLatName.Text = dgvCliente.CurrentRow.Cells[2].Value.ToString();
+            txtTelephone.Text = dgvCliente.CurrentRow.Cells[3].Value.ToString();
+            txtAddress.Text = dgvCliente.CurrentRow.Cells[4].Value.ToString();
+            txtPostalCode.Text = dgvCliente.CurrentRow.Cells[5].Value.ToString();
         }
 
         /* private void cbxOjo_SelectedIndexChanged(object sender, EventArgs e)

@@ -81,7 +81,7 @@ namespace CapaPresentacion
                         }
                         else
                         {
-                            MessageBox.Show("Solo permiten numeros(Cedula), cambie la seleccion de busqueda!", "Error de busqueda!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show("Solo permiten numeros(Name), cambie la seleccion de busqueda!", "Error de busqueda!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             txt_valor_Cita.Text = "";
                         }
                     }
@@ -101,7 +101,7 @@ namespace CapaPresentacion
                        /* else
                         {
                             //buscar.SetError(buscar, "Only use alphabates");
-                            MessageBox.Show("Solo puede se permiten letras(Nombre), cambie la seleccion de busqueda!", "Error de busqueda!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show("Solo puede se permiten letras(LastName), cambie la seleccion de busqueda!", "Error de busqueda!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         }*/
 
                     }
@@ -179,7 +179,7 @@ namespace CapaPresentacion
             gbx_datosCita.Enabled = true;
             if (string.IsNullOrWhiteSpace(txt_CedulaUsuario.Text))
             {
-                MessageBox.Show("Campo Cedula vacio, llene el campo correspondiente!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Campo Name vacio, llene el campo correspondiente!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
             else

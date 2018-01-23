@@ -81,11 +81,11 @@ namespace ProyectoOptica.CapaLogica.Servicio
             miComando.Parameters.Add("@id", MySqlDbType.VarChar);
             miComando.Parameters["@id"].Value = elUsuario.id_usuario;
 
-            miComando.Parameters.Add("@cedula", MySqlDbType.VarChar);
-            miComando.Parameters["@cedula"].Value = elUsuario.cedula;
+            miComando.Parameters.Add("@name", MySqlDbType.VarChar);
+            miComando.Parameters["@name"].Value = elUsuario.cedula;
 
-            miComando.Parameters.Add("@nombre", MySqlDbType.VarChar);
-            miComando.Parameters["@nombre"].Value = elUsuario.nombre;
+            miComando.Parameters.Add("@lastName", MySqlDbType.VarChar);
+            miComando.Parameters["@lastName"].Value = elUsuario.nombre;
 
             miComando.Parameters.Add("@contrasena", MySqlDbType.VarChar);
             miComando.Parameters["@contrasena"].Value = elUsuario.contrasenna;
@@ -138,8 +138,27 @@ namespace ProyectoOptica.CapaLogica.Servicio
 
             miComando.CommandText = "consultar_usuario";
 
-            miComando.Parameters.Add("@cedula", MySqlDbType.VarChar);
-            miComando.Parameters["@cedula"].Value = cedula;
+            miComando.Parameters.Add("@name", MySqlDbType.VarChar);
+            miComando.Parameters["@name"].Value = cedula;
+
+            DataSet miDataSet = new DataSet();
+            this.abrirConexion();
+
+            miDataSet = this.seleccionarInformacion(miComando);
+            this.cerrarConexion();
+
+            return miDataSet;
+        }
+
+        public DataSet ConfirmPassword(int us)
+        {
+            miComando = new MySqlCommand();
+            Console.WriteLine("Gestor confirm_password");
+
+            miComando.CommandText = "confirm_password";
+
+            miComando.Parameters.Add("@us", MySqlDbType.VarChar);
+            miComando.Parameters["@us"].Value = us;
 
             DataSet miDataSet = new DataSet();
             this.abrirConexion();

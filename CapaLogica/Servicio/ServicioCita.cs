@@ -39,11 +39,11 @@ namespace ProyectoOptica.CapaLogica.Servicio
 
             miComando.CommandText = "insertar_cita";
 
-            miComando.Parameters.Add("@cedula", MySqlDbType.VarChar);
-            miComando.Parameters["@cedula"].Value = laCita.cedula;
+            miComando.Parameters.Add("@name", MySqlDbType.VarChar);
+            miComando.Parameters["@name"].Value = laCita.cedula;
 
-            miComando.Parameters.Add("@nombre", MySqlDbType.VarChar);
-            miComando.Parameters["@nombre"].Value = laCita.nombre;
+            miComando.Parameters.Add("@lastName", MySqlDbType.VarChar);
+            miComando.Parameters["@lastName"].Value = laCita.nombre;
 
             miComando.Parameters.Add("@telefono", MySqlDbType.VarChar);
             miComando.Parameters["@telefono"].Value = laCita.telefono;
@@ -133,7 +133,7 @@ namespace ProyectoOptica.CapaLogica.Servicio
             return respuesta;
         }
 
-        //metodo para el SP de Consultar Cita por Cedula
+        //metodo para el SP de Consultar Cita por Name
         public DataSet ConsultarCitaCedula(string cedula)
         {
             Console.WriteLine("Gestor ConsultarCedula");
@@ -153,7 +153,7 @@ namespace ProyectoOptica.CapaLogica.Servicio
         }
 
 
-        //metodo para el SP de Consultar Cita por Nombre
+        //metodo para el SP de Consultar Cita por LastName
         public DataSet ConsultarCitaNombre(string nom)
         {
             miComando = new MySqlCommand();

@@ -33,32 +33,24 @@ namespace CapaLogica.Servicio
         public string InsertarCliente(Cliente elCliente)
         {
             miComando = new MySqlCommand();
-            Console.WriteLine("Gestor insertar_cliente");
+            Console.WriteLine("Gestor Insert_Customers");
 
-            miComando.CommandText = "insertar_cliente";
+            miComando.CommandText = "Insert_Customers";
 
-            miComando.Parameters.Add("@cedula", MySqlDbType.VarChar);
-            miComando.Parameters["@cedula"].Value = elCliente.Cedula;
+            miComando.Parameters.Add("@name", MySqlDbType.VarChar);
+            miComando.Parameters["@name"].Value = elCliente.Name;
 
-            miComando.Parameters.Add("@nombre", MySqlDbType.VarChar);
-            miComando.Parameters["@nombre"].Value = elCliente.Nombre;
+            miComando.Parameters.Add("@lastName", MySqlDbType.VarChar);
+            miComando.Parameters["@lastName"].Value = elCliente.LastName;
 
-            miComando.Parameters.Add("@apellido1", MySqlDbType.VarChar);
-            miComando.Parameters["@apellido1"].Value = elCliente.Apellido1;
+            miComando.Parameters.Add("@telephone", MySqlDbType.VarChar);
+            miComando.Parameters["@telephone"].Value = elCliente.Telephone;
 
-            miComando.Parameters.Add("@apellido2", MySqlDbType.VarChar);
-            miComando.Parameters["@apellido2"].Value = elCliente.Apellido2;
+            miComando.Parameters.Add("@address", MySqlDbType.VarChar);
+            miComando.Parameters["@address"].Value = elCliente.Address;
 
-            miComando.Parameters.Add("@direccion", MySqlDbType.VarChar);
-            miComando.Parameters["@direccion"].Value = elCliente.Direccion;
-
-            miComando.Parameters.Add("@telefono", MySqlDbType.VarChar);
-            miComando.Parameters["@telefono"].Value = elCliente.Telefono;
-
-            miComando.Parameters.Add("@deuda", MySqlDbType.Int16);
-            miComando.Parameters["@deuda"].Value = elCliente.Deuda;
-
-           
+            miComando.Parameters.Add("@postalCode", MySqlDbType.Int32);
+            miComando.Parameters["@postalCode"].Value = elCliente.PostalCode;
 
             respuesta = this.ejecutaSentencia(miComando);
 
@@ -75,33 +67,28 @@ namespace CapaLogica.Servicio
         public string ModificarCliente(Cliente elCliente)
         {
             miComando = new MySqlCommand();
-            Console.WriteLine("Gestor modificar_cliente");
+            Console.WriteLine("Gestor Costum_Customers");
 
-            miComando.CommandText = "modificar_cliente";
+            miComando.CommandText = "Costum_Customers";
 
-            miComando.Parameters.Add("@id_client", MySqlDbType.VarChar);
-            miComando.Parameters["@id_client"].Value = elCliente.Id_cliente;
+            miComando.Parameters.Add("@code", MySqlDbType.VarChar);
+            miComando.Parameters["@code"].Value = elCliente.Code;
 
-            miComando.Parameters.Add("@ced", MySqlDbType.VarChar);
-            miComando.Parameters["@ced"].Value = elCliente.Cedula;
+            miComando.Parameters.Add("@name", MySqlDbType.VarChar);
+            miComando.Parameters["@name"].Value = elCliente.Name;
 
-            miComando.Parameters.Add("@nom", MySqlDbType.VarChar);
-            miComando.Parameters["@nom"].Value = elCliente.Nombre;
+            miComando.Parameters.Add("@lastName", MySqlDbType.VarChar);
+            miComando.Parameters["@lastName"].Value = elCliente.LastName;
 
-            miComando.Parameters.Add("@ape1", MySqlDbType.VarChar);
-            miComando.Parameters["@ape1"].Value = elCliente.Apellido1;
+            miComando.Parameters.Add("@telephone", MySqlDbType.VarChar);
+            miComando.Parameters["@telephone"].Value = elCliente.Telephone;
 
-            miComando.Parameters.Add("@ape2", MySqlDbType.VarChar);
-            miComando.Parameters["@ape2"].Value = elCliente.Apellido2;
+            miComando.Parameters.Add("@address", MySqlDbType.VarChar);
+            miComando.Parameters["@address"].Value = elCliente.Address;
 
-            miComando.Parameters.Add("@direc", MySqlDbType.VarChar);
-            miComando.Parameters["@direc"].Value = elCliente.Direccion;
+            miComando.Parameters.Add("@postalCode", MySqlDbType.Int32);
+            miComando.Parameters["@postalCode"].Value = elCliente.PostalCode;
 
-            miComando.Parameters.Add("@tele", MySqlDbType.VarChar);
-            miComando.Parameters["@tele"].Value = elCliente.Telefono;
-
-            miComando.Parameters.Add("@deu", MySqlDbType.Int16);
-            miComando.Parameters["@deu"].Value = elCliente.Deuda;
 
             respuesta = this.ejecutaSentencia(miComando);
 
@@ -120,8 +107,8 @@ namespace CapaLogica.Servicio
 
             miComando.CommandText = "InactivarCliente";
 
-            miComando.Parameters.Add("@id_cliente", MySqlDbType.Int16);
-            miComando.Parameters["@id_cliente"].Value = elCliente.Id_cliente;
+            miComando.Parameters.Add("@code", MySqlDbType.Int16);
+            miComando.Parameters["@code"].Value = elCliente.Code;
 
 
             respuesta = this.ejecutaSentencia(miComando);
@@ -144,7 +131,7 @@ namespace CapaLogica.Servicio
             miComando.CommandText = "consultar_cliente";
 
             miComando.Parameters.Add("@id_client", MySqlDbType.Int16);
-            miComando.Parameters["@id_client"].Value = elCliente.Id_cliente;
+            miComando.Parameters["@id_client"].Value = elCliente.Code;
 
             respuesta = this.ejecutaSentencia(miComando);
 
@@ -213,9 +200,9 @@ namespace CapaLogica.Servicio
         public DataTable ListarCliente()
         {
             miComando = new MySqlCommand();
-            Console.WriteLine("Gestor listar_cliente");
+            Console.WriteLine("Gestor list_customers");
 
-            miComando.CommandText = "listar_cliente";
+            miComando.CommandText = "list_customers";
 
             DataSet elCliente = new DataSet();
             this.abrirConexion();

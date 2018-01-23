@@ -107,7 +107,7 @@
             this.rbtn_nombreCita.Name = "rbtn_nombreCita";
             this.rbtn_nombreCita.Size = new System.Drawing.Size(81, 23);
             this.rbtn_nombreCita.TabIndex = 73;
-            this.rbtn_nombreCita.Text = "Nombre";
+            this.rbtn_nombreCita.Text = "LastName";
             this.rbtn_nombreCita.UseVisualStyleBackColor = true;
             // 
             // rbtn_CedulaCita

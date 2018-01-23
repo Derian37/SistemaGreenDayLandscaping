@@ -54,8 +54,8 @@ namespace ProyectoOptica.CapaLogica.Servicio
 
             miComando.CommandText = "insertar_tarjeta_nueva";
 
-            miComando.Parameters.Add("@id_cliente", MySqlDbType.Int32);
-            miComando.Parameters["@id_cliente"].Value = elTarjeta.Id_cliente;
+            miComando.Parameters.Add("@code", MySqlDbType.Int32);
+            miComando.Parameters["@code"].Value = elTarjeta.Id_cliente;
 
             miComando.Parameters.Add("@id_producto_armazon", MySqlDbType.Int32);
             miComando.Parameters["@id_producto_armazon"].Value = elTarjeta.Id_producto;
@@ -111,8 +111,8 @@ namespace ProyectoOptica.CapaLogica.Servicio
 
             miComando.CommandText = "modificar_tarjeta";
 
-            miComando.Parameters.Add("@id_cliente", MySqlDbType.Int64);
-            miComando.Parameters["@id_cliente"].Value = elTarjeta.Id_cliente;
+            miComando.Parameters.Add("@code", MySqlDbType.Int64);
+            miComando.Parameters["@code"].Value = elTarjeta.Id_cliente;
 
             miComando.Parameters.Add("@id_anteojos", MySqlDbType.Int64);
             miComando.Parameters["@id_anteojos"].Value = elTarjeta.Id_anteojos;
@@ -162,8 +162,8 @@ namespace ProyectoOptica.CapaLogica.Servicio
 
             miComando.CommandText = "consultar_tarjeta";
 
-            miComando.Parameters.AddWithValue("@id_cliente", MySqlDbType.Int32);
-            miComando.Parameters["@id_cliente"].Value = id_cliente;
+            miComando.Parameters.AddWithValue("@code", MySqlDbType.Int32);
+            miComando.Parameters["@code"].Value = id_cliente;
 
             DataSet miDataSet = new DataSet();
             this.abrirConexion();

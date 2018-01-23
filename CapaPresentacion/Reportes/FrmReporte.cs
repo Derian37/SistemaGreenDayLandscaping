@@ -68,7 +68,7 @@ namespace CapaPresentacion.Reportes
                     Dgv_reporte_ventas.Columns["N_Recibo"].HeaderText = "NUM_RECIBO";
                     Dgv_reporte_ventas.Columns["Cod_Prod"].HeaderText = "CODIGO";
                     Dgv_reporte_ventas.Columns["Modo_Pago"].HeaderText = "MODO PAGO";
-                    Dgv_reporte_ventas.Columns["Nombre"].HeaderText = "NOMBRE PRODUCTO";
+                    Dgv_reporte_ventas.Columns["LastName"].HeaderText = "NOMBRE PRODUCTO";
                     Dgv_reporte_ventas.Columns["Total"].HeaderText = "TOTAL";
                 }
             }
@@ -109,7 +109,7 @@ namespace CapaPresentacion.Reportes
                     Dgv_reporte_ventas.Columns["N_Recibo"].HeaderText = "NUM_RECIBO";
                     Dgv_reporte_ventas.Columns["Cod_Prod"].HeaderText = "CODIGO";
                     Dgv_reporte_ventas.Columns["Modo_Pago"].HeaderText = "MODO PAGO";
-                    Dgv_reporte_ventas.Columns["Nombre"].HeaderText = "NOMBRE PRODUCTO";
+                    Dgv_reporte_ventas.Columns["LastName"].HeaderText = "NOMBRE PRODUCTO";
                     Dgv_reporte_ventas.Columns["Total"].HeaderText = "TOTAL";
                 }
             }
@@ -198,7 +198,7 @@ namespace CapaPresentacion.Reportes
                     Dgv_reporte_ventas.Columns["N_Recibo"].HeaderText = "NUM_RECIBO";
                     Dgv_reporte_ventas.Columns["Cod_Prod"].HeaderText = "CODIGO";
                     Dgv_reporte_ventas.Columns["Modo_Pago"].HeaderText = "MODO PAGO";
-                    Dgv_reporte_ventas.Columns["Nombre"].HeaderText = "NOMBRE PRODUCTO";
+                    Dgv_reporte_ventas.Columns["LastName"].HeaderText = "NOMBRE PRODUCTO";
                     Dgv_reporte_ventas.Columns["Total"].HeaderText = "TOTAL";
                 }
             }

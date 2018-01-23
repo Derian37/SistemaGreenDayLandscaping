@@ -38,6 +38,9 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.configuraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolstrip_usuarios = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnControlTrabajo = new System.Windows.Forms.Button();
+            this.lblVeterinario = new System.Windows.Forms.Label();
+            this.GrpPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctUsuario)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -50,7 +53,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(129, 16);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Nombre de Usuario:";
+            this.label1.Text = "LastName de Usuario:";
             // 
             // label2
             // 
@@ -68,6 +71,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.GrpPrincipal.AutoSize = true;
             this.GrpPrincipal.BackColor = System.Drawing.Color.AliceBlue;
+            this.GrpPrincipal.Controls.Add(this.btnControlTrabajo);
+            this.GrpPrincipal.Controls.Add(this.lblVeterinario);
             this.GrpPrincipal.Location = new System.Drawing.Point(55, 116);
             this.GrpPrincipal.Name = "GrpPrincipal";
             this.GrpPrincipal.Size = new System.Drawing.Size(1091, 574);
@@ -130,6 +135,33 @@
             this.toolstrip_usuarios.Text = "Usuarios";
             this.toolstrip_usuarios.Click += new System.EventHandler(this.toolstrip_usuarios_Click);
             // 
+            // btnControlTrabajo
+            // 
+            this.btnControlTrabajo.AutoSize = true;
+            this.btnControlTrabajo.BackColor = System.Drawing.Color.Transparent;
+            this.btnControlTrabajo.BackgroundImage = global::CapaPresentacion.Properties.Resources.user_icon;
+            this.btnControlTrabajo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnControlTrabajo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnControlTrabajo.FlatAppearance.BorderSize = 0;
+            this.btnControlTrabajo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnControlTrabajo.Location = new System.Drawing.Point(49, 30);
+            this.btnControlTrabajo.Name = "btnControlTrabajo";
+            this.btnControlTrabajo.Size = new System.Drawing.Size(108, 112);
+            this.btnControlTrabajo.TabIndex = 20;
+            this.btnControlTrabajo.UseVisualStyleBackColor = false;
+            this.btnControlTrabajo.Click += new System.EventHandler(this.btnControlTrabajo_Click_1);
+            // 
+            // lblVeterinario
+            // 
+            this.lblVeterinario.AutoSize = true;
+            this.lblVeterinario.BackColor = System.Drawing.Color.Transparent;
+            this.lblVeterinario.Font = new System.Drawing.Font("Impact", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVeterinario.Location = new System.Drawing.Point(45, 145);
+            this.lblVeterinario.Name = "lblVeterinario";
+            this.lblVeterinario.Size = new System.Drawing.Size(117, 22);
+            this.lblVeterinario.TabIndex = 19;
+            this.lblVeterinario.Text = "Add Customers";
+            // 
             // frmPrincipal
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -150,10 +182,12 @@
             this.MinimizeBox = false;
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Optica Santa Marta";
+            this.Text = "System Green Day Landscaping";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPrincipal_FormClosing);
             this.Load += new System.EventHandler(this.FrmPrincipalLoad);
+            this.GrpPrincipal.ResumeLayout(false);
+            this.GrpPrincipal.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctUsuario)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -173,5 +207,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem configuraciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolstrip_usuarios;
+        private System.Windows.Forms.Button btnControlTrabajo;
+        private System.Windows.Forms.Label lblVeterinario;
     }
 }

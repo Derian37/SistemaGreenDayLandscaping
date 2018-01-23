@@ -190,7 +190,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 19);
             this.label2.TabIndex = 69;
-            this.label2.Text = "Nombre:";
+            this.label2.Text = "LastName:";
             // 
             // btnRecuperarDuenno
             // 

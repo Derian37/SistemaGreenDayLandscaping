@@ -36,8 +36,8 @@ namespace CapaPresentacion
             {
                 dgvCliente.DataSource = elCliente.ListarClienteSinTarjeta();
                 dgvCliente.Columns["id_cliente"].Visible = false;
-                dgvCliente.Columns["cedula"].HeaderText = "Cedula";
-                dgvCliente.Columns["nombre"].HeaderText = "Nombre";
+                dgvCliente.Columns["cedula"].HeaderText = "Name";
+                dgvCliente.Columns["nombre"].HeaderText = "LastName";
                 dgvCliente.Columns["apellido1"].HeaderText = "PrimerApellido";
                 dgvCliente.Columns["apellido2"].HeaderText = "SegundoApellido";
                 dgvCliente.Columns["direccion"].HeaderText = "Direccion";

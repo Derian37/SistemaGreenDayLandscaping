@@ -326,7 +326,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 19);
             this.label3.TabIndex = 71;
-            this.label3.Text = "Nombre:";
+            this.label3.Text = "LastName:";
             // 
             // label2
             // 

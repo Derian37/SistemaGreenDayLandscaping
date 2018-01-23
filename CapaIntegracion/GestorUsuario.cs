@@ -66,6 +66,17 @@ namespace ProyectoOptica.CapaIntegracion
         }
 
         /// <summary>
+        /// Metodo Consultar Usuario
+        /// </summary>
+        /// <param name="Usuario_cedula"></param>
+        /// <returns></returns>
+        public DataSet ConfirmPassword(int user)
+        {
+            using (ServicioUsuario elUsuario = new ServicioUsuario())
+                return elUsuario.ConfirmPassword(user);
+        }
+
+        /// <summary>
         /// Metodo Listar Usuarios
         /// </summary>
         /// <returns></returns>

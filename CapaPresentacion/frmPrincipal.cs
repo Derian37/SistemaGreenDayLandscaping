@@ -129,5 +129,12 @@ namespace CapaPresentacion
             rpt.Show();
             this.Hide();
         }
+
+        private void btnControlTrabajo_Click_1(object sender, EventArgs e)
+        {
+            frmCliente frm_cliente = new frmCliente(id_usuario, usuario, cargo);
+            frm_cliente.Show();
+            this.SetVisibleCore(false);
+        }
     }
 }
