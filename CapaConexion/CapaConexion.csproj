@@ -47,7 +47,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="servicio.cs" />
+    <Compile Include="Servicio.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\Settings.settings">

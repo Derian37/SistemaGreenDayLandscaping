@@ -1,29 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MySql.Data;
+//Bibliotecas MySQL
 using MySql.Data.MySqlClient;
 
 /// <summary>
-/// SistemaBitacora.CapaConexion
+/// SistemaOpticaSantaMarta.CapaConexion
 /// </summary>
-namespace SistemaBitacora.CapaConexion
+namespace ProyectoOptica.CapaConexion
 {
     /// <summary>
     /// Clase Servicio encargada de realizar la Conexion con la Base de Datos.
     /// </summary>
     public class servicio
     {
-        #region
+        /// <summary>
+        /// Region de Atributos
+        /// </summary>
+        #region ATRIBUTOS
         protected MySqlConnection conexion;
         protected MySqlCommand cmd;
         #endregion
 
         /// <summary>
-        /// Constructor de la clase Servicio.
+        /// Constructor de la clase Servicio, encargado de proveer la conexión con la base de tados Mysql.
         /// </summary>
         public servicio()
         {
@@ -31,7 +30,7 @@ namespace SistemaBitacora.CapaConexion
             builder.Server = "localhost";
             builder.UserID = "root";
             builder.Password = "1234";
-            builder.Database = "bd_registro";
+            builder.Database = "bd_optica";
             conexion = new MySqlConnection(builder.ToString());
         }
 
@@ -43,7 +42,6 @@ namespace SistemaBitacora.CapaConexion
             conexion.Open();
         }
 
-
         /// <summary>
         /// Metodo encarado de cerrar la conexion.
         /// </summary>
@@ -51,7 +49,6 @@ namespace SistemaBitacora.CapaConexion
         {
             conexion.Close();
         }
-
 
         /// <summary>
         /// Metodo encarado de ejecutar la sentencia que se le envie.
@@ -77,6 +74,7 @@ namespace SistemaBitacora.CapaConexion
             return "";
 
         }
+
         /// <summary>
         ///  Metodo encarado dela sentencia que se le envie de tipo MySqlCommand.
         /// </summary>
@@ -126,7 +124,7 @@ namespace SistemaBitacora.CapaConexion
         /// </summary>
         /// <param name="comando">Parametro de tipo MySqlCommand</param>
         /// <returns>Un DataSet con la informacion que retorna la sentencia</returns>
-        public DataSet seleccionarInformacion(MySqlCommand comando)
+        protected DataSet seleccionarInformacion(MySqlCommand comando)
         {
             DataSet miDataSet = new DataSet();
             MySqlDataAdapter miSqlDataAdapter = new MySqlDataAdapter();
