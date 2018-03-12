@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Data;
-using ProyectoOptica.CapaConexion;
+using SistemaGDL.CapaConexion;
 using CapaLogica.Servicio;
 /// <summary>
 ///  SistemaOpticaSantaMarta.CapaIntegracion
 /// </summary>
-namespace ProyectoOptica.CapaIntegracion
+namespace SistemaGDL.CapaIntegracion
 {
     /// <summary>
     /// Clase encargada de realizar el enalze de las funciones o metodos del sistema, con relacin a los expedientes, que posee la Base de datos.

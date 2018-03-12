@@ -9,7 +9,7 @@ using MySql.Data;
 using MySql.Data.MySqlClient;
 using MySql.Data.Types;
 //Bibliotecas del sistema
-using ProyectoOptica.CapaConexion;
+using SistemaGDL.CapaConexion;
 using CapaLogica.LogicaNegocio;
 
 namespace CapaLogica.Servicio
@@ -18,6 +18,7 @@ namespace CapaLogica.Servicio
     {
         private string respuesta;
         private MySqlCommand miComando;
+        DateTime fecha = new DateTime();
 
         public ServicioCliente()
         {
@@ -51,6 +52,34 @@ namespace CapaLogica.Servicio
 
             miComando.Parameters.Add("@postalCode", MySqlDbType.Int32);
             miComando.Parameters["@postalCode"].Value = elCliente.PostalCode;
+
+            miComando.Parameters.Add("@staticPrice", MySqlDbType.Double);
+            miComando.Parameters["@staticPrice"].Value = elCliente.StaticPrice;
+
+            respuesta = this.ejecutaSentencia(miComando);
+
+            if (respuesta == "")
+                respuesta += "Se ha realizado correctamente la transaccion";
+
+            Console.WriteLine(respuesta);
+            Console.WriteLine("FIN Gestor Insertar Cliente");
+
+            return respuesta;
+
+        }
+
+        public string InsertSaveBills(Cliente elCliente)
+        {
+            miComando = new MySqlCommand();
+            Console.WriteLine("Gestor Insert_saveBills");
+
+            miComando.CommandText = "Insert_saveBills";
+
+            miComando.Parameters.Add("@id_customer", MySqlDbType.Int32);
+            miComando.Parameters["@id_customer"].Value = elCliente.Code;
+
+            miComando.Parameters.Add("@fecha", MySqlDbType.Date);
+            miComando.Parameters["@fecha"].Value = fecha.ToString("d");
 
             respuesta = this.ejecutaSentencia(miComando);
 
@@ -88,6 +117,9 @@ namespace CapaLogica.Servicio
 
             miComando.Parameters.Add("@postalCode", MySqlDbType.Int32);
             miComando.Parameters["@postalCode"].Value = elCliente.PostalCode;
+
+            miComando.Parameters.Add("@staticPrice", MySqlDbType.Double);
+            miComando.Parameters["@staticPrice"].Value = elCliente.StaticPrice;
 
 
             respuesta = this.ejecutaSentencia(miComando);
@@ -147,10 +179,25 @@ namespace CapaLogica.Servicio
         public DataSet ConsultarCliente(int Id_cliente)
         {
 
-            miComando.CommandText = "consultar_cliente";
+            miComando.CommandText = "list_customerbyid";
 
-            miComando.Parameters.AddWithValue("@id_client", MySqlDbType.Int16);
-            miComando.Parameters["@id_client"].Value = Id_cliente;
+            miComando.Parameters.AddWithValue("@id_customer", MySqlDbType.Int16);
+            miComando.Parameters["@id_customer"].Value = Id_cliente;
+
+            DataSet miDataSet = new DataSet();
+            this.abrirConexion();
+
+            miDataSet = this.seleccionarInformacion(miComando);
+            this.cerrarConexion();
+
+            return miDataSet;
+        }
+
+        public DataSet GetLastCustomer()
+        {
+
+            miComando.CommandText = "get_lastcustomer";
+
 
             DataSet miDataSet = new DataSet();
             this.abrirConexion();
@@ -212,19 +259,55 @@ namespace CapaLogica.Servicio
             return miTablaDatos;
         }
 
-        public DataTable ListarClienteSinTarjeta()
+        public DataTable ListarClienteSinTarjeta(int id_cliente)
         {
             miComando = new MySqlCommand();
-            Console.WriteLine("Gestor listarClienteSinTarjeta");
+            Console.WriteLine("Gestor list_savebillsbyid");
 
-            miComando.CommandText = "listarClienteSinTarjeta";
+            miComando.CommandText = "list_savebillsbyid";
+            miComando.Parameters.AddWithValue("@id_customer", MySqlDbType.Int16);
+            miComando.Parameters["@id_customer"].Value = id_cliente;
 
-            DataSet elCliente = new DataSet();
+            DataSet laGraduacion = new DataSet();
             this.abrirConexion();
-            elCliente = this.seleccionarInformacion(miComando);
-            DataTable miTablaDatos = elCliente.Tables[0];
+            laGraduacion = this.seleccionarInformacion(miComando);
+            DataTable miTablaDatos = laGraduacion.Tables[0];
 
             return miTablaDatos;
+        }
+
+        public DataSet GetBillByDate(int id_cliente, string Fecha1, string Fecha2)
+        {
+            miComando = new MySqlCommand();
+
+            miComando.CommandText = "get_billbydate";
+
+            miComando.Parameters.Add("@id_customer", MySqlDbType.Int16).Value=id_cliente;
+            miComando.Parameters.Add("@fecha1", MySqlDbType.VarChar, 48).Value=Fecha1;
+            miComando.Parameters.Add("@fecha2", MySqlDbType.VarChar,48).Value=Fecha2;
+
+            DataSet DataSet = new DataSet();
+            this.abrirConexion();
+            DataSet = this.seleccionarInformacion(miComando);
+            this.cerrarConexion();
+
+            return DataSet;
+        }
+
+        public DataSet GetLastBill(int id_cliente)
+        {
+            miComando = new MySqlCommand();
+            Console.WriteLine("Gestor get_lastbill");
+
+            miComando.CommandText = "get_lastbill";
+            miComando.Parameters.AddWithValue("@id_customer", MySqlDbType.Int16);
+            miComando.Parameters["@id_customer"].Value = id_cliente;
+
+            DataSet DataSet = new DataSet();
+            this.abrirConexion();
+            DataSet = this.seleccionarInformacion(miComando);
+            cerrarConexion();
+            return DataSet;
         }
 
     }

@@ -9,7 +9,7 @@ using MySql.Data;
 using MySql.Data.MySqlClient;
 using MySql.Data.Types;
 //Bibliotecas del sistema
-using ProyectoOptica.CapaConexion;
+using SistemaGDL.CapaConexion;
 using CapaLogica.LogicaNegocio;
 
 namespace CapaLogica.Servicio

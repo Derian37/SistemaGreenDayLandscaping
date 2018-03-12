@@ -43,11 +43,15 @@
             this.volverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgvCliente = new System.Windows.Forms.DataGridView();
             this.gbxDatos = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnModificar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.lblCode = new System.Windows.Forms.Label();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
             this.gbxDatos.SuspendLayout();
@@ -148,7 +152,7 @@
             this.volverToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1211, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1309, 28);
             this.menuStrip1.TabIndex = 75;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -172,19 +176,21 @@
             this.dgvCliente.Location = new System.Drawing.Point(47, 363);
             this.dgvCliente.Name = "dgvCliente";
             this.dgvCliente.ReadOnly = true;
-            this.dgvCliente.Size = new System.Drawing.Size(1152, 321);
+            this.dgvCliente.Size = new System.Drawing.Size(1233, 321);
             this.dgvCliente.TabIndex = 76;
             this.dgvCliente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellClick);
             // 
             // gbxDatos
             // 
-            this.gbxDatos.Controls.Add(this.label2);
+            this.gbxDatos.Controls.Add(this.comboBox1);
+            this.gbxDatos.Controls.Add(this.label4);
+            this.gbxDatos.Controls.Add(this.label3);
+            this.gbxDatos.Controls.Add(this.button1);
             this.gbxDatos.Controls.Add(this.label1);
             this.gbxDatos.Controls.Add(this.txtName);
             this.gbxDatos.Controls.Add(this.lblNombre);
             this.gbxDatos.Controls.Add(this.txtLatName);
             this.gbxDatos.Controls.Add(this.lblApellido1);
-            this.gbxDatos.Controls.Add(this.btnModificar);
             this.gbxDatos.Controls.Add(this.txtTelephone);
             this.gbxDatos.Controls.Add(this.btnGuardar);
             this.gbxDatos.Controls.Add(this.lblDireccion);
@@ -193,51 +199,89 @@
             this.gbxDatos.Controls.Add(this.txtPostalCode);
             this.gbxDatos.Controls.Add(this.lblTelefono);
             this.gbxDatos.Controls.Add(this.lblCode);
+            this.gbxDatos.Controls.Add(this.btnModificar);
+            this.gbxDatos.Controls.Add(this.label2);
             this.gbxDatos.Font = new System.Drawing.Font("Ravie", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxDatos.Location = new System.Drawing.Point(47, 57);
             this.gbxDatos.Name = "gbxDatos";
-            this.gbxDatos.Size = new System.Drawing.Size(1152, 270);
+            this.gbxDatos.Size = new System.Drawing.Size(1233, 270);
             this.gbxDatos.TabIndex = 80;
             this.gbxDatos.TabStop = false;
             this.gbxDatos.Enter += new System.EventHandler(this.gbxDatos_Enter);
             // 
-            // label2
+            // comboBox1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Ravie", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1069, 240);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 17);
-            this.label2.TabIndex = 43;
-            this.label2.Text = "Modificar";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.comboBox1.DisplayMember = "e";
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "40,00",
+            "45,00",
+            "50,00",
+            "55,00",
+            "60,00",
+            "65,00",
+            "70,00",
+            "75,00",
+            "80,00",
+            "85,00",
+            "90,00",
+            "95,00",
+            "40,00",
+            "100,00"});
+            this.comboBox1.Location = new System.Drawing.Point(904, 94);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 25);
+            this.comboBox1.TabIndex = 48;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(774, 100);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(124, 15);
+            this.label4.TabIndex = 47;
+            this.label4.Text = "Static Price     $ ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Ravie", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(927, 239);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(107, 17);
+            this.label3.TabIndex = 46;
+            this.label3.Text = "View the Bills";
+            this.label3.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::CapaPresentacion.Properties.Resources.siguiente;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(948, 178);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(62, 58);
+            this.button1.TabIndex = 45;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Ravie", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(961, 240);
+            this.label1.Location = new System.Drawing.Point(1069, 239);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 17);
+            this.label1.Size = new System.Drawing.Size(151, 17);
             this.label1.TabIndex = 42;
-            this.label1.Text = "Guardar";
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.BackgroundImage = global::CapaPresentacion.Properties.Resources.modificar;
-            this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnModificar.Location = new System.Drawing.Point(1077, 178);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(62, 59);
-            this.btnModificar.TabIndex = 41;
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            this.label1.Text = "Save New Customer";
             // 
             // btnGuardar
             // 
             this.btnGuardar.BackgroundImage = global::CapaPresentacion.Properties.Resources.guardar;
             this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGuardar.Location = new System.Drawing.Point(964, 179);
+            this.btnGuardar.Location = new System.Drawing.Point(1105, 178);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(62, 58);
             this.btnGuardar.TabIndex = 39;
@@ -253,12 +297,36 @@
             this.lblCode.TabIndex = 44;
             this.lblCode.Visible = false;
             // 
+            // btnModificar
+            // 
+            this.btnModificar.BackgroundImage = global::CapaPresentacion.Properties.Resources.modificar;
+            this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnModificar.Location = new System.Drawing.Point(1105, 178);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(62, 59);
+            this.btnModificar.TabIndex = 41;
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Visible = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Ravie", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(1069, 240);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(135, 17);
+            this.label2.TabIndex = 43;
+            this.label2.Text = "Modify Customer";
+            this.label2.Visible = false;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1211, 696);
+            this.ClientSize = new System.Drawing.Size(1309, 696);
             this.Controls.Add(this.gbxDatos);
             this.Controls.Add(this.dgvCliente);
             this.Controls.Add(this.menuStrip1);
@@ -299,5 +367,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblCode;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label4;
     }
 }

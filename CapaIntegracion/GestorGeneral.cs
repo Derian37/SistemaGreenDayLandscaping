@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
-using ProyectoOptica.CapaConexion;
+using SistemaGDL.CapaConexion;
 using CapaLogica.LogicaNegocio;
 using CapaLogica.Servicio;
 
-namespace ProyectoOptica.CapaIntegracion
+namespace SistemaGDL.CapaIntegracion
 {
     public class GestorGeneral : servicio, IDisposable
     {

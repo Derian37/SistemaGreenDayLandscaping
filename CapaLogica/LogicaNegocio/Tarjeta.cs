@@ -2,7 +2,7 @@
 /// <summary>
 /// SistemaOpticaSantaMarta.CapaLogica.LogicaNegocio
 /// </summary>
-namespace ProyectoOptica.CapaLogica.LogicaNegocio
+namespace SistemaGDL.CapaLogica.LogicaNegocio
 {
     /// <summary>
     /// Clase encargadad de suministrar atributos a los servicios de Tarjeta.

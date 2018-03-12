@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data;
-using ProyectoOptica.CapaConexion;
+using SistemaGDL.CapaConexion;
 using CapaLogica.LogicaNegocio;
-using ProyectoOptica.CapaLogica.Servicio;
+using SistemaGDL.CapaLogica.Servicio;
 
-namespace ProyectoOptica.CapaIntegracion
+namespace SistemaGDL.CapaIntegracion
 {
     public class GestorVenta : servicio, IDisposable
     {
@@ -17,36 +13,58 @@ namespace ProyectoOptica.CapaIntegracion
         public void Dispose() { }
 
 
-        public string InsertarVenta(int id_cliente, int id_usuario, string fecha, int modo_pago, double saldo, string estado)
+        public string InsertarVenta(int id_bill, DateTime fecha, string detalle, double saldo, double total)
         {
-            Venta nuevaVenta = new Venta(id_cliente, id_usuario, fecha, modo_pago, saldo, estado);
+            Venta nuevaVenta = new Venta(id_bill, fecha, detalle, saldo, total);
             using (ServicioVenta elVenta = new ServicioVenta())
                 return elVenta.InsertarVenta(nuevaVenta);
         }
 
-        public string InsertarDetalleVenta(int id_venta, string codigo, int cantidad, double precio, double subtotal, string estado)
+        public string InsertarNewVenta(int id_customer, int id_usuario, DateTime fecha, string detalle)
         {
-            Venta nuevaVenta = new Venta(id_venta, codigo, cantidad, precio, subtotal, estado);
+            Venta nuevaVenta = new Venta(id_customer, id_usuario, fecha, detalle);
             using (ServicioVenta elVenta = new ServicioVenta())
-                return elVenta.InsertarDetalleVenta(nuevaVenta);
+                return elVenta.InsertarNewVenta(nuevaVenta);
         }
 
-        //public string ModificarVenta(int id_Venta, int id_cliente, string fecha, int id_usuario, int modo_pago, string estado)
+        public string InsertNewSaveBills(int id_customer, DateTime fecha, int bill)
+        {
+            Venta nuevaVenta = new Venta(id_customer, fecha, bill);
+            using (ServicioVenta elVenta = new ServicioVenta())
+                return elVenta.InsertNewSaveBills(nuevaVenta);
+        }
+
+        
+
+        //public string InsertarDetalleVenta(int id_venta, string codigo, int cantidad, double precio, double subtotal, string estado)
         //{
-        //    Venta modificarVenta = new Venta(id_Venta, id_cliente, id_usuario, fecha, modo_pago, estado);
+        //    Venta nuevaVenta = new Venta(id_venta, codigo, cantidad, precio, subtotal, estado);
         //    using (ServicioVenta elVenta = new ServicioVenta())
-        //        return elVenta.ModificarVenta(modificarVenta);
+        //        return elVenta.InsertarDetalleVenta(nuevaVenta);
         //}
+
+        public string ModifyBill(int id_Venta, int id_cliente, DateTime fecha,string details, Double price, Double amount)
+        {
+            Venta Venta = new Venta(id_Venta, id_cliente, fecha,  details,  price,  amount);
+            using (ServicioVenta elVenta = new ServicioVenta())
+                return elVenta.ModifyBill(Venta);
+        }
 
         /// <summary>
         /// Metodo Consultar Venta
         /// </summary>
         /// <param name="id_Venta"></param>
         /// <returns></returns>
-        public DataSet ConsultarVenta(int id_Venta)
+        public DataTable ConsultarVenta(int id_cliente, int last_id)
         {
             using (ServicioVenta elVenta = new ServicioVenta())
-                return elVenta.ConsultarVenta(id_Venta);
+                return elVenta.ConsultarVenta(id_cliente,last_id);
+        }
+
+        public DataTable ConsultarVentaE(int id_bill)
+        {
+            using (ServicioVenta elVenta = new ServicioVenta())
+                return elVenta.ConsultarVentaE(id_bill);
         }
 
         /// <summary>

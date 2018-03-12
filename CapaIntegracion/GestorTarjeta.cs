@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Data;
-using ProyectoOptica.CapaConexion;
-using ProyectoOptica.CapaLogica.Servicio;
-using ProyectoOptica.CapaLogica.LogicaNegocio;
+using SistemaGDL.CapaConexion;
+using SistemaGDL.CapaLogica.Servicio;
+using SistemaGDL.CapaLogica.LogicaNegocio;
 /// <summary>
 ///  SistemaOpticaSantaMarta.CapaIntegracion
 /// </summary>
-namespace ProyectoOptica.CapaIntegracion
+namespace SistemaGDL.CapaIntegracion
 {
 
     /// <summary>

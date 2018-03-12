@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 //Bibliotecas del sistema
-using ProyectoOptica.CapaConexion;
+using SistemaGDL.CapaConexion;
 using CapaLogica.LogicaNegocio;
 
-namespace ProyectoOptica.CapaLogica.Servicio
+namespace SistemaGDL.CapaLogica.Servicio
 {
     /// <summary>
     /// Description of ServicioUsuario.

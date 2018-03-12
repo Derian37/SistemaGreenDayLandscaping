@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
-using ProyectoOptica.CapaConexion;
+using SistemaGDL.CapaConexion;
 using CapaLogica.LogicaNegocio;
 using CapaLogica.Servicio;
 
-namespace ProyectoOptica.CapaIntegracion
+namespace SistemaGDL.CapaIntegracion
 {
     public class GestorCliente : servicio, IDisposable
 
@@ -17,16 +17,22 @@ namespace ProyectoOptica.CapaIntegracion
 
         public void Dispose() { }
 
-        public string InsertarCliente(string name, string lastname, string telephone, string address, string postalCode)
+        public string InsertarCliente(string name, string lastname, string telephone, string address, string postalCode, Double staticPrice)
         {
-            Cliente nuevoCliente = new Cliente( name,  lastname,  telephone,  address,  postalCode);
+            Cliente nuevoCliente = new Cliente( name,  lastname,  telephone,  address,  postalCode, staticPrice);
             using (ServicioCliente elCliente = new ServicioCliente())
                 return elCliente.InsertarCliente(nuevoCliente);
         }
-
-        public string ModificarCliente(int code, string name, string lastname, string telephone, string address, string postalCode)
+        public string InsertSaveBills(int id_cliente)
         {
-            Cliente nuevoCliente = new Cliente(code, name, lastname, telephone, address, postalCode);
+            Cliente nuevoCliente = new Cliente(id_cliente);
+            using (ServicioCliente elCliente = new ServicioCliente())
+                return elCliente.InsertSaveBills(nuevoCliente);
+        }
+
+        public string ModificarCliente(int code, string name, string lastname, string telephone, string address, string postalCode,Double staticPrice)
+        {
+            Cliente nuevoCliente = new Cliente(code, name, lastname, telephone, address, postalCode, staticPrice);
             using (ServicioCliente elCliente = new ServicioCliente())
                 return elCliente.ModificarCliente(nuevoCliente);
         }
@@ -57,10 +63,29 @@ namespace ProyectoOptica.CapaIntegracion
                 return elCliente.ListarCliente();
         }
 
-        public DataTable ListarClienteSinTarjeta()
+        public DataTable ListarClienteSinTarjeta(int id_cliente)
         {
             using (ServicioCliente elCliente = new ServicioCliente())
-                return elCliente.ListarClienteSinTarjeta();
+                return elCliente.ListarClienteSinTarjeta(id_cliente);
         }
+
+        public DataSet GetLastCustomer()
+        {
+            using (ServicioCliente elCliente = new ServicioCliente())
+                return elCliente.GetLastCustomer();
+        }
+
+        public DataSet GetBillByDate(int id_cliente,string Fecha1, string Fecha2)
+        {
+            using (ServicioCliente elCliente = new ServicioCliente())
+                return elCliente.GetBillByDate(id_cliente,  Fecha1,  Fecha2);
+        }
+        public DataSet GetLastBill(int id_cliente)
+        {
+            using (ServicioCliente elCliente = new ServicioCliente())
+                return elCliente.GetLastBill(id_cliente);
+        }
+        
+
     }
 }

@@ -1,18 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 //Librerias MySql
-using MySql.Data;
 using MySql.Data.MySqlClient;
-using MySql.Data.Types;
 //Bibliotecas del sistema
-using ProyectoOptica.CapaConexion;
+using SistemaGDL.CapaConexion;
 using CapaLogica.LogicaNegocio;
 
-namespace ProyectoOptica.CapaLogica.Servicio
+namespace SistemaGDL.CapaLogica.Servicio
 {
     /// <summary>
     /// 
@@ -40,27 +34,24 @@ namespace ProyectoOptica.CapaLogica.Servicio
         {
             miComando = new MySqlCommand();
 
-            Console.WriteLine("Gestor insertar_venta");
+            Console.WriteLine("Gestor Insert_bills");
 
-            miComando.CommandText = "insertar_venta";
+            miComando.CommandText = "Insert_bills";
 
-            miComando.Parameters.Add("@code", MySqlDbType.Int16);
-            miComando.Parameters["@code"].Value = elVenta.Id_cliente;
+            miComando.Parameters.Add("@id_bill", MySqlDbType.Int16);
+            miComando.Parameters["@id_bill"].Value = elVenta.Id_bill;
 
-            miComando.Parameters.Add("@id_usuario", MySqlDbType.Int16);
-            miComando.Parameters["@id_usuario"].Value = elVenta.Id_usuario;
-
-            miComando.Parameters.Add("@fecha", MySqlDbType.VarChar);
+            miComando.Parameters.Add("@fecha", MySqlDbType.DateTime);
             miComando.Parameters["@fecha"].Value = elVenta.Fecha;
 
-            miComando.Parameters.Add("@modo_pago", MySqlDbType.Int16);
-            miComando.Parameters["@modo_pago"].Value = elVenta.Modo_pago;
+            miComando.Parameters.Add("@details", MySqlDbType.VarChar);
+            miComando.Parameters["@details"].Value = elVenta.Modo_pago;
 
-            miComando.Parameters.Add("@saldo", MySqlDbType.Double);
-            miComando.Parameters["@saldo"].Value = elVenta.Saldo;
+            miComando.Parameters.Add("@servicePrice", MySqlDbType.Double);
+            miComando.Parameters["@servicePrice"].Value = elVenta.Saldo;
 
-            miComando.Parameters.Add("@estado", MySqlDbType.VarChar);
-            miComando.Parameters["@estado"].Value = elVenta.Estado;
+            miComando.Parameters.Add("@amount", MySqlDbType.Double);
+            miComando.Parameters["@amount"].Value = elVenta.Estado;
 
             respuesta = this.ejecutaSentencia(miComando);
 
@@ -72,6 +63,108 @@ namespace ProyectoOptica.CapaLogica.Servicio
 
             return respuesta;
 
+        }
+
+        //Metodo para la SP de insertar Venta
+        public string InsertarNewVenta(Venta elVenta)
+        {
+            miComando = new MySqlCommand();
+
+            Console.WriteLine("Gestor Insert_newBills");
+
+            miComando.CommandText = "Insert_newBills";
+
+            miComando.Parameters.Add("@id_customer", MySqlDbType.Int16);
+            miComando.Parameters["@id_customer"].Value = elVenta.Id_cliente;
+
+            miComando.Parameters.Add("@id_user", MySqlDbType.Int16);
+            miComando.Parameters["@id_user"].Value = elVenta.Id_usuario;
+
+            miComando.Parameters.Add("@fecha", MySqlDbType.DateTime);
+            miComando.Parameters["@fecha"].Value = elVenta.Fecha;
+
+            miComando.Parameters.Add("@details", MySqlDbType.VarChar);
+            miComando.Parameters["@details"].Value = elVenta.Modo_pago;
+
+      
+            respuesta = this.ejecutaSentencia(miComando);
+
+            if (respuesta == "")
+                respuesta += "Se ha realizado correctamente la transaccion";
+
+            Console.WriteLine(respuesta);
+            Console.WriteLine("FIN Gestor Insertar Venta");
+
+            return respuesta;
+
+        }
+        //Metodo para la SP de insertar Venta
+        public string InsertNewSaveBills(Venta elVenta)
+        {
+            miComando = new MySqlCommand();
+
+            Console.WriteLine("Gestor Insert_saveBills");
+
+            miComando.CommandText = "Insert_saveBills";
+
+            miComando.Parameters.Add("@id_customer", MySqlDbType.Int16);
+            miComando.Parameters["@id_customer"].Value = elVenta.Id_cliente;
+
+            miComando.Parameters.Add("@fecha", MySqlDbType.Date);
+            miComando.Parameters["@fecha"].Value = elVenta.Fecha;
+
+            miComando.Parameters.Add("@id_bill", MySqlDbType.Int32);
+            miComando.Parameters["@id_bill"].Value = elVenta.Id_bill;
+
+
+            respuesta = this.ejecutaSentencia(miComando);
+
+            if (respuesta == "")
+                respuesta += "Se ha realizado correctamente la transaccion";
+
+            Console.WriteLine(respuesta);
+            Console.WriteLine("FIN Gestor Insertar Venta");
+
+            return respuesta;
+
+        }
+
+        public string ModifyBill(Venta Venta)
+        {
+            miComando = new MySqlCommand();
+            Console.WriteLine("Gestor modify_bill");
+
+            miComando.CommandText = "modify_bill";
+
+            miComando.Parameters.Add("@id_billf", MySqlDbType.Int32);
+            miComando.Parameters["@id_billf"].Value = Venta.Id_venta;
+
+            miComando.Parameters.Add("@id_bill", MySqlDbType.Int32);
+            miComando.Parameters["@id_bill"].Value = Venta.Id_bill;
+                        
+            miComando.Parameters.Add("@fecha", MySqlDbType.DateTime);
+            miComando.Parameters["@fecha"].Value = Venta.Fecha;
+
+            miComando.Parameters.Add("@detalle", MySqlDbType.VarChar);
+            miComando.Parameters["@detalle"].Value = Venta.Modo_pago;
+
+            miComando.Parameters.Add("@precio", MySqlDbType.Double);
+            miComando.Parameters["@precio"].Value = Venta.Precio;
+
+            miComando.Parameters.Add("@monto", MySqlDbType.Double);
+            miComando.Parameters["@monto"].Value = Venta.Saldo;
+
+    
+
+            respuesta = this.ejecutaSentencia(miComando);
+
+            if (respuesta == "")
+                respuesta += "Se ha realizado correctamente la transacción";
+
+            Console.WriteLine(respuesta);
+            Console.WriteLine("Fin Gestor modify_bill");
+
+            return respuesta;
         }
 
         //metodo para la SP de Modificar Venta
@@ -113,23 +206,43 @@ namespace ProyectoOptica.CapaLogica.Servicio
 
 
         //metodo para el SP de Consultar Venta 
-        public DataSet ConsultarVenta(int id_Venta)
+        public DataTable ConsultarVenta(int id_cliente, int last_id)
         {
             miComando = new MySqlCommand();
-            Console.WriteLine("Gestor ConsultarVenta");
+            Console.WriteLine("Gestor list_Bills");
 
-            miComando.CommandText = "consultar_Venta";
+            miComando.CommandText = "list_Bills";
+            miComando.Parameters.AddWithValue("@id_customer", MySqlDbType.Int16);
+            miComando.Parameters["@id_customer"].Value = id_cliente;
 
-            miComando.Parameters.Add("@id", MySqlDbType.VarChar, 128).Value = id_Venta;
-            //miComando.Parameters["@cod"].Value = cod;
+            miComando.Parameters.AddWithValue("@last_id", MySqlDbType.Int16);
+            miComando.Parameters["@last_id"].Value = last_id;
 
-            DataSet miDataSet = new DataSet();
+            DataSet laGraduacion = new DataSet();
             this.abrirConexion();
+            laGraduacion = this.seleccionarInformacion(miComando);
+            DataTable miTablaDatos = laGraduacion.Tables[0];
 
-            miDataSet = this.seleccionarInformacion(miComando);
-            this.cerrarConexion();
+            return miTablaDatos;
+        
+        }
 
-            return miDataSet;
+        public DataTable ConsultarVentaE(int id_bill)
+        {
+            miComando = new MySqlCommand();
+            Console.WriteLine("Gestor get_bill");
+
+            miComando.CommandText = "get_bill";
+            miComando.Parameters.AddWithValue("@id_bill", MySqlDbType.Int16);
+            miComando.Parameters["@id_bill"].Value = id_bill;
+
+            DataSet laGraduacion = new DataSet();
+            this.abrirConexion();
+            laGraduacion = this.seleccionarInformacion(miComando);
+            DataTable miTablaDatos = laGraduacion.Tables[0];
+
+            return miTablaDatos;
+
         }
 
         //metodo para el SP de ConsultarUltimoVenta 

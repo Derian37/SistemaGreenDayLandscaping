@@ -34,8 +34,6 @@
             this.txt_usuario_Contrasena = new System.Windows.Forms.TextBox();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.cbx_usuario_nombre = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsuario
@@ -45,9 +43,9 @@
             this.lblUsuario.Location = new System.Drawing.Point(118, 86);
             this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(58, 16);
+            this.lblUsuario.Size = new System.Drawing.Size(40, 16);
             this.lblUsuario.TabIndex = 0;
-            this.lblUsuario.Text = "Usuario:";
+            this.lblUsuario.Text = "User:";
             // 
             // lblContrasena
             // 
@@ -56,9 +54,9 @@
             this.lblContrasena.Location = new System.Drawing.Point(96, 123);
             this.lblContrasena.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblContrasena.Name = "lblContrasena";
-            this.lblContrasena.Size = new System.Drawing.Size(80, 16);
+            this.lblContrasena.Size = new System.Drawing.Size(71, 16);
             this.lblContrasena.TabIndex = 1;
-            this.lblContrasena.Text = "Contraseña:";
+            this.lblContrasena.Text = "Password:";
             // 
             // txt_usuario_Contrasena
             // 
@@ -87,7 +85,7 @@
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(76, 30);
             this.btnIngresar.TabIndex = 7;
-            this.btnIngresar.Text = "Ingresar";
+            this.btnIngresar.Text = "sing in";
             this.btnIngresar.UseVisualStyleBackColor = false;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
@@ -102,22 +100,12 @@
             this.cbx_usuario_nombre.Size = new System.Drawing.Size(106, 24);
             this.cbx_usuario_nombre.TabIndex = 8;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.login;
-            this.pictureBox1.InitialImage = global::CapaPresentacion.Properties.Resources.login;
-            this.pictureBox1.Location = new System.Drawing.Point(324, 141);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(124, 123);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
             // frmLogin
             // 
             this.AcceptButton = this.btnIngresar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Lavender;
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(469, 276);
             this.Controls.Add(this.cbx_usuario_nombre);
@@ -125,7 +113,6 @@
             this.Controls.Add(this.txt_usuario_Contrasena);
             this.Controls.Add(this.lblContrasena);
             this.Controls.Add(this.lblUsuario);
-            this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -136,7 +123,6 @@
             this.Text = "System Green Day Landscaping";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogin_FormClosing);
             this.Load += new System.EventHandler(this.frmLogin_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,6 +135,5 @@
         private System.Windows.Forms.Label lblContrasena;
         private System.Windows.Forms.TextBox txt_usuario_Contrasena;
         private System.Windows.Forms.Button btnIngresar;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

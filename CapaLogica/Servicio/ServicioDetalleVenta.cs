@@ -3,10 +3,10 @@ using System.Data;
 //Librerias MySql
 using MySql.Data.MySqlClient;
 //Bibliotecas del sistema
-using ProyectoOptica.CapaConexion;
+using SistemaGDL.CapaConexion;
 using CapaLogica.LogicaNegocio;
 
-namespace ProyectoOptica.CapaLogica.Servicio
+namespace SistemaGDL.CapaLogica.Servicio
 {
     /// <summary>
     /// 

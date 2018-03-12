@@ -1,12 +1,12 @@
-﻿using ProyectoOptica.CapaConexion;
-using ProyectoOptica.CapaLogica.LogicaNegocio;
-using ProyectoOptica.CapaLogica.Servicio;
+﻿using SistemaGDL.CapaConexion;
+using SistemaGDL.CapaLogica.LogicaNegocio;
+using SistemaGDL.CapaLogica.Servicio;
 using System;
 using System.Data;
 /// <summary>
 ///  SistemaOpticaSantaMarta.CapaIntegracion
 /// </summary>
-namespace ProyectoOptica.CapaIntegracion
+namespace SistemaGDL.CapaIntegracion
 {
     /// <summary>
     /// Clase encargada de realizar el enalze de las funciones o metodos del sistema, relacionados con la graduacion de los ojos, que posee la Base de datos.

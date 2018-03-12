@@ -32,14 +32,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.GrpPrincipal = new System.Windows.Forms.GroupBox();
+            this.btnControlTrabajo = new System.Windows.Forms.Button();
+            this.lblVeterinario = new System.Windows.Forms.Label();
             this.pctUsuario = new System.Windows.Forms.PictureBox();
             this.lbl_usuarioCargo = new System.Windows.Forms.Label();
             this.lbl_usuarioNombre = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.configuraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolstrip_usuarios = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnControlTrabajo = new System.Windows.Forms.Button();
-            this.lblVeterinario = new System.Windows.Forms.Label();
             this.GrpPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctUsuario)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -51,9 +51,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(66, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 16);
+            this.label1.Size = new System.Drawing.Size(40, 16);
             this.label1.TabIndex = 7;
-            this.label1.Text = "LastName de Usuario:";
+            this.label1.Text = "User:";
             // 
             // label2
             // 
@@ -61,9 +61,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(66, 64);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 16);
+            this.label2.Size = new System.Drawing.Size(40, 16);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Cargo:";
+            this.label2.Text = "Area:";
             // 
             // GrpPrincipal
             // 
@@ -79,6 +79,33 @@
             this.GrpPrincipal.TabIndex = 11;
             this.GrpPrincipal.TabStop = false;
             this.GrpPrincipal.Enter += new System.EventHandler(this.GrpPrincipal_Enter);
+            // 
+            // btnControlTrabajo
+            // 
+            this.btnControlTrabajo.AutoSize = true;
+            this.btnControlTrabajo.BackColor = System.Drawing.Color.Transparent;
+            this.btnControlTrabajo.BackgroundImage = global::CapaPresentacion.Properties.Resources.user_icon;
+            this.btnControlTrabajo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnControlTrabajo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnControlTrabajo.FlatAppearance.BorderSize = 0;
+            this.btnControlTrabajo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnControlTrabajo.Location = new System.Drawing.Point(49, 30);
+            this.btnControlTrabajo.Name = "btnControlTrabajo";
+            this.btnControlTrabajo.Size = new System.Drawing.Size(108, 112);
+            this.btnControlTrabajo.TabIndex = 20;
+            this.btnControlTrabajo.UseVisualStyleBackColor = false;
+            this.btnControlTrabajo.Click += new System.EventHandler(this.btnControlTrabajo_Click_1);
+            // 
+            // lblVeterinario
+            // 
+            this.lblVeterinario.AutoSize = true;
+            this.lblVeterinario.BackColor = System.Drawing.Color.Transparent;
+            this.lblVeterinario.Font = new System.Drawing.Font("Impact", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVeterinario.Location = new System.Drawing.Point(59, 145);
+            this.lblVeterinario.Name = "lblVeterinario";
+            this.lblVeterinario.Size = new System.Drawing.Size(87, 22);
+            this.lblVeterinario.TabIndex = 19;
+            this.lblVeterinario.Text = "Customers";
             // 
             // pctUsuario
             // 
@@ -134,33 +161,6 @@
             this.toolstrip_usuarios.Size = new System.Drawing.Size(119, 22);
             this.toolstrip_usuarios.Text = "Usuarios";
             this.toolstrip_usuarios.Click += new System.EventHandler(this.toolstrip_usuarios_Click);
-            // 
-            // btnControlTrabajo
-            // 
-            this.btnControlTrabajo.AutoSize = true;
-            this.btnControlTrabajo.BackColor = System.Drawing.Color.Transparent;
-            this.btnControlTrabajo.BackgroundImage = global::CapaPresentacion.Properties.Resources.user_icon;
-            this.btnControlTrabajo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnControlTrabajo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnControlTrabajo.FlatAppearance.BorderSize = 0;
-            this.btnControlTrabajo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnControlTrabajo.Location = new System.Drawing.Point(49, 30);
-            this.btnControlTrabajo.Name = "btnControlTrabajo";
-            this.btnControlTrabajo.Size = new System.Drawing.Size(108, 112);
-            this.btnControlTrabajo.TabIndex = 20;
-            this.btnControlTrabajo.UseVisualStyleBackColor = false;
-            this.btnControlTrabajo.Click += new System.EventHandler(this.btnControlTrabajo_Click_1);
-            // 
-            // lblVeterinario
-            // 
-            this.lblVeterinario.AutoSize = true;
-            this.lblVeterinario.BackColor = System.Drawing.Color.Transparent;
-            this.lblVeterinario.Font = new System.Drawing.Font("Impact", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVeterinario.Location = new System.Drawing.Point(45, 145);
-            this.lblVeterinario.Name = "lblVeterinario";
-            this.lblVeterinario.Size = new System.Drawing.Size(117, 22);
-            this.lblVeterinario.TabIndex = 19;
-            this.lblVeterinario.Text = "Add Customers";
             // 
             // frmPrincipal
             // 

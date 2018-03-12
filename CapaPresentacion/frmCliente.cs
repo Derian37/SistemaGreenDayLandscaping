@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProyectoOptica.CapaIntegracion;
+using SistemaGDL.CapaIntegracion;
 
 
 namespace CapaPresentacion
@@ -21,6 +15,7 @@ namespace CapaPresentacion
         string usuario;
         string cargo;
         int id_usuario;
+        //int new_id;
 
         public frmCliente(int id_usuario, string nombre, string cargo)
         {
@@ -48,20 +43,26 @@ namespace CapaPresentacion
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txtName.Text != "" && txtLatName.Text != ""  && txtTelephone.Text != "" && txtAddress.Text != "" && txtPostalCode.Text != "")
+            if (txtName.Text != "" && txtLatName.Text != ""  && txtTelephone.Text != "" && txtAddress.Text != "" && txtPostalCode.Text != "" && comboBox1.SelectedItem.ToString() != "")
             {
                 using (GestorCliente elCliente = new GestorCliente())
                 {
-                    elCliente.InsertarCliente(txtName.Text, txtLatName.Text, txtTelephone.Text, txtAddress.Text, txtPostalCode.Text);
+                    elCliente.InsertarCliente(txtName.Text, txtLatName.Text, txtTelephone.Text, txtAddress.Text, txtPostalCode.Text,double.Parse(comboBox1.SelectedItem.ToString()));
                 }
+                //using (GestorCliente NewCliente = new GestorCliente())
+                //{
+                    
+                //    new_id = int.Parse(NewCliente.GetLastCustomer().Tables[0].Rows[0][0].ToString().ToString());
+                //    NewCliente.InsertSaveBills(new_id);
+                //}
+                limpiar();
             }
             else
             {
                 MessageBox.Show("¡ Debe rellenar todos los espacios ! ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             CargarGridCliente();
-            //CargarComboCliente();
-            //CargarComboOjo();
+   
             defecto();
         }
 
@@ -71,8 +72,15 @@ namespace CapaPresentacion
             {
                 using (GestorCliente elCliente = new GestorCliente())
                 {
-                    elCliente.ModificarCliente(int.Parse(lblCode.Text.ToString()), txtName.Text, txtLatName.Text, txtTelephone.Text, txtAddress.Text, txtPostalCode.Text);
+                    elCliente.ModificarCliente(int.Parse(lblCode.Text.ToString()), txtName.Text, txtLatName.Text, txtTelephone.Text, txtAddress.Text, txtPostalCode.Text, double.Parse(comboBox1.SelectedItem.ToString()));
                 }
+                btnGuardar.Visible = true;
+                label1.Visible = true;
+                btnModificar.Visible = false;
+                label2.Visible = false;
+                button1.Visible = false;
+                label3.Visible = false;
+                limpiar();
             }
             else
             {
@@ -137,6 +145,7 @@ namespace CapaPresentacion
                 dgvCliente.Columns["telephone"].HeaderText = "Telephone";
                 dgvCliente.Columns["address"].HeaderText = "Address";
                 dgvCliente.Columns["postalCode"].HeaderText = "Postal Code";
+                dgvCliente.Columns["staticPrice"].HeaderText = "Static Price";
 
 
             }
@@ -256,6 +265,37 @@ namespace CapaPresentacion
             txtTelephone.Text = dgvCliente.CurrentRow.Cells[3].Value.ToString();
             txtAddress.Text = dgvCliente.CurrentRow.Cells[4].Value.ToString();
             txtPostalCode.Text = dgvCliente.CurrentRow.Cells[5].Value.ToString();
+            //comboBox1.DataSource = dgvCliente.CurrentRow.Cells[6].Value.ToString();
+            btnGuardar.Visible = false;
+            label1.Visible = false;
+            btnModificar.Visible = true;
+            label2.Visible = true;
+            button1.Visible = true;
+            label3.Visible = true;
+        }
+        public void limpiar(){
+            txtName.Text = "";
+            txtLatName.Text = "";
+            txtTelephone.Text = "";
+            txtAddress.Text = "";
+            txtPostalCode.Text = "";
+            comboBox1.Text = null;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmListaClientes custormeslist = new frmListaClientes(id_usuario, usuario, cargo, int.Parse(lblCode.Text));
+                custormeslist.Show();
+                this.SetVisibleCore(false);
+            }
+            catch (Exception g) {
+                MessageBox.Show("Este cliente no posee facturas");
+                frmListaClientes custormeslist = new frmListaClientes(id_usuario, usuario, cargo, int.Parse(lblCode.Text));
+                custormeslist.Show();
+                this.SetVisibleCore(false);
+            }
         }
 
         /* private void cbxOjo_SelectedIndexChanged(object sender, EventArgs e)

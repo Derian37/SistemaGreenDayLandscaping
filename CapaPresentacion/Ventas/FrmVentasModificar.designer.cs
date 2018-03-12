@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class FrmVentas
+    partial class FrmVentasModificar
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVentas));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVentasModificar));
             this.dgv_ventas = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,10 +50,17 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Date = new System.Windows.Forms.DateTimePicker();
             this.label19 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.txtDetails = new System.Windows.Forms.TextBox();
+            this.btnExpediente = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
@@ -64,8 +71,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.volverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.txtDetails = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ventas)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -87,17 +92,18 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_ventas.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_ventas.Location = new System.Drawing.Point(339, 205);
+            this.dgv_ventas.Location = new System.Drawing.Point(340, 208);
             this.dgv_ventas.Name = "dgv_ventas";
             this.dgv_ventas.ReadOnly = true;
             this.dgv_ventas.Size = new System.Drawing.Size(783, 397);
             this.dgv_ventas.TabIndex = 1;
+            this.dgv_ventas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ventas_CellClick);
             this.dgv_ventas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ventas_CellContentClick);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(954, 658);
+            this.label3.Location = new System.Drawing.Point(955, 661);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 16);
             this.label3.TabIndex = 6;
@@ -106,7 +112,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(926, 693);
+            this.label4.Location = new System.Drawing.Point(927, 696);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 16);
             this.label4.TabIndex = 8;
@@ -115,7 +121,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(926, 622);
+            this.label5.Location = new System.Drawing.Point(927, 625);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 16);
             this.label5.TabIndex = 12;
@@ -135,7 +141,7 @@
             this.label12.BackColor = System.Drawing.SystemColors.MenuText;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label12.Location = new System.Drawing.Point(339, 205);
+            this.label12.Location = new System.Drawing.Point(340, 208);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(110, 24);
             this.label12.TabIndex = 35;
@@ -147,7 +153,7 @@
             this.label13.BackColor = System.Drawing.SystemColors.MenuText;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label13.Location = new System.Drawing.Point(443, 205);
+            this.label13.Location = new System.Drawing.Point(444, 208);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(287, 24);
             this.label13.TabIndex = 36;
@@ -159,7 +165,7 @@
             this.label14.BackColor = System.Drawing.SystemColors.MenuText;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label14.Location = new System.Drawing.Point(722, 205);
+            this.label14.Location = new System.Drawing.Point(723, 208);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(206, 24);
             this.label14.TabIndex = 37;
@@ -171,7 +177,7 @@
             this.label17.BackColor = System.Drawing.SystemColors.MenuText;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label17.Location = new System.Drawing.Point(925, 205);
+            this.label17.Location = new System.Drawing.Point(926, 208);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(197, 24);
             this.label17.TabIndex = 39;
@@ -183,7 +189,7 @@
             this.lbl_subtotal.BackColor = System.Drawing.SystemColors.HighlightText;
             this.lbl_subtotal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbl_subtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_subtotal.Location = new System.Drawing.Point(1006, 610);
+            this.lbl_subtotal.Location = new System.Drawing.Point(1007, 613);
             this.lbl_subtotal.Name = "lbl_subtotal";
             this.lbl_subtotal.Size = new System.Drawing.Size(116, 30);
             this.lbl_subtotal.TabIndex = 45;
@@ -194,7 +200,7 @@
             this.lbl_iva.BackColor = System.Drawing.SystemColors.HighlightText;
             this.lbl_iva.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbl_iva.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_iva.Location = new System.Drawing.Point(1006, 648);
+            this.lbl_iva.Location = new System.Drawing.Point(1007, 651);
             this.lbl_iva.Name = "lbl_iva";
             this.lbl_iva.Size = new System.Drawing.Size(116, 30);
             this.lbl_iva.TabIndex = 46;
@@ -205,7 +211,7 @@
             this.lbl_total.BackColor = System.Drawing.SystemColors.HighlightText;
             this.lbl_total.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbl_total.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_total.Location = new System.Drawing.Point(1006, 683);
+            this.lbl_total.Location = new System.Drawing.Point(1007, 686);
             this.lbl_total.Name = "lbl_total";
             this.lbl_total.Size = new System.Drawing.Size(116, 30);
             this.lbl_total.TabIndex = 47;
@@ -289,13 +295,13 @@
             this.label18.TabIndex = 55;
             this.label18.Text = "Price Services:";
             // 
-            // dateTimePicker1
+            // Date
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(108, 13);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(100, 22);
-            this.dateTimePicker1.TabIndex = 57;
+            this.Date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Date.Location = new System.Drawing.Point(112, 14);
+            this.Date.Name = "Date";
+            this.Date.Size = new System.Drawing.Size(100, 22);
+            this.Date.TabIndex = 57;
             // 
             // label19
             // 
@@ -308,19 +314,76 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Controls.Add(this.txtPrice);
-            this.groupBox1.Controls.Add(this.label19);
+            this.groupBox1.Controls.Add(this.label26);
             this.groupBox1.Controls.Add(this.txtDetails);
+            this.groupBox1.Controls.Add(this.btnExpediente);
+            this.groupBox1.Controls.Add(this.label19);
             this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.Date);
             this.groupBox1.Controls.Add(this.btn_Agregar);
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Location = new System.Drawing.Point(339, 608);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label27);
+            this.groupBox1.Location = new System.Drawing.Point(340, 611);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(581, 105);
             this.groupBox1.TabIndex = 59;
             this.groupBox1.TabStop = false;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(223, 71);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(93, 20);
+            this.radioButton1.TabIndex = 100;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Static Price";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Location = new System.Drawing.Point(112, 70);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(100, 22);
+            this.txtPrice.TabIndex = 97;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(460, 77);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(53, 19);
+            this.label26.TabIndex = 75;
+            this.label26.Text = "Modify";
+            this.label26.Visible = false;
+            this.label26.Click += new System.EventHandler(this.label26_Click);
+            // 
+            // txtDetails
+            // 
+            this.txtDetails.Location = new System.Drawing.Point(112, 42);
+            this.txtDetails.Name = "txtDetails";
+            this.txtDetails.Size = new System.Drawing.Size(100, 22);
+            this.txtDetails.TabIndex = 96;
+            // 
+            // btnExpediente
+            // 
+            this.btnExpediente.BackColor = System.Drawing.Color.Transparent;
+            this.btnExpediente.BackgroundImage = global::CapaPresentacion.Properties.Resources.modificar;
+            this.btnExpediente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExpediente.FlatAppearance.BorderSize = 0;
+            this.btnExpediente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExpediente.Location = new System.Drawing.Point(466, 41);
+            this.btnExpediente.Name = "btnExpediente";
+            this.btnExpediente.Size = new System.Drawing.Size(42, 37);
+            this.btnExpediente.TabIndex = 74;
+            this.btnExpediente.UseVisualStyleBackColor = false;
+            this.btnExpediente.Visible = false;
+            this.btnExpediente.Click += new System.EventHandler(this.btnExpediente_Click);
             // 
             // label2
             // 
@@ -330,6 +393,24 @@
             this.label2.Size = new System.Drawing.Size(33, 16);
             this.label2.TabIndex = 59;
             this.label2.Text = "Add";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(289, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 16);
+            this.label1.TabIndex = 98;
+            this.label1.Visible = false;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(365, 40);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(0, 16);
+            this.label27.TabIndex = 99;
+            this.label27.Visible = false;
             // 
             // groupBox2
             // 
@@ -436,21 +517,7 @@
             this.volverToolStripMenuItem.Text = "Volver";
             this.volverToolStripMenuItem.Click += new System.EventHandler(this.volverToolStripMenuItem_Click);
             // 
-            // txtPrice
-            // 
-            this.txtPrice.Location = new System.Drawing.Point(108, 70);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(100, 22);
-            this.txtPrice.TabIndex = 97;
-            // 
-            // txtDetails
-            // 
-            this.txtDetails.Location = new System.Drawing.Point(108, 42);
-            this.txtDetails.Name = "txtDetails";
-            this.txtDetails.Size = new System.Drawing.Size(100, 22);
-            this.txtDetails.TabIndex = 96;
-            // 
-            // FrmVentas
+            // FrmVentasModificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -477,7 +544,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmVentas";
+            this.Name = "FrmVentasModificar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " System Green Day Landscaping";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -517,7 +584,7 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker Date;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
@@ -531,7 +598,12 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem volverToolStripMenuItem;
+        private System.Windows.Forms.Button btnExpediente;
+        private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.TextBox txtDetails;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }

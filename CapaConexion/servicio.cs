@@ -6,7 +6,7 @@ using MySql.Data.MySqlClient;
 /// <summary>
 /// SistemaOpticaSantaMarta.CapaConexion
 /// </summary>
-namespace ProyectoOptica.CapaConexion
+namespace SistemaGDL.CapaConexion
 {
     /// <summary>
     /// Clase Servicio encargada de realizar la Conexion con la Base de Datos.

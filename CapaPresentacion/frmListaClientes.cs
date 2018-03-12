@@ -7,42 +7,60 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProyectoOptica.CapaIntegracion;
+using SistemaGDL.CapaIntegracion;
 
 namespace CapaPresentacion
 {
     public partial class frmListaClientes : Form
     {
+        string f1 = "";
+        string f2 = "";
+        DataTable dtRegistro = new DataTable();
+        DataSet dsRegistro = new DataSet();
         int id_usuario;
+        int id_lastbill;
         bool bandera = false;
         string usuario;
         string cargo;
-        public frmListaClientes(int id_usuario, string usuario, string cargo)
+        int id_cliente;
+        public frmListaClientes(int id_usuario, string usuario, string cargo, int id_cliente)
         {
             this.id_usuario = id_usuario;
             this.usuario = usuario;
             this.cargo = cargo;
+            this.id_cliente = id_cliente;
             InitializeComponent();
         }
 
         private void frmListaClientes_Load(object sender, EventArgs e)
         {
             CargarGridCliente();
+            CargarUltimoIdBill();
+        }
+
+        private void CargarUltimoIdBill()
+        {
+            try
+            {
+                using (GestorCliente elCliente = new GestorCliente())
+                {
+                    id_lastbill = int.Parse(elCliente.GetLastBill(id_cliente).Tables[0].Rows[0][0].ToString());
+                }
+            }
+            catch (Exception l) {
+                MessageBox.Show("Este cliente no posee registros");
+            }
         }
 
         private void CargarGridCliente()
         {
             using (GestorCliente elCliente = new GestorCliente())
             {
-                dgvCliente.DataSource = elCliente.ListarClienteSinTarjeta();
-                dgvCliente.Columns["id_cliente"].Visible = false;
-                dgvCliente.Columns["cedula"].HeaderText = "Name";
-                dgvCliente.Columns["nombre"].HeaderText = "LastName";
-                dgvCliente.Columns["apellido1"].HeaderText = "PrimerApellido";
-                dgvCliente.Columns["apellido2"].HeaderText = "SegundoApellido";
-                dgvCliente.Columns["direccion"].HeaderText = "Direccion";
-                dgvCliente.Columns["telefono"].HeaderText = "Telefono";
-                dgvCliente.Columns["deuda"].Visible = false;
+                dgvCliente.DataSource = elCliente.ListarClienteSinTarjeta(id_cliente);
+                dgvCliente.Columns["id_bill"].Visible = false;
+                dgvCliente.Columns["name"].HeaderText = "Name";
+                dgvCliente.Columns["details"].HeaderText = "Details" ;
+                dgvCliente.Columns["fecha"].HeaderText = "Date";
 
             }
         }
@@ -53,8 +71,8 @@ namespace CapaPresentacion
                 try
                 {
                     bandera = false;
-                    frmNuevaTarjeta frmNuevaTargea = new frmNuevaTarjeta(id_usuario, label_id.Text, usuario, cargo);
-                    frmNuevaTargea.Show();
+                    FrmVentasModificar FrmVentasModificar = new FrmVentasModificar(id_usuario, id_cliente, int.Parse(label_id.Text), usuario,cargo);
+                    FrmVentasModificar.Show();
                     this.SetVisibleCore(false);
                 }
                 catch (Exception u)
@@ -90,8 +108,8 @@ namespace CapaPresentacion
 
         private void volverToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmExpediente frmExpediente = new frmExpediente(id_usuario, usuario, cargo);
-            frmExpediente.Show();
+            frmCliente cust = new frmCliente(id_usuario,usuario,cargo);
+            cust.Show();
             this.SetVisibleCore(false);
         }
 
@@ -106,7 +124,135 @@ namespace CapaPresentacion
             label_id.Text = dgvCliente.CurrentRow.Cells[0].Value.ToString();
             textBox1.Text = dgvCliente.CurrentRow.Cells[2].Value.ToString();
             textBox2.Text = dgvCliente.CurrentRow.Cells[1].Value.ToString();
-            textBox3.Text = dgvCliente.CurrentRow.Cells[3].Value.ToString();
+            textBox3.Text = dgvCliente.CurrentRow.Cells[2].Value.ToString();
+            textBox4.Text = dgvCliente.CurrentRow.Cells[1].Value.ToString();
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FrmVentasModificar FrmVentasModificar = new FrmVentasModificar(id_usuario, id_cliente,id_lastbill,usuario,cargo);
+            FrmVentasModificar.Show();
+            this.SetVisibleCore(false);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (textBox5.Text != "")
+            {
+                using (GestorVenta venta = new GestorVenta())
+                {
+                    venta.InsertarNewVenta(id_cliente, id_usuario, DateTime.Parse("2018-02-01"), textBox5.Text);
+                    CargarUltimoIdBill();
+                }
+
+                FrmVentasNuevas FrmVentasNuevas = new FrmVentasNuevas(id_usuario, id_cliente, id_lastbill, usuario, cargo);
+                FrmVentasNuevas.Show();
+                this.SetVisibleCore(false);
+            }
+            else {
+                MessageBox.Show("No ha llenado el campo de detalle", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            f1 = dateTimePicker1.Text;
+            f2 = dateTimePicker2.Text;
+            consultafecha(f1, f2);
+        }
+
+        private void consultafecha(string f1, string f2)
+        {
+            string Fecha1 = "";
+            string Fecha2 = "";
+            string[] fechone;
+            string[] fechtwo;
+
+            f1 = f1.Replace("/", "-");
+            f2 = f2.Replace("/", "-");
+            fechone = f1.Split('-');
+            fechtwo = f2.Split('-');
+
+            foreach (string i in fechone)
+            {
+                Fecha1 = fechone[2] + "-" + fechone[1] + "-" + fechone[0];
+            }
+            foreach (string i in fechtwo)
+            {
+                Fecha2 = fechtwo[2] + "-" + fechtwo[1] + "-" + fechtwo[0];
+            }
+
+            using (GestorCliente customer = new GestorCliente())
+            {
+                this.dsRegistro = customer.GetBillByDate(int.Parse(id_cliente.ToString()), Fecha1, Fecha2);
+                this.dtRegistro = this.dsRegistro.Tables[0];
+                dgvCliente.DataSource = dtRegistro;
+                dgvCliente.Columns["id_bill"].Visible = false;
+                dgvCliente.Columns["name"].HeaderText = "Name";
+                dgvCliente.Columns["details"].HeaderText = "Details";
+                dgvCliente.Columns["fecha"].HeaderText = "Date";
+
+            }
+        }
+
+        private void tabControl1_MouseClick(object sender, MouseEventArgs e)
+        {
+            CargarGridCliente();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (bandera == true)
+            {
+                try
+                {
+                    bandera = false;
+                    FrmVentas FrmVentas = new FrmVentas(int.Parse(label_id.Text), id_usuario, id_cliente,usuario,cargo);
+                    FrmVentas.Show();
+                    this.SetVisibleCore(false);
+                }
+                catch (Exception u)
+                {
+                    Console.Write(u);
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("No ha elegido un cliente", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
     }
 }

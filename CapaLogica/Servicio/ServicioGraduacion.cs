@@ -3,12 +3,12 @@ using System.Data;
 //Librerias MySql
 using MySql.Data.MySqlClient;
 //Bibliotecas del sistema
-using ProyectoOptica.CapaConexion;
-using ProyectoOptica.CapaLogica.LogicaNegocio;
+using SistemaGDL.CapaConexion;
+using SistemaGDL.CapaLogica.LogicaNegocio;
 /// <summary>
 /// SistemaOpticaSantaMarta.CapaLogica.Servicio
 /// </summary>
-namespace ProyectoOptica.CapaLogica.Servicio
+namespace SistemaGDL.CapaLogica.Servicio
 {
     /// <summary>
     /// Clase que suministra los servicios al gestor de Graduación,

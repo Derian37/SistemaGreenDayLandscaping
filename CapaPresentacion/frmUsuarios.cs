@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProyectoOptica.CapaConexion;
-using ProyectoOptica.CapaIntegracion;
-using ProyectoOptica.CapaLogica.Servicio;
+using SistemaGDL.CapaConexion;
+using SistemaGDL.CapaIntegracion;
+using SistemaGDL.CapaLogica.Servicio;
 using CapaLogica.LogicaNegocio;
 
 

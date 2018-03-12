@@ -2,8 +2,8 @@
 using System.Data;
 //Librerias MySql
 using MySql.Data.MySqlClient;
-//Bibliotecas del sistemaC:\Users\Derian Chavarría\Documents\Visual Studio 2017\Projects\ProyectoOptica\CapaLogica\Servicio\ServicioExpediente.cs
-using ProyectoOptica.CapaConexion;
+//Bibliotecas del sistemaC:\Users\Derian Chavarría\Documents\Visual Studio 2017\Projects\SistemaGDL\CapaLogica\Servicio\ServicioExpediente.cs
+using SistemaGDL.CapaConexion;
 /// <summary>
 /// SistemaOpticaSantaMarta.CapaLogica.Servicio
 /// </summary>

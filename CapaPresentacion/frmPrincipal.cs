@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProyectoOptica.CapaConexion;
-using ProyectoOptica.CapaIntegracion;
-using ProyectoOptica.CapaLogica.Servicio;
+using SistemaGDL.CapaConexion;
+using SistemaGDL.CapaIntegracion;
+using SistemaGDL.CapaLogica.Servicio;
 using CapaLogica.LogicaNegocio;
 
 namespace CapaPresentacion
@@ -37,24 +37,15 @@ namespace CapaPresentacion
 
         private void btnExpediente_Click(object sender, EventArgs e)
         {
-            frmExpediente frm_Expediente = new frmExpediente(id_usuario,usuario, cargo);
-            frm_Expediente.Show();
-            this.SetVisibleCore(false);
         }
        
         private void btnCita_Click(object sender, EventArgs e)
         {
             //MessageBox.Show("¡ En Contrucción ¡", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            frmCitas frm_citas = new frmCitas(id_usuario, usuario, cargo);
-            frm_citas.Show();
-            this.Hide();
         }
 
         private void btnProductos_Click(object sender, EventArgs e)
         {
-            frmProductos frm_Productos = new frmProductos(id_usuario, usuario, cargo);
-            frm_Productos.Show();
-            this.Hide();
         }
         
         void Btn_SalirClick(object sender, EventArgs e)
@@ -80,16 +71,11 @@ namespace CapaPresentacion
 
         private void btnControlTrabajo_Click(object sender, EventArgs e)
         {
-            FrmControlTrabajo control = new FrmControlTrabajo();
-            control.Show();
-            this.Hide();
         }
 
         private void btnRecibos_Click(object sender, EventArgs e)
         {
-            FrmContenedor cont = new FrmContenedor(id_usuario, usuario, cargo);
-            cont.Show();
-            this.Hide();
+        
         }
 
         private void btnProforma_Click(object sender, EventArgs e)
@@ -125,9 +111,6 @@ namespace CapaPresentacion
 
         private void btn_Reportes_Click(object sender, EventArgs e)
         {
-            Reportes.FrmReporte rpt = new Reportes.FrmReporte(id_usuario, usuario, cargo);
-            rpt.Show();
-            this.Hide();
         }
 
         private void btnControlTrabajo_Click_1(object sender, EventArgs e)

@@ -5,30 +5,29 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class FrmVentas : Form
+    public partial class FrmVentasNuevas : Form
     {
         int id_usuario;
         int id_customer;//variable local para registrar el usuario
-        int id_bill;
+        int id_lastbill;
         string usuario;
         string cargo;
         public static int cont_fila = 0;
         public static double total;
         public static double subtotal;
         DateTime fecha = DateTime.Now;
+        double staticprice;
         public static double iva;
         private DataTable dtVentas = new DataTable();
         private DataSet dsVentas = new DataSet();
-        public FrmVentas(int id_bill, int id_usuario, int id_customer, string usuario, string cargo)
-
+        public FrmVentasNuevas(int id_usuario,int id_customer, int id_lastbill,string usuario, string cargo)
         {
             InitializeComponent();
             this.id_usuario = id_usuario;
             this.id_customer = id_customer;
-            this.id_bill = id_bill;
+            this.id_lastbill = id_lastbill;
             this.usuario = usuario;
             this.cargo = cargo;
-
         }
 
         private void FrmFacturacion_Load(object sender, EventArgs e)
@@ -38,26 +37,21 @@ namespace CapaPresentacion
             CalcularTotales();
             label16.Text= fecha.ToString("d");
         }
-
-        private void CargarDatosCliente()
+        public Double amount()
         {
-            using (GestorCliente customer = new GestorCliente())
+            double amount = double.Parse(txtPrice.Text);
+            for (int i = 0; i <= dgv_ventas.RowCount - 1; i++)
             {
-                label21.Text = (string)customer.ConsultarCliente(id_customer).Tables[0].Rows[0][0];
-                label23.Text = (string)customer.ConsultarCliente(id_customer).Tables[0].Rows[0][1];
-                label25.Text = (string)customer.ConsultarCliente(id_customer).Tables[0].Rows[0][2];
+                amount = amount + Convert.ToDouble(dgv_ventas.Rows[i].Cells[3].Value);
             }
+            return amount;
         }
-
-        /// <summary>
-        /// 
-        /// </summary>
         private void CargarFactura()
         {
-          
+
             using (GestorVenta bills = new GestorVenta())
             {
-                dgv_ventas.DataSource = bills.ConsultarVentaE(id_bill);
+                dgv_ventas.DataSource = bills.ConsultarVentaE(id_lastbill);
 
                 dgv_ventas.Columns["id_bill"].Visible = false;
                 dgv_ventas.Columns["fecha"].HeaderText = "fecha";
@@ -67,6 +61,18 @@ namespace CapaPresentacion
 
             }
         }
+        private void CargarDatosCliente()
+        {
+            using (GestorCliente customer = new GestorCliente())
+            {
+                label21.Text = (string)customer.ConsultarCliente(id_customer).Tables[0].Rows[0][0];
+                label23.Text = (string)customer.ConsultarCliente(id_customer).Tables[0].Rows[0][1];
+                label25.Text = (string)customer.ConsultarCliente(id_customer).Tables[0].Rows[0][2];
+                staticprice = (double)customer.ConsultarCliente(id_customer).Tables[0].Rows[0][3];
+            }
+        }
+
+       
         
         private void FrmFacturacion_KeyDown(object sender, KeyEventArgs e)
         {
@@ -95,34 +101,7 @@ namespace CapaPresentacion
 
         private void AgregarNombreProducto()
         {
-            //try
-            //{
-            //    using (GestorProducto producto = new GestorProducto())
-            //    {
-            //        dsVentas = producto.ConsultarProductoCodigo(txt_codigoProducto.Text);
-            //        dtVentas = dsVentas.Tables[0];
-
-            //        id_producto = int.Parse(dtVentas.Rows[0]["id_productos"].ToString());
-            //        codigoProd = dtVentas.Rows[0]["codigo"].ToString();
-            //        monto = float.Parse(dtVentas.Rows[0]["monto"].ToString());
-            //        cantidad = int.Parse(dtVentas.Rows[0]["cantidad"].ToString());
-            //        tipo = dtVentas.Rows[0]["iva"].ToString();
-
-            //        if (cantidad == 0)
-            //        {
-            //            MessageBox.Show("Existencias del Producto agotadas", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Error);
-            //        }
-            //        else
-            //        {
-            //            lbl_nombreProducto.Text = dtVentas.Rows[0]["nombre"].ToString();
-            //            txt_cantidad.Focus();
-            //        }
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Digite un código de producto valido"+ex, caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Error);
-            //}
+           
         }
 
         private void btn_buscarProducto_Click(object sender, EventArgs e)
@@ -314,16 +293,41 @@ namespace CapaPresentacion
 
         private void LimpiarCampos()
         {
-            //numRecibo = 0;
-            //txt_nombreCliente.Text = "";
-            //lbl_subtotal.Text = "";
-            //lbl_iva.Text = "";
-            //lbl_total.Text = "";
-            //dgv_ventas.Rows.Clear();
+            txtDetails.Text = "";
+            txtPrice.Text = "";
+            txtPrice.Enabled = true;
         }
 
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
+            double precio = 0;
+
+            if (radioButton1.Checked)
+            {
+               
+                precio = staticprice;
+            }else
+            {
+                precio = double.Parse(txtPrice.Text);
+            }
+            using (GestorVenta insertbills = new GestorVenta())
+            {
+                double amount = precio;
+                for (int i = 0; i <= dgv_ventas.RowCount - 1; i++)
+                {
+                    amount = amount + Convert.ToDouble(dgv_ventas.Rows[i].Cells[3].Value);
+                }
+                 insertbills.InsertarVenta(id_lastbill, Date.Value,txtDetails.Text, precio, amount);
+                
+               
+                MessageBox.Show("Sirve", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+                CargarFactura();
+                CalcularTotales();
+                LimpiarCampos();
+            }
+
+
+
             //int cant = int.Parse(txt_cantidad.Text);
             //if (codigoProd != "" && cant > 0 && cant <= cantidad)
             //{
@@ -390,12 +394,7 @@ namespace CapaPresentacion
         private void CalcularTotales()
         {
             double total = 0;
-            double amount = 0;
-            for (int i = 0; i <= dgv_ventas.RowCount - 1; i++)
-            {
-                amount = amount + Convert.ToDouble(dgv_ventas.Rows[i].Cells[3].Value);
-                dgv_ventas.Rows[i].Cells[4].Value = amount.ToString();
-            }
+         
             for (int i = 0; i <= dgv_ventas.RowCount - 1; i++)
             {
                 total = total + Convert.ToDouble(dgv_ventas.Rows[i].Cells[3].Value);
@@ -460,11 +459,70 @@ namespace CapaPresentacion
             this.Close();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Guardar();
+        }
+
+        private void Guardar()
+        {
+            using (GestorVenta insertnewsavebills = new GestorVenta())
+            {
+                insertnewsavebills.InsertNewSaveBills(id_customer, fecha.Date,id_lastbill);
+                MessageBox.Show("Sirve", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+                frmListaClientes volver = new frmListaClientes(id_usuario,usuario,cargo,id_customer);
+                volver.Show();
+                this.SetVisibleCore(false);
+            }
+        }
+
         private void volverToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListaClientes volver = new frmListaClientes(id_usuario, usuario, cargo, id_customer);
             volver.Show();
             this.SetVisibleCore(false);
+        }
+
+        private void btnExpediente_Click(object sender, EventArgs e)
+        {
+            if (txtDetails.Text != "" && txtPrice.Text != "")
+            {
+                using (GestorVenta laVenta = new GestorVenta())
+                {
+
+
+                    laVenta.ModifyBill(int.Parse(label1.Text), int.Parse(variable.Text), Date.Value, txtDetails.Text, double.Parse(txtPrice.Text), amount());
+                    MessageBox.Show("Sirve", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+                    CargarFactura();
+                    LimpiarCampos();
+                    btnExpediente.Visible = false;
+                    label26.Visible = false;
+                }
+
+
+            }
+            else
+            {
+                MessageBox.Show("¡ Debe rellenar todos los espacios ! ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            CalcularTotales();
+            LimpiarCampos();
+        }
+
+        private void dgv_ventas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            label1.Text = dgv_ventas.CurrentRow.Cells[5].Value.ToString();
+            variable.Text = dgv_ventas.CurrentRow.Cells[0].Value.ToString();
+            Date.Text = dgv_ventas.CurrentRow.Cells[1].Value.ToString();
+            txtDetails.Text = dgv_ventas.CurrentRow.Cells[2].Value.ToString();
+            txtPrice.Text = dgv_ventas.CurrentRow.Cells[3].Value.ToString();
+            btnExpediente.Visible = true;
+            label26.Visible = true;
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            txtPrice.Enabled = false;
         }
     }
 }
