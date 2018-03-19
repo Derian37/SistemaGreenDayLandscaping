@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVentasModificar));
             this.dgv_ventas = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
@@ -71,6 +71,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.volverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label28 = new System.Windows.Forms.Label();
+            this.btn_Print = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ventas)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -84,14 +86,14 @@
             this.dgv_ventas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_ventas.BackgroundColor = System.Drawing.Color.White;
             this.dgv_ventas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_ventas.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_ventas.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_ventas.Location = new System.Drawing.Point(340, 208);
             this.dgv_ventas.Name = "dgv_ventas";
             this.dgv_ventas.ReadOnly = true;
@@ -193,6 +195,7 @@
             this.lbl_subtotal.Name = "lbl_subtotal";
             this.lbl_subtotal.Size = new System.Drawing.Size(116, 30);
             this.lbl_subtotal.TabIndex = 45;
+            this.lbl_subtotal.Text = "0";
             this.lbl_subtotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_iva
@@ -204,6 +207,7 @@
             this.lbl_iva.Name = "lbl_iva";
             this.lbl_iva.Size = new System.Drawing.Size(116, 30);
             this.lbl_iva.TabIndex = 46;
+            this.lbl_iva.Text = "0";
             this.lbl_iva.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_total
@@ -414,7 +418,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label28);
             this.groupBox2.Controls.Add(this.label25);
+            this.groupBox2.Controls.Add(this.btn_Print);
             this.groupBox2.Controls.Add(this.label24);
             this.groupBox2.Controls.Add(this.label23);
             this.groupBox2.Controls.Add(this.label22);
@@ -517,6 +523,30 @@
             this.volverToolStripMenuItem.Text = "Volver";
             this.volverToolStripMenuItem.Click += new System.EventHandler(this.volverToolStripMenuItem_Click);
             // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(1293, 150);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(34, 16);
+            this.label28.TabIndex = 105;
+            this.label28.Text = "Print";
+            // 
+            // btn_Print
+            // 
+            this.btn_Print.BackColor = System.Drawing.SystemColors.Window;
+            this.btn_Print.BackgroundImage = global::CapaPresentacion.Properties.Resources.print_64;
+            this.btn_Print.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Print.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Print.Location = new System.Drawing.Point(1280, 111);
+            this.btn_Print.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Print.Name = "btn_Print";
+            this.btn_Print.Size = new System.Drawing.Size(50, 39);
+            this.btn_Print.TabIndex = 104;
+            this.btn_Print.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Print.UseVisualStyleBackColor = false;
+            this.btn_Print.Click += new System.EventHandler(this.btn_Print_Click);
+            // 
             // FrmVentasModificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -605,5 +635,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Button btn_Print;
     }
 }

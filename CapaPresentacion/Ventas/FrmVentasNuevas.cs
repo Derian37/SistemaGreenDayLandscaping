@@ -295,20 +295,28 @@ namespace CapaPresentacion
         {
             txtDetails.Text = "";
             txtPrice.Text = "";
+            radioButton1.Checked = false;
             txtPrice.Enabled = true;
         }
 
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
+    
             double precio = 0;
+            try
+            {
+                if (radioButton1.Checked)
+                {
 
-            if (radioButton1.Checked)
-            {
-               
-                precio = staticprice;
-            }else
-            {
-                precio = double.Parse(txtPrice.Text);
+                    precio = staticprice;
+                }
+                else
+                {
+                    precio = double.Parse(txtPrice.Text);
+                }
+            }
+            catch (Exception o) {
+                MessageBox.Show("Ingresar un Precio");
             }
             using (GestorVenta insertbills = new GestorVenta())
             {
@@ -317,76 +325,13 @@ namespace CapaPresentacion
                 {
                     amount = amount + Convert.ToDouble(dgv_ventas.Rows[i].Cells[3].Value);
                 }
-                 insertbills.InsertarVenta(id_lastbill, Date.Value,txtDetails.Text, precio, amount);
-                
-               
+                insertbills.InsertarVenta(id_lastbill, Date.Value, txtDetails.Text, precio, amount);
+
                 MessageBox.Show("Sirve", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
                 CargarFactura();
                 CalcularTotales();
                 LimpiarCampos();
-            }
-
-
-
-            //int cant = int.Parse(txt_cantidad.Text);
-            //if (codigoProd != "" && cant > 0 && cant <= cantidad)
-            //{
-            //    bool existe = false;
-            //    int num_fila = 0;
-
-            //    if (cont_fila == 0)
-            //    {
-            //        float total = cant * monto;
-            //        dgv_ventas.Rows.Add(codigoProd, lbl_nombreProducto.Text, cant, tipo, monto, total);
-            //        cont_fila++;
-            //    }
-            //    else
-            //    {
-            //        foreach (DataGridViewRow fila in dgv_ventas.Rows)
-            //        {
-            //            if (Convert.ToString(fila.Cells[0].Value) == codigoProd)
-            //            {
-            //                existe = true;
-            //                num_fila = fila.Index;
-            //            }
-            //        }
-            //        if (existe == true)
-            //        {
-            //            dgv_ventas.Rows[num_fila].Cells[2].Value = (Convert.ToDouble(txt_cantidad.Text) + Convert.ToDouble(dgv_ventas.Rows[num_fila].Cells[2].Value)).ToString();
-            //            double total = Convert.ToDouble(dgv_ventas.Rows[num_fila].Cells[2].Value) * Convert.ToDouble(dgv_ventas.Rows[num_fila].Cells[4].Value);
-            //            dgv_ventas.Rows[num_fila].Cells[4].Value = total;
-            //        }
-            //        else
-            //        {
-            //            float total = cant * monto;
-            //            dgv_ventas.Rows.Add(codigoProd, lbl_nombreProducto.Text, cant, tipo, monto, total);
-            //            cont_fila++;
-            //        }
-            //    }
-            //    CalcularTotales();
-            //}
-            //else if (codigoProd == "")
-            //{
-            //    MessageBox.Show("Debe agregar un producto primero", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Error);
-            //    txt_codigoProducto.Focus();
-            //}
-            //else if (cant == 0)
-            //{
-            //    MessageBox.Show("Debe agregar una cantidad", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Error);
-            //    txt_cantidad.Focus();
-            //}
-            //else if (cant > cantidad)
-            //{
-            //    MessageBox.Show("Solo hay "+cantidad+" unidades en existencia de ese producto", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Error);
-            //    txt_cantidad.Focus();
-            //}
-            //txt_codigoProducto.Text = "";
-            //lbl_nombreProducto.Text = "";
-            //txt_cantidad.Text = "0";
-            //codigoProd = "";
-            //monto = 0;
-            //cantidad = 0;
-            //txt_codigoProducto.Focus();
+             }
         }
         /// <summary>
         /// Calcula el total sumando todos los subtotales y el impuesto
@@ -523,6 +468,31 @@ namespace CapaPresentacion
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             txtPrice.Enabled = false;
+        }
+
+        private void btn_Print_Click(object sender, EventArgs e)
+        {
+            Imprimir();
+        }
+
+        private void Imprimir()
+        {
+            double subtotal = double.Parse(lbl_subtotal.Text);
+            double tax = double.Parse(lbl_iva.Text);
+            double total = double.Parse(lbl_total.Text);
+            string nombre = label21.Text;
+            string apellido = label23.Text;
+
+            try
+            {
+                frmReporte reporte = new frmReporte(dgv_ventas, subtotal, tax, total, nombre, apellido);
+                reporte.Show();
+                this.SetVisibleCore(false);
+            }
+            catch (Exception j) {
+                MessageBox.Show(j.ToString());
+            }
+         
         }
     }
 }

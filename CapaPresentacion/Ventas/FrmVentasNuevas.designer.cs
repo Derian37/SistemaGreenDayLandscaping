@@ -63,8 +63,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label27 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
+            this.btn_Print = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -191,6 +193,7 @@
             this.lbl_subtotal.Name = "lbl_subtotal";
             this.lbl_subtotal.Size = new System.Drawing.Size(116, 30);
             this.lbl_subtotal.TabIndex = 45;
+            this.lbl_subtotal.Text = "0";
             this.lbl_subtotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_iva
@@ -202,6 +205,7 @@
             this.lbl_iva.Name = "lbl_iva";
             this.lbl_iva.Size = new System.Drawing.Size(116, 30);
             this.lbl_iva.TabIndex = 46;
+            this.lbl_iva.Text = "0";
             this.lbl_iva.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_total
@@ -428,8 +432,10 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label27);
             this.groupBox2.Controls.Add(this.label25);
             this.groupBox2.Controls.Add(this.label24);
+            this.groupBox2.Controls.Add(this.btn_Print);
             this.groupBox2.Controls.Add(this.label23);
             this.groupBox2.Controls.Add(this.label22);
             this.groupBox2.Controls.Add(this.label21);
@@ -446,6 +452,15 @@
             this.groupBox2.Size = new System.Drawing.Size(1342, 171);
             this.groupBox2.TabIndex = 60;
             this.groupBox2.TabStop = false;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(1302, 138);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(34, 16);
+            this.label27.TabIndex = 103;
+            this.label27.Text = "Print";
             // 
             // label25
             // 
@@ -464,6 +479,21 @@
             this.label24.Size = new System.Drawing.Size(65, 16);
             this.label24.TabIndex = 59;
             this.label24.Text = "Address: ";
+            // 
+            // btn_Print
+            // 
+            this.btn_Print.BackColor = System.Drawing.SystemColors.Window;
+            this.btn_Print.BackgroundImage = global::CapaPresentacion.Properties.Resources.print_64;
+            this.btn_Print.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Print.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Print.Location = new System.Drawing.Point(1289, 99);
+            this.btn_Print.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Print.Name = "btn_Print";
+            this.btn_Print.Size = new System.Drawing.Size(50, 39);
+            this.btn_Print.TabIndex = 102;
+            this.btn_Print.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Print.UseVisualStyleBackColor = false;
+            this.btn_Print.Click += new System.EventHandler(this.btn_Print_Click);
             // 
             // label23
             // 
@@ -595,5 +625,7 @@
         private System.Windows.Forms.Button btnExpediente;
         private System.Windows.Forms.Label variable;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Button btn_Print;
     }
 }

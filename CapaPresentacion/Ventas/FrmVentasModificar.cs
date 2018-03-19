@@ -124,6 +124,7 @@ namespace CapaPresentacion
         {
             txtDetails.Text = "";
             txtPrice.Text = "";
+            radioButton1.Checked = false;
             txtPrice.Enabled = true;
         }
 
@@ -294,6 +295,31 @@ namespace CapaPresentacion
         private void label26_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_Print_Click(object sender, EventArgs e)
+        {
+            Imprimir();
+        }
+
+        private void Imprimir()
+        {
+            double subtotal = double.Parse(lbl_subtotal.Text);
+            double tax = double.Parse(lbl_iva.Text);
+            double total = double.Parse(lbl_total.Text);
+            string nombre = label21.Text;
+            string apellido = label23.Text;
+
+            try
+            {
+                frmReporte reporte = new frmReporte(dgv_ventas, subtotal, tax, total, nombre, apellido);
+                reporte.Show();
+                this.SetVisibleCore(false);
+            }
+            catch (Exception j)
+            {
+                MessageBox.Show(j.ToString());
+            }
         }
     }
 }
