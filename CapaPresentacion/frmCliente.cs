@@ -266,7 +266,7 @@ namespace CapaPresentacion
             txtTelephone.Text = dgvCliente.CurrentRow.Cells[3].Value.ToString();
             txtAddress.Text = dgvCliente.CurrentRow.Cells[4].Value.ToString();
             txtPostalCode.Text = dgvCliente.CurrentRow.Cells[5].Value.ToString();
-            //comboBox1.DataSource = dgvCliente.CurrentRow.Cells[6].Value.ToString();
+            comboBox1.Text = dgvCliente.CurrentRow.Cells[6].Value.ToString();
             btnGuardar.Visible = false;
             label1.Visible = false;
             btnModificar.Visible = true;
