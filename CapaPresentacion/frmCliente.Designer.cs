@@ -43,6 +43,7 @@
             this.volverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgvCliente = new System.Windows.Forms.DataGridView();
             this.gbxDatos = new System.Windows.Forms.GroupBox();
+            this.Cancel = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,7 +54,6 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.Cancel = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
             this.gbxDatos.SuspendLayout();
@@ -218,6 +218,18 @@
             this.gbxDatos.TabStop = false;
             this.gbxDatos.Enter += new System.EventHandler(this.gbxDatos_Enter);
             // 
+            // Cancel
+            // 
+            this.Cancel.BackgroundImage = global::CapaPresentacion.Properties.Resources.delete_64;
+            this.Cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Cancel.Location = new System.Drawing.Point(1192, 11);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(41, 36);
+            this.Cancel.TabIndex = 49;
+            this.Cancel.UseVisualStyleBackColor = true;
+            this.Cancel.Visible = false;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
+            // 
             // comboBox1
             // 
             this.comboBox1.DisplayMember = "e";
@@ -225,24 +237,25 @@
             this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "40,00",
-            "45,00",
-            "50,00",
-            "55,00",
-            "60,00",
-            "65,00",
-            "70,00",
-            "75,00",
-            "80,00",
-            "85,00",
-            "90,00",
-            "95,00",
-            "40,00",
-            "100,00"});
+            "00",
+            "40",
+            "45",
+            "50",
+            "55",
+            "60",
+            "65",
+            "70",
+            "75",
+            "80",
+            "85",
+            "90",
+            "95",
+            "100"});
             this.comboBox1.Location = new System.Drawing.Point(904, 94);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 27);
             this.comboBox1.TabIndex = 48;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -340,18 +353,6 @@
             this.label5.Size = new System.Drawing.Size(87, 15);
             this.label5.TabIndex = 81;
             this.label5.Text = "Customers:";
-            // 
-            // Cancel
-            // 
-            this.Cancel.BackgroundImage = global::CapaPresentacion.Properties.Resources.delete_64;
-            this.Cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Cancel.Location = new System.Drawing.Point(1192, 11);
-            this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(41, 36);
-            this.Cancel.TabIndex = 49;
-            this.Cancel.UseVisualStyleBackColor = true;
-            this.Cancel.Visible = false;
-            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // frmCliente
             // 
