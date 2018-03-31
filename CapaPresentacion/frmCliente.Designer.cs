@@ -52,6 +52,8 @@
             this.lblCode = new System.Windows.Forms.Label();
             this.btnModificar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Cancel = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
             this.gbxDatos.SuspendLayout();
@@ -184,9 +186,11 @@
             this.dgvCliente.Size = new System.Drawing.Size(1233, 321);
             this.dgvCliente.TabIndex = 76;
             this.dgvCliente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellClick);
+            this.dgvCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellContentClick);
             // 
             // gbxDatos
             // 
+            this.gbxDatos.Controls.Add(this.Cancel);
             this.gbxDatos.Controls.Add(this.comboBox1);
             this.gbxDatos.Controls.Add(this.label4);
             this.gbxDatos.Controls.Add(this.label3);
@@ -327,12 +331,35 @@
             this.label2.Visible = false;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(44, 345);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(87, 15);
+            this.label5.TabIndex = 81;
+            this.label5.Text = "Customers:";
+            // 
+            // Cancel
+            // 
+            this.Cancel.BackgroundImage = global::CapaPresentacion.Properties.Resources.delete_64;
+            this.Cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Cancel.Location = new System.Drawing.Point(1192, 11);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(41, 36);
+            this.Cancel.TabIndex = 49;
+            this.Cancel.UseVisualStyleBackColor = true;
+            this.Cancel.Visible = false;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
+            // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1309, 696);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.gbxDatos);
             this.Controls.Add(this.dgvCliente);
             this.Controls.Add(this.menuStrip1);
@@ -377,5 +404,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button Cancel;
+        private System.Windows.Forms.Label label5;
     }
 }

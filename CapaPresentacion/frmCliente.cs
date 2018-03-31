@@ -77,6 +77,7 @@ namespace CapaPresentacion
                 btnGuardar.Visible = true;
                 label1.Visible = true;
                 btnModificar.Visible = false;
+                Cancel.Visible = false;
                 label2.Visible = false;
                 button1.Visible = false;
                 label3.Visible = false;
@@ -269,6 +270,7 @@ namespace CapaPresentacion
             btnGuardar.Visible = false;
             label1.Visible = false;
             btnModificar.Visible = true;
+            Cancel.Visible = true;
             label2.Visible = true;
             button1.Visible = true;
             label3.Visible = true;
@@ -296,6 +298,23 @@ namespace CapaPresentacion
                 custormeslist.Show();
                 this.SetVisibleCore(false);
             }
+        }
+
+        private void dgvCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+            btnGuardar.Visible = true;
+            label1.Visible = true;
+            btnModificar.Visible = false;
+            Cancel.Visible = false;
+            label2.Visible = false;
+            button1.Visible = false;
+            label3.Visible = false;
+            limpiar();
         }
 
         /* private void cbxOjo_SelectedIndexChanged(object sender, EventArgs e)
