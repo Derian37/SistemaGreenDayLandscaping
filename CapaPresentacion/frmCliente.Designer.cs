@@ -111,38 +111,43 @@
             // 
             // txtPostalCode
             // 
+            this.txtPostalCode.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPostalCode.Location = new System.Drawing.Point(549, 96);
             this.txtPostalCode.Name = "txtPostalCode";
-            this.txtPostalCode.Size = new System.Drawing.Size(190, 23);
+            this.txtPostalCode.Size = new System.Drawing.Size(190, 26);
             this.txtPostalCode.TabIndex = 28;
             // 
             // txtAddress
             // 
+            this.txtAddress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.Location = new System.Drawing.Point(169, 96);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(190, 23);
+            this.txtAddress.Size = new System.Drawing.Size(190, 26);
             this.txtAddress.TabIndex = 27;
             // 
             // txtTelephone
             // 
+            this.txtTelephone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelephone.Location = new System.Drawing.Point(904, 29);
             this.txtTelephone.Name = "txtTelephone";
-            this.txtTelephone.Size = new System.Drawing.Size(190, 23);
+            this.txtTelephone.Size = new System.Drawing.Size(190, 26);
             this.txtTelephone.TabIndex = 26;
             this.txtTelephone.TextChanged += new System.EventHandler(this.txtDireccion_TextChanged);
             // 
             // txtLatName
             // 
+            this.txtLatName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLatName.Location = new System.Drawing.Point(549, 28);
             this.txtLatName.Name = "txtLatName";
-            this.txtLatName.Size = new System.Drawing.Size(190, 23);
+            this.txtLatName.Size = new System.Drawing.Size(190, 26);
             this.txtLatName.TabIndex = 24;
             // 
             // txtName
             // 
+            this.txtName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(169, 28);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(190, 23);
+            this.txtName.Size = new System.Drawing.Size(190, 26);
             this.txtName.TabIndex = 23;
             // 
             // menuStrip1
@@ -213,6 +218,7 @@
             // 
             this.comboBox1.DisplayMember = "e";
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "40,00",
@@ -231,7 +237,7 @@
             "100,00"});
             this.comboBox1.Location = new System.Drawing.Point(904, 94);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 25);
+            this.comboBox1.Size = new System.Drawing.Size(121, 27);
             this.comboBox1.TabIndex = 48;
             // 
             // label4
