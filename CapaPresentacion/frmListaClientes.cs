@@ -239,8 +239,8 @@ namespace CapaPresentacion
                 try
                 {
                     bandera = false;
-                    FrmVentas FrmVentas = new FrmVentas(int.Parse(label_id.Text), id_usuario, id_cliente,usuario,cargo);
-                    FrmVentas.Show();
+                    FrmVentasModificar FrmVentasModificar = new FrmVentasModificar(id_usuario, id_cliente, int.Parse(label_id.Text), usuario, cargo);
+                    FrmVentasModificar.Show();
                     this.SetVisibleCore(false);
                 }
                 catch (Exception u)
