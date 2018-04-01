@@ -17,8 +17,9 @@ namespace CapaPresentacion
         string usuario;
         string cargo;
         int id_cliente;
+        string address;
 
-        public frmReporte(DataGridView NuevoData,double subtotal, double tax, double total,string name, string lastname, int id_usuario, string usuario, string cargo, int id_cliente)
+        public frmReporte(DataGridView NuevoData,double subtotal, double tax, double total,string name, string lastname, int id_usuario, string usuario, string cargo, int id_cliente,string address)
         {
             this.id_usuario = id_usuario;
             this.usuario = usuario;
@@ -30,6 +31,7 @@ namespace CapaPresentacion
             this.total = total;
             this.name = name;
             this.lastname = lastname;
+            this.address = address;
 
 
             InitializeComponent();
@@ -53,7 +55,8 @@ namespace CapaPresentacion
                                                               tax,
                                                               total,
                                                               name,
-                                                              lastname});
+                                                              lastname,
+                                                              address});
             }
 
             Report reporte = new Report();
@@ -68,6 +71,11 @@ namespace CapaPresentacion
             frmListaClientes cust = new frmListaClientes(id_usuario, usuario, cargo,id_cliente);
             cust.Show();
             this.SetVisibleCore(false);
+        }
+
+        private void frmReporte_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

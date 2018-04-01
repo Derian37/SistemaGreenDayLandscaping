@@ -297,6 +297,8 @@ namespace CapaPresentacion {
             
             private global::System.Data.DataColumn columnLastName;
             
+            private global::System.Data.DataColumn columnAddress;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public DtDatosDataTable() {
@@ -404,6 +406,14 @@ namespace CapaPresentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn AddressColumn {
+                get {
+                    return this.columnAddress;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -439,7 +449,7 @@ namespace CapaPresentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DtDatosRow AddDtDatosRow(string Date, string Details, string Price, string Amount, string _Sub_total, string Tax, string Total, string Name, string LastName) {
+            public DtDatosRow AddDtDatosRow(string Date, string Details, string Price, string Amount, string _Sub_total, string Tax, string Total, string Name, string LastName, string Address) {
                 DtDatosRow rowDtDatosRow = ((DtDatosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Date,
@@ -450,7 +460,8 @@ namespace CapaPresentacion {
                         Tax,
                         Total,
                         Name,
-                        LastName};
+                        LastName,
+                        Address};
                 rowDtDatosRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDtDatosRow);
                 return rowDtDatosRow;
@@ -482,6 +493,7 @@ namespace CapaPresentacion {
                 this.columnTotal = base.Columns["Total"];
                 this.columnName = base.Columns["Name"];
                 this.columnLastName = base.Columns["LastName"];
+                this.columnAddress = base.Columns["Address"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -507,6 +519,8 @@ namespace CapaPresentacion {
                 base.Columns.Add(this.columnName);
                 this.columnLastName = new global::System.Data.DataColumn("LastName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLastName);
+                this.columnAddress = new global::System.Data.DataColumn("Address", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAddress);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -793,6 +807,22 @@ namespace CapaPresentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Address {
+                get {
+                    try {
+                        return ((string)(this[this.tableDtDatos.AddressColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Address\' de la tabla \'DtDatos\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDtDatos.AddressColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsDateNull() {
                 return this.IsNull(this.tableDtDatos.DateColumn);
             }
@@ -897,6 +927,18 @@ namespace CapaPresentacion {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetLastNameNull() {
                 this[this.tableDtDatos.LastNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsAddressNull() {
+                return this.IsNull(this.tableDtDatos.AddressColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetAddressNull() {
+                this[this.tableDtDatos.AddressColumn] = global::System.Convert.DBNull;
             }
         }
         

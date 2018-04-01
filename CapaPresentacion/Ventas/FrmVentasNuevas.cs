@@ -513,7 +513,7 @@ namespace CapaPresentacion
 
             try
             {
-                frmReporte reporte = new frmReporte(dgv_ventas, subtotal, tax, total, nombre, apellido, id_usuario, usuario, cargo, id_cliente);
+                frmReporte reporte = new frmReporte(dgv_ventas, subtotal, tax, total, nombre, apellido, id_usuario, usuario, cargo, id_cliente,label25.Text);
                 reporte.Show();
                 this.SetVisibleCore(false);
             }
