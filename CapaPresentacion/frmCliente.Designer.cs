@@ -237,6 +237,10 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "00",
+            "20",
+            "25",
+            "30",
+            "35",
             "40",
             "45",
             "50",
