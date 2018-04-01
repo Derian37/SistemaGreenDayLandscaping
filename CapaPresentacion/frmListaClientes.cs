@@ -71,7 +71,7 @@ namespace CapaPresentacion
                 try
                 {
                     bandera = false;
-                    FrmVentasModificar FrmVentasModificar = new FrmVentasModificar(id_usuario, id_cliente, int.Parse(label_id.Text), usuario,cargo);
+                    FrmVentasModificar FrmVentasModificar = new FrmVentasModificar(id_usuario, id_cliente, int.Parse(label_id.Text), usuario,cargo, id_cliente);
                     FrmVentasModificar.Show();
                     this.SetVisibleCore(false);
                 }
@@ -161,7 +161,7 @@ namespace CapaPresentacion
 
         private void button4_Click(object sender, EventArgs e)
         {
-            FrmVentasModificar FrmVentasModificar = new FrmVentasModificar(id_usuario, id_cliente,id_lastbill,usuario,cargo);
+            FrmVentasModificar FrmVentasModificar = new FrmVentasModificar(id_usuario, id_cliente,id_lastbill,usuario,cargo, id_cliente);
             FrmVentasModificar.Show();
             this.SetVisibleCore(false);
         }
@@ -176,7 +176,7 @@ namespace CapaPresentacion
                     CargarUltimoIdBill();
                 }
 
-                FrmVentasNuevas FrmVentasNuevas = new FrmVentasNuevas(id_usuario, id_cliente, id_lastbill, usuario, cargo);
+                FrmVentasNuevas FrmVentasNuevas = new FrmVentasNuevas(id_usuario, id_cliente, id_lastbill, usuario, cargo, id_cliente);
                 FrmVentasNuevas.Show();
                 this.SetVisibleCore(false);
             }
@@ -239,7 +239,7 @@ namespace CapaPresentacion
                 try
                 {
                     bandera = false;
-                    FrmVentasModificar FrmVentasModificar = new FrmVentasModificar(id_usuario, id_cliente, int.Parse(label_id.Text), usuario, cargo);
+                    FrmVentasModificar FrmVentasModificar = new FrmVentasModificar(id_usuario, id_cliente, int.Parse(label_id.Text), usuario, cargo, id_cliente);
                     FrmVentasModificar.Show();
                     this.SetVisibleCore(false);
                 }

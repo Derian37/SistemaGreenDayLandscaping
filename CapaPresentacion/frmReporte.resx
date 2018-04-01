@@ -117,4 +117,27 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="volverToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAx1JREFUOE99kntMjXEYx59ze8+1o3J6OyeRao5DRi6xHOXSKWuJLm6j3FI2RMRm
+        xs5Sh4ROp6Hmfkl0OZFyG8aMmpoia5bYiEls8p8dJ75+TqeZuXy2735/PN/v87zvs4f+wEyc327FnPCz
+        Iwvjr06rnXst4rLxnKF4iEWeRNmkdLv+Dm8WmeY2hj/a9SULh5GPIyjEUVhRggJYHFuQ2BzZzudxiW77
+        7/jvU6xMeRftzEYaNvStwLqvKVjlSHZpvTMVG7+txFakY9nHWAQUKbPdsX40O8UR8R0TnQu7ZyOxKwoJ
+        XTMR99oIa68Fts/5SH5r6tcbExb3xCL+xWSwL5nXn84gybg6vsnYasCk+3pMbAhGaMNwnOwuxQBxjyMw
+        pcmAqU0hmNI4CtNaQjC23rfTZy2pyDdXNGPkdQ/4lEnhXc5BV61A+etTrmCv4xMym1djsF0E3s5BUyWG
+        tkoG3QUFguqU0FpE8ynAJt2lPSACt43A7/dE7Uu7K9z3vQ8H2w7AVBeJhGsxSLwSg3mXoxFcwkOWQ/De
+        I4BfEVdKQUXyM14ZAtBSgvXOXlf4f9zqvAHhWoLHeoJ/oeQKBe6Tn1ZPF0IQSpieZcSH3h6X0fnNifq2
+        WpQ9PAt7ywVUN1egsuE8Um2LIIwjKEwC+OdK6mlYoczML5FAHEYgIyEsazy6Pr5yNalrvQivNSrQIlZb
+        wDSHKYogCSeoZwsxZA93iLS54shgixxcNEE2nxmYQrbr0fH+mavJkzetUGfKIE0nyFcwsWZcDEG3mfu5
+        xKSfpyvWH1c1ajKFkLI9KNexJkwjLENx98VtXGqvhno7B3k2q2WyIayJOk2AoIOKDt+B0/bJERtDytQO
+        z61swiaCagebksdeG1MxCxaw18z+ewtbHqsHH1HAN4+Ld4UH8MuXLR9TM8ihLRZCbSX4VapguKnD6Nv+
+        CKj1gmeJEBqrAPpyJXQF8ix37Hf4HGmUoWJQU+g9b5jaR2Nx9yws7YlG7PPxmPCAx4gKj6e/TvhfsNPW
+        5nGx+mOa/WH24fbJNYE1+hM+Np1FnqAzk8LtckP0A+bFtZMdxi94AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

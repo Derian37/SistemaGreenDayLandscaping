@@ -13,9 +13,17 @@ namespace CapaPresentacion
         double total;
         string name;
         string lastname;
+        int id_usuario;
+        string usuario;
+        string cargo;
+        int id_cliente;
 
-        public frmReporte(DataGridView NuevoData,double subtotal, double tax, double total,string name, string lastname)
+        public frmReporte(DataGridView NuevoData,double subtotal, double tax, double total,string name, string lastname, int id_usuario, string usuario, string cargo, int id_cliente)
         {
+            this.id_usuario = id_usuario;
+            this.usuario = usuario;
+            this.cargo = cargo;
+            this.id_cliente = id_cliente;
             this.temporal = NuevoData;
             this.subtotal = subtotal;
             this.tax = tax;
@@ -53,6 +61,13 @@ namespace CapaPresentacion
             reporte.SetDataSource(tempreporte);
 
             crv_Report.ReportSource = reporte;
+        }
+
+        private void volverToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListaClientes cust = new frmListaClientes(id_usuario, usuario, cargo,id_cliente);
+            cust.Show();
+            this.SetVisibleCore(false);
         }
     }
 }

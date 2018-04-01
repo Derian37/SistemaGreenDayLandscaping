@@ -9,6 +9,7 @@ namespace CapaPresentacion
     {
         int id_usuario;
         int id_lastbill = 0;
+        int id_cliente;
         int id_customer;//variable local para registrar el usuario
         string usuario;
         string cargo;
@@ -20,13 +21,14 @@ namespace CapaPresentacion
         public static double iva;
         private DataTable dtVentas = new DataTable();
         private DataSet dsVentas = new DataSet();
-        public FrmVentasModificar(int id_usuario,int id_customer, int id_lastbill, string usuario, string cargo)
+        public FrmVentasModificar(int id_usuario,int id_customer, int id_lastbill, string usuario, string cargo,int id_cliente)
         {
             InitializeComponent();
             this.id_usuario = id_usuario;
             this.id_customer = id_customer;
             this.id_lastbill = id_lastbill;
             this.usuario = usuario;
+            this.id_cliente = id_cliente;
             this.cargo = cargo;
         }
 
@@ -312,7 +314,7 @@ namespace CapaPresentacion
 
             try
             {
-                frmReporte reporte = new frmReporte(dgv_ventas, subtotal, tax, total, nombre, apellido);
+                frmReporte reporte = new frmReporte(dgv_ventas, subtotal, tax, total, nombre, apellido,id_usuario,usuario,cargo,id_cliente);
                 reporte.Show();
                 this.SetVisibleCore(false);
             }
