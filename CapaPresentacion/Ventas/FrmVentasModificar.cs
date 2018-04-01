@@ -17,6 +17,7 @@ namespace CapaPresentacion
         public static double total;
         public static double subtotal;
         double staticprice;
+        double precio = 0;
         DateTime fecha = DateTime.Now;
         public static double iva;
         private DataTable dtVentas = new DataTable();
@@ -124,9 +125,12 @@ namespace CapaPresentacion
 
         private void LimpiarCampos()
         {
+            radioButton1.Checked = false;
             txtDetails.Text = "";
             txtPrice.Text = "";
-            radioButton1.Checked = false;
+            txt_guys.Text = "";
+            txt_hours.Text = "";
+            txt_Price.Text = "";
             txtPrice.Enabled = true;
         }
 
@@ -140,12 +144,12 @@ namespace CapaPresentacion
         }
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
-            double precio = 0;
+     
 
             if (radioButton1.Checked)
             {
-
-                precio = staticprice;
+                CalHours();
+                precio = double.Parse(txtPrice.Text);
             }
             else
             {
@@ -322,6 +326,30 @@ namespace CapaPresentacion
             {
                 MessageBox.Show(j.ToString());
             }
+        }
+
+        private void txt_Price_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_Price_KeyUp(object sender, KeyEventArgs e)
+        {
+            CalHours();
+        }
+        private void CalHours()
+        {
+            int resultado;
+            resultado = int.Parse(txt_hours.Text) * int.Parse(txt_Price.Text);
+            txtPrice.Text = resultado.ToString();
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            txtPrice.Enabled = false;
+            precio = staticprice;
+            txt_Price.Text = precio.ToString();
+            CalHours();
         }
     }
 }

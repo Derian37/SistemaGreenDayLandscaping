@@ -11,6 +11,7 @@ namespace CapaPresentacion
         int id_customer;//variable local para registrar el usuario
         int id_lastbill;
         string usuario;
+        double precio = 0;
         string cargo;
         public static int cont_fila = 0;
         public static double total;
@@ -295,22 +296,28 @@ namespace CapaPresentacion
 
         private void LimpiarCampos()
         {
+           
+            radioButton1.Checked = false;
             txtDetails.Text = "";
             txtPrice.Text = "";
-            radioButton1.Checked = false;
+            txt_guys.Text = "";
+            txt_hours.Text = "";
+            txt_Price.Text = "";
             txtPrice.Enabled = true;
         }
 
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
     
-            double precio = 0;
+            
             try
             {
                 if (radioButton1.Checked)
                 {
 
-                    precio = staticprice;
+                    CalHours();
+                    precio = double.Parse(txtPrice.Text);
+
                 }
                 else
                 {
@@ -327,7 +334,7 @@ namespace CapaPresentacion
                 {
                     amount = amount + Convert.ToDouble(dgv_ventas.Rows[i].Cells[3].Value);
                 }
-                insertbills.InsertarVenta(id_lastbill, Date.Value, txtDetails.Text, precio, amount);
+                insertbills.InsertarVenta(id_lastbill, Date.Value, txtDetails.Text+" Guys "+txt_guys.Text+" Hours "+txt_hours.Text, precio, amount);
 
                 MessageBox.Show("Sirve", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
                 CargarFactura();
@@ -351,7 +358,20 @@ namespace CapaPresentacion
 
         private void FrmVentas_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+             DialogResult result = MessageBox.Show("Do you want to save?", "!SAVE¡", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                MessageBox.Show("Saved successfully");
+                Guardar();
+
+            }
+            else if (result == DialogResult.No)
+            {
+                frmListaClientes volver = new frmListaClientes(id_usuario, usuario, cargo, id_customer);
+                volver.Show();
+                this.SetVisibleCore(false);
+            }
         }
 
         private void dgv_ventas_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -416,7 +436,7 @@ namespace CapaPresentacion
             using (GestorVenta insertnewsavebills = new GestorVenta())
             {
                 insertnewsavebills.InsertNewSaveBills(id_customer, fecha.Date,id_lastbill);
-                MessageBox.Show("Sirve", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+                MessageBox.Show("Saved successfully", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
                 frmListaClientes volver = new frmListaClientes(id_usuario,usuario,cargo,id_customer);
                 volver.Show();
                 this.SetVisibleCore(false);
@@ -470,11 +490,17 @@ namespace CapaPresentacion
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             txtPrice.Enabled = false;
+            precio = staticprice;
+            txt_Price.Text = precio.ToString();
+            CalHours();
+            
+          
         }
 
         private void btn_Print_Click(object sender, EventArgs e)
         {
             Imprimir();
+            Guardar();
         }
 
         private void Imprimir()
@@ -495,6 +521,18 @@ namespace CapaPresentacion
                 MessageBox.Show(j.ToString());
             }
          
+        }
+
+        private void txt_Price_KeyUp(object sender, KeyEventArgs e)
+        {
+            CalHours(); 
+        }
+
+        private void CalHours()
+        {
+            int resultado;
+            resultado = int.Parse(txt_hours.Text) * int.Parse(txt_Price.Text);
+            txtPrice.Text = resultado.ToString();
         }
     }
 }

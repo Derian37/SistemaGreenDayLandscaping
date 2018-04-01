@@ -53,6 +53,12 @@
             this.Date = new System.Windows.Forms.DateTimePicker();
             this.label19 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_Price = new System.Windows.Forms.TextBox();
+            this.txt_hours = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.txt_guys = new System.Windows.Forms.TextBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.variable = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -225,7 +231,7 @@
             this.btn_Agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Agregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Agregar.Image = global::CapaPresentacion.Properties.Resources.agregar_min;
-            this.btn_Agregar.Location = new System.Drawing.Point(436, 37);
+            this.btn_Agregar.Location = new System.Drawing.Point(517, 36);
             this.btn_Agregar.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Agregar.Name = "btn_Agregar";
             this.btn_Agregar.Size = new System.Drawing.Size(50, 39);
@@ -316,14 +322,18 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txt_Price);
+            this.groupBox1.Controls.Add(this.txt_hours);
+            this.groupBox1.Controls.Add(this.label30);
+            this.groupBox1.Controls.Add(this.label29);
+            this.groupBox1.Controls.Add(this.label28);
+            this.groupBox1.Controls.Add(this.txt_guys);
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Controls.Add(this.variable);
             this.groupBox1.Controls.Add(this.label26);
-            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btnExpediente);
             this.groupBox1.Controls.Add(this.txtPrice);
             this.groupBox1.Controls.Add(this.txtDetails);
-            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label19);
             this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.label2);
@@ -335,6 +345,55 @@
             this.groupBox1.Size = new System.Drawing.Size(581, 105);
             this.groupBox1.TabIndex = 59;
             this.groupBox1.TabStop = false;
+            // 
+            // txt_Price
+            // 
+            this.txt_Price.Location = new System.Drawing.Point(314, 44);
+            this.txt_Price.Name = "txt_Price";
+            this.txt_Price.Size = new System.Drawing.Size(34, 22);
+            this.txt_Price.TabIndex = 110;
+            this.txt_Price.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_Price_KeyUp);
+            // 
+            // txt_hours
+            // 
+            this.txt_hours.Location = new System.Drawing.Point(261, 44);
+            this.txt_hours.Name = "txt_hours";
+            this.txt_hours.Size = new System.Drawing.Size(34, 22);
+            this.txt_hours.TabIndex = 109;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(311, 28);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(42, 16);
+            this.label30.TabIndex = 108;
+            this.label30.Text = "Price:";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(258, 28);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(47, 16);
+            this.label29.TabIndex = 107;
+            this.label29.Text = "Hours:";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(218, 28);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(42, 16);
+            this.label28.TabIndex = 106;
+            this.label28.Text = "Guys:";
+            // 
+            // txt_guys
+            // 
+            this.txt_guys.Location = new System.Drawing.Point(221, 45);
+            this.txt_guys.Name = "txt_guys";
+            this.txt_guys.Size = new System.Drawing.Size(34, 22);
+            this.txt_guys.TabIndex = 104;
             // 
             // radioButton1
             // 
@@ -361,7 +420,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(366, 74);
+            this.label26.Location = new System.Drawing.Point(450, 74);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(53, 19);
             this.label26.TabIndex = 77;
@@ -371,7 +430,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(519, 78);
+            this.label1.Location = new System.Drawing.Point(1207, 138);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 16);
             this.label1.TabIndex = 62;
@@ -384,7 +443,7 @@
             this.btnExpediente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExpediente.FlatAppearance.BorderSize = 0;
             this.btnExpediente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExpediente.Location = new System.Drawing.Point(372, 38);
+            this.btnExpediente.Location = new System.Drawing.Point(454, 38);
             this.btnExpediente.Name = "btnExpediente";
             this.btnExpediente.Size = new System.Drawing.Size(42, 37);
             this.btnExpediente.TabIndex = 76;
@@ -412,10 +471,10 @@
             this.button1.BackgroundImage = global::CapaPresentacion.Properties.Resources.guardar;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(522, 37);
+            this.button1.Location = new System.Drawing.Point(1198, 99);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 39);
+            this.button1.Size = new System.Drawing.Size(62, 39);
             this.button1.TabIndex = 61;
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = false;
@@ -424,7 +483,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(433, 81);
+            this.label2.Location = new System.Drawing.Point(525, 76);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(33, 16);
             this.label2.TabIndex = 59;
@@ -441,11 +500,13 @@
             this.groupBox2.Controls.Add(this.label21);
             this.groupBox2.Controls.Add(this.label20);
             this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
@@ -456,7 +517,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(1302, 138);
+            this.label27.Location = new System.Drawing.Point(1291, 138);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(34, 16);
             this.label27.TabIndex = 103;
@@ -486,10 +547,10 @@
             this.btn_Print.BackgroundImage = global::CapaPresentacion.Properties.Resources.print_64;
             this.btn_Print.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Print.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Print.Location = new System.Drawing.Point(1289, 99);
+            this.btn_Print.Location = new System.Drawing.Point(1275, 99);
             this.btn_Print.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Print.Name = "btn_Print";
-            this.btn_Print.Size = new System.Drawing.Size(50, 39);
+            this.btn_Print.Size = new System.Drawing.Size(64, 39);
             this.btn_Print.TabIndex = 102;
             this.btn_Print.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Print.UseVisualStyleBackColor = false;
@@ -627,5 +688,11 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Button btn_Print;
+        private System.Windows.Forms.TextBox txt_Price;
+        private System.Windows.Forms.TextBox txt_hours;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TextBox txt_guys;
     }
 }
