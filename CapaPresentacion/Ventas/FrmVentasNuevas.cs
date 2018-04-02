@@ -518,7 +518,13 @@ namespace CapaPresentacion
 
         private void txt_Price_KeyUp(object sender, KeyEventArgs e)
         {
-            CalHours(); 
+            try
+            {
+                CalHours();
+            }
+            catch (Exception u) {
+                Console.WriteLine(u);
+            }
         }
 
         private void CalHours()
@@ -526,6 +532,11 @@ namespace CapaPresentacion
             int resultado;
             resultado = int.Parse(txt_hours.Text) * int.Parse(txt_Price.Text);
             txtPrice.Text = resultado.ToString();
+        }
+
+        private void txt_Price_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -352,6 +352,7 @@
             this.txt_Price.Name = "txt_Price";
             this.txt_Price.Size = new System.Drawing.Size(34, 22);
             this.txt_Price.TabIndex = 110;
+            this.txt_Price.TextChanged += new System.EventHandler(this.txt_Price_TextChanged);
             this.txt_Price.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_Price_KeyUp);
             // 
             // txt_hours

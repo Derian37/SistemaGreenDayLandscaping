@@ -335,7 +335,14 @@ namespace CapaPresentacion
 
         private void txt_Price_KeyUp(object sender, KeyEventArgs e)
         {
-            CalHours();
+            try
+            {
+                CalHours();
+            }
+            catch (Exception u)
+            {
+                Console.WriteLine(u);
+            }
         }
         private void CalHours()
         {
