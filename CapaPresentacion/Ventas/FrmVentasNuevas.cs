@@ -451,7 +451,7 @@ namespace CapaPresentacion
                 {
 
 
-                    laVenta.ModifyBill(int.Parse(label1.Text), int.Parse(variable.Text), Date.Value, txtDetails.Text, double.Parse(txtPrice.Text), amount());
+                    laVenta.ModifyBill(int.Parse(label1.Text), int.Parse(variable.Text), Date.Value, txtDetails.Text + " Guys " + txt_guys.Text + " Hours " + txt_hours.Text, double.Parse(txtPrice.Text), amount());
                     MessageBox.Show("Sirve", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
                     CargarFactura();
                     LimpiarCampos();

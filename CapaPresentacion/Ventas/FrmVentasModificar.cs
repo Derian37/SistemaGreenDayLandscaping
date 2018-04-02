@@ -162,7 +162,7 @@ namespace CapaPresentacion
                 {
                     amount = amount + Convert.ToDouble(dgv_ventas.Rows[i].Cells[3].Value);
                 }
-                insertbills.InsertarVenta(id_lastbill, Date.Value, txtDetails.Text, precio, amount);
+                insertbills.InsertarVenta(id_lastbill, Date.Value, txtDetails.Text + " Guys " + txt_guys.Text + " Hours " + txt_hours.Text, precio, amount);
 
 
                 MessageBox.Show("Sirve", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
@@ -280,7 +280,7 @@ namespace CapaPresentacion
                 {
                                     
                     
-                    laVenta.ModifyBill(int.Parse(label1.Text),int.Parse(label27.Text), Date.Value, txtDetails.Text, double.Parse(txtPrice.Text), amount());
+                    laVenta.ModifyBill(int.Parse(label1.Text),int.Parse(label27.Text), Date.Value, txtDetails.Text + " Guys " + txt_guys.Text + " Hours " + txt_hours.Text, double.Parse(txtPrice.Text), amount());
                     MessageBox.Show("Sirve", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
                     CargarFactura();
                     LimpiarCampos();
