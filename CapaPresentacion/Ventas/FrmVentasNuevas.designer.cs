@@ -62,12 +62,12 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.variable = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnExpediente = new System.Windows.Forms.Button();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.txtDetails = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
@@ -348,7 +348,7 @@
             // 
             // txt_Price
             // 
-            this.txt_Price.Location = new System.Drawing.Point(314, 44);
+            this.txt_Price.Location = new System.Drawing.Point(314, 45);
             this.txt_Price.Name = "txt_Price";
             this.txt_Price.Size = new System.Drawing.Size(34, 22);
             this.txt_Price.TabIndex = 110;
@@ -356,7 +356,7 @@
             // 
             // txt_hours
             // 
-            this.txt_hours.Location = new System.Drawing.Point(261, 44);
+            this.txt_hours.Location = new System.Drawing.Point(261, 45);
             this.txt_hours.Name = "txt_hours";
             this.txt_hours.Size = new System.Drawing.Size(34, 22);
             this.txt_hours.TabIndex = 109;
@@ -427,15 +427,6 @@
             this.label26.Text = "Modify";
             this.label26.Visible = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1207, 138);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 16);
-            this.label1.TabIndex = 62;
-            this.label1.Text = "Save";
-            // 
             // btnExpediente
             // 
             this.btnExpediente.BackColor = System.Drawing.Color.Transparent;
@@ -465,6 +456,24 @@
             this.txtDetails.Size = new System.Drawing.Size(100, 22);
             this.txtDetails.TabIndex = 60;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(525, 76);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(33, 16);
+            this.label2.TabIndex = 59;
+            this.label2.Text = "Add";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1207, 138);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 16);
+            this.label1.TabIndex = 62;
+            this.label1.Text = "Save";
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Window;
@@ -479,15 +488,6 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(525, 76);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 16);
-            this.label2.TabIndex = 59;
-            this.label2.Text = "Add";
             // 
             // groupBox2
             // 

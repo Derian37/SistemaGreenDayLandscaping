@@ -358,20 +358,13 @@ namespace CapaPresentacion
 
         private void FrmVentas_FormClosing(object sender, FormClosingEventArgs e)
         {
-             DialogResult result = MessageBox.Show("Do you want to save?", "!SAVE¡", MessageBoxButtons.YesNo);
 
-            if (result == DialogResult.Yes)
-            {
-                MessageBox.Show("Saved successfully");
-                Guardar();
+       
 
-            }
-            else if (result == DialogResult.No)
-            {
                 frmListaClientes volver = new frmListaClientes(id_usuario, usuario, cargo, id_customer);
                 volver.Show();
                 this.SetVisibleCore(false);
-            }
+         
         }
 
         private void dgv_ventas_CellContentClick(object sender, DataGridViewCellEventArgs e)
