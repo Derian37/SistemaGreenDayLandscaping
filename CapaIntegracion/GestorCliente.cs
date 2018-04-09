@@ -80,7 +80,7 @@ namespace SistemaGDL.CapaIntegracion
             using (ServicioCliente elCliente = new ServicioCliente())
                 return elCliente.GetBillByDate(id_cliente,  Fecha1,  Fecha2);
         }
-        public DataSet GetLastBill(int id_cliente)
+        public DataTable GetLastBill(int id_cliente)
         {
             using (ServicioCliente elCliente = new ServicioCliente())
                 return elCliente.GetLastBill(id_cliente);

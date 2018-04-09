@@ -294,20 +294,21 @@ namespace CapaLogica.Servicio
             return DataSet;
         }
 
-        public DataSet GetLastBill(int id_cliente)
+        public DataTable GetLastBill(int id_cliente)
         {
             miComando = new MySqlCommand();
             Console.WriteLine("Gestor get_lastbill");
-
             miComando.CommandText = "get_lastbill";
+
             miComando.Parameters.AddWithValue("@id_customer", MySqlDbType.Int16);
             miComando.Parameters["@id_customer"].Value = id_cliente;
 
-            DataSet DataSet = new DataSet();
+            DataSet laGraduacion = new DataSet();
             this.abrirConexion();
-            DataSet = this.seleccionarInformacion(miComando);
-            cerrarConexion();
-            return DataSet;
+            laGraduacion = this.seleccionarInformacion(miComando);
+            DataTable miTablaDatos = laGraduacion.Tables[0];
+
+            return miTablaDatos;
         }
 
     }

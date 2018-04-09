@@ -353,6 +353,7 @@
             this.txt_Price.Size = new System.Drawing.Size(34, 22);
             this.txt_Price.TabIndex = 110;
             this.txt_Price.TextChanged += new System.EventHandler(this.txt_Price_TextChanged);
+            this.txt_Price.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Price_KeyPress);
             this.txt_Price.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_Price_KeyUp);
             // 
             // txt_hours
@@ -361,6 +362,8 @@
             this.txt_hours.Name = "txt_hours";
             this.txt_hours.Size = new System.Drawing.Size(34, 22);
             this.txt_hours.TabIndex = 109;
+            this.txt_hours.TextChanged += new System.EventHandler(this.txt_hours_TextChanged);
+            this.txt_hours.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_hours_KeyPress);
             // 
             // label30
             // 
@@ -395,6 +398,7 @@
             this.txt_guys.Name = "txt_guys";
             this.txt_guys.Size = new System.Drawing.Size(34, 22);
             this.txt_guys.TabIndex = 104;
+            this.txt_guys.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_guys_KeyPress);
             // 
             // radioButton1
             // 
@@ -449,6 +453,8 @@
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(100, 22);
             this.txtPrice.TabIndex = 61;
+            this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
+            this.txtPrice.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPrice_KeyUp);
             // 
             // txtDetails
             // 

@@ -336,6 +336,7 @@ namespace CapaPresentacion
                 {
                     amount = amount + Convert.ToDouble(dgv_ventas.Rows[i].Cells[3].Value);
                 }
+                
                 insertbills.InsertarVenta(id_lastbill, f1, txtDetails.Text+" Guys "+txt_guys.Text+" Hours "+txt_hours.Text, precio, amount);
 
                 MessageBox.Show("Sirve", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
@@ -430,7 +431,19 @@ namespace CapaPresentacion
         {
             using (GestorVenta insertnewsavebills = new GestorVenta())
             {
-                insertnewsavebills.InsertNewSaveBills(id_customer, fecha.Date.ToString(),id_lastbill);
+                f1 = fecha.ToShortDateString();
+                string Fecha = "";
+                string[] fechone;
+
+                f1 = f1.Replace("/", "-");
+   
+                fechone = f1.Split('-');
+                foreach (string i in fechone)
+                {
+                    Fecha = fechone[2] + "-" + fechone[1] + "-" + fechone[0];
+                };
+
+                insertnewsavebills.InsertNewSaveBills(id_customer, Fecha, id_lastbill);
                 MessageBox.Show("Saved successfully", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
                 frmListaClientes volver = new frmListaClientes(id_usuario,usuario,cargo,id_customer);
                 volver.Show();
@@ -541,6 +554,144 @@ namespace CapaPresentacion
         private void txt_Price_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtPrice_KeyUp(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                if (Char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = false;
+                    
+                }
+                else if (Char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+      
+                }
+                else if (Char.IsSeparator(e.KeyChar))
+                {
+                    e.Handled = false;
+       
+                }
+                else
+                {
+                    e.Handled = true;
+                    MessageBox.Show("Debe introducir solo numeros");
+                }
+            }
+            catch (Exception u)
+            {
+                Console.WriteLine(u);
+                MessageBox.Show("Debe introducir solo numeros");
+            }
+        }
+
+        private void txt_guys_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                if (Char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = false;
+
+                }
+                else if (Char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+
+                }
+                else if (Char.IsSeparator(e.KeyChar))
+                {
+                    e.Handled = false;
+
+                }
+                else
+                {
+                    e.Handled = true;
+                    MessageBox.Show("Debe introducir solo numeros");
+                }
+            }
+            catch (Exception u)
+            {
+                Console.WriteLine(u);
+                MessageBox.Show("Debe introducir solo numeros");
+            }
+        }
+
+        private void txt_hours_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_hours_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                if (Char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = false;
+
+                }
+                else if (Char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+
+                }
+                else if (Char.IsSeparator(e.KeyChar))
+                {
+                    e.Handled = false;
+
+                }
+                else
+                {
+                    e.Handled = true;
+                    MessageBox.Show("Debe introducir solo numeros");
+                }
+            }
+            catch (Exception u)
+            {
+                Console.WriteLine(u);
+                MessageBox.Show("Debe introducir solo numeros");
+            }
+        }
+
+        private void txt_Price_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                if (Char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = false;
+
+                }
+                else if (Char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+
+                }
+                else if (Char.IsSeparator(e.KeyChar))
+                {
+                    e.Handled = false;
+
+                }
+                else
+                {
+                    e.Handled = true;
+                    MessageBox.Show("Debe introducir solo numeros");
+                }
+            }
+            catch (Exception u)
+            {
+                Console.WriteLine(u);
+                MessageBox.Show("Debe introducir solo numeros");
+            }
         }
     }
 }

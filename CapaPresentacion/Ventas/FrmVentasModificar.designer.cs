@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVentasModificar));
             this.dgv_ventas = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,6 +53,12 @@
             this.Date = new System.Windows.Forms.DateTimePicker();
             this.label19 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_Price = new System.Windows.Forms.TextBox();
+            this.txt_hours = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.txt_guys = new System.Windows.Forms.TextBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
@@ -73,12 +79,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.volverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.txt_Price = new System.Windows.Forms.TextBox();
-            this.txt_hours = new System.Windows.Forms.TextBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.txt_guys = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ventas)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -92,14 +92,14 @@
             this.dgv_ventas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_ventas.BackgroundColor = System.Drawing.Color.White;
             this.dgv_ventas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_ventas.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_ventas.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_ventas.Location = new System.Drawing.Point(340, 208);
             this.dgv_ventas.Name = "dgv_ventas";
             this.dgv_ventas.ReadOnly = true;
@@ -349,6 +349,60 @@
             this.groupBox1.TabIndex = 59;
             this.groupBox1.TabStop = false;
             // 
+            // txt_Price
+            // 
+            this.txt_Price.Location = new System.Drawing.Point(319, 49);
+            this.txt_Price.Name = "txt_Price";
+            this.txt_Price.Size = new System.Drawing.Size(34, 22);
+            this.txt_Price.TabIndex = 116;
+            this.txt_Price.TextChanged += new System.EventHandler(this.txt_Price_TextChanged);
+            this.txt_Price.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Price_KeyPress);
+            this.txt_Price.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_Price_KeyUp);
+            // 
+            // txt_hours
+            // 
+            this.txt_hours.Location = new System.Drawing.Point(266, 49);
+            this.txt_hours.Name = "txt_hours";
+            this.txt_hours.Size = new System.Drawing.Size(34, 22);
+            this.txt_hours.TabIndex = 115;
+            this.txt_hours.TextChanged += new System.EventHandler(this.txt_hours_TextChanged);
+            this.txt_hours.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_hours_KeyPress);
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(316, 33);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(42, 16);
+            this.label30.TabIndex = 114;
+            this.label30.Text = "Price:";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(263, 33);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(47, 16);
+            this.label29.TabIndex = 113;
+            this.label29.Text = "Hours:";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(223, 33);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(42, 16);
+            this.label31.TabIndex = 112;
+            this.label31.Text = "Guys:";
+            // 
+            // txt_guys
+            // 
+            this.txt_guys.Location = new System.Drawing.Point(226, 50);
+            this.txt_guys.Name = "txt_guys";
+            this.txt_guys.Size = new System.Drawing.Size(34, 22);
+            this.txt_guys.TabIndex = 111;
+            this.txt_guys.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_guys_KeyPress);
+            // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
@@ -367,6 +421,7 @@
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(100, 22);
             this.txtPrice.TabIndex = 97;
+            this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             // 
             // label26
             // 
@@ -559,56 +614,6 @@
             this.volverToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
             this.volverToolStripMenuItem.Text = "Volver";
             this.volverToolStripMenuItem.Click += new System.EventHandler(this.volverToolStripMenuItem_Click);
-            // 
-            // txt_Price
-            // 
-            this.txt_Price.Location = new System.Drawing.Point(319, 49);
-            this.txt_Price.Name = "txt_Price";
-            this.txt_Price.Size = new System.Drawing.Size(34, 22);
-            this.txt_Price.TabIndex = 116;
-            this.txt_Price.TextChanged += new System.EventHandler(this.txt_Price_TextChanged);
-            this.txt_Price.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_Price_KeyUp);
-            // 
-            // txt_hours
-            // 
-            this.txt_hours.Location = new System.Drawing.Point(266, 49);
-            this.txt_hours.Name = "txt_hours";
-            this.txt_hours.Size = new System.Drawing.Size(34, 22);
-            this.txt_hours.TabIndex = 115;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(316, 33);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(42, 16);
-            this.label30.TabIndex = 114;
-            this.label30.Text = "Price:";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(263, 33);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(47, 16);
-            this.label29.TabIndex = 113;
-            this.label29.Text = "Hours:";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(223, 33);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(42, 16);
-            this.label31.TabIndex = 112;
-            this.label31.Text = "Guys:";
-            // 
-            // txt_guys
-            // 
-            this.txt_guys.Location = new System.Drawing.Point(226, 50);
-            this.txt_guys.Name = "txt_guys";
-            this.txt_guys.Size = new System.Drawing.Size(34, 22);
-            this.txt_guys.TabIndex = 111;
             // 
             // FrmVentasModificar
             // 

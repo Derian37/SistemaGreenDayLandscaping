@@ -17,12 +17,13 @@ namespace CapaPresentacion
         string f2 = "";
         DataTable dtRegistro = new DataTable();
         DataSet dsRegistro = new DataSet();
+
         int id_usuario;
-        int id_lastbill;
+        int id_lastbill = 0;
         bool bandera = false;
         string usuario;
         string cargo;
-        int id_cliente;
+        int id_cliente = 0;
         public frmListaClientes(int id_usuario, string usuario, string cargo, int id_cliente)
         {
             this.id_usuario = id_usuario;
@@ -36,6 +37,7 @@ namespace CapaPresentacion
         {
             CargarGridCliente();
             CargarUltimoIdBill();
+           
         }
 
         private void CargarUltimoIdBill()
@@ -44,10 +46,12 @@ namespace CapaPresentacion
             {
                 using (GestorCliente elCliente = new GestorCliente())
                 {
-                    id_lastbill = int.Parse(elCliente.GetLastBill(id_cliente).Tables[0].Rows[0][0].ToString());
+                    id_lastbill = int.Parse(elCliente.GetLastBill(id_cliente).Rows[0][0].ToString());
                 }
             }
             catch (Exception l) {
+               
+                Console.Write(l);
                 MessageBox.Show("Este cliente no posee registros");
             }
         }
@@ -168,21 +172,28 @@ namespace CapaPresentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox5.Text != "")
+            try
             {
-                using (GestorVenta venta = new GestorVenta())
+                if (textBox5.Text != "")
                 {
-                    venta.InsertarNewVenta(id_cliente, id_usuario, DateTime.Parse("2018-02-01").ToString(), textBox5.Text);
-                    CargarUltimoIdBill();
+                    using (GestorVenta venta = new GestorVenta())
+                    {
+                        venta.InsertarNewVenta(id_cliente, id_usuario, DateTime.Parse("2018-02-01").ToString(), textBox5.Text);
+                        CargarUltimoIdBill();
+                    }
+                  
+                    FrmVentasNuevas FrmVentasNuevas = new FrmVentasNuevas(id_usuario, id_cliente, id_lastbill, usuario, cargo, id_cliente);
+                    FrmVentasNuevas.Show();
+                    this.SetVisibleCore(false);
                 }
+                else
+                {
+                    MessageBox.Show("No ha llenado el campo de detalle", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-                FrmVentasNuevas FrmVentasNuevas = new FrmVentasNuevas(id_usuario, id_cliente, id_lastbill, usuario, cargo, id_cliente);
-                FrmVentasNuevas.Show();
-                this.SetVisibleCore(false);
+                }
             }
-            else {
-                MessageBox.Show("No ha llenado el campo de detalle", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
+            catch (Exception o) {
+                Console.Write(o);
             }
         }
 
