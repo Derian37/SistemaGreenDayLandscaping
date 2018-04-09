@@ -13,7 +13,7 @@ namespace CapaLogica.LogicaNegocio
         #region ATRIBUTOS
         private int id_venta;
         private int id_bill;
-        private DateTime fecha;
+        private string fecha;
         private int id_cliente;
         private int id_usuario;
         private string modo_pago;
@@ -33,7 +33,7 @@ namespace CapaLogica.LogicaNegocio
         {
         }
 
-        public Venta(int id_billFac, int id_bill, DateTime fecha, string details, double price, double amount)
+        public Venta(int id_billFac, int id_bill, string fecha, string details, double price, double amount)
         {
             Id_venta = id_billFac;
             Id_bill = id_bill;
@@ -44,7 +44,7 @@ namespace CapaLogica.LogicaNegocio
 
         }
 
-        public Venta(int Pid_cliente, int Pid_usuario, DateTime Pfecha, string Pmodo_pago)
+        public Venta(int Pid_cliente, int Pid_usuario, string Pfecha, string Pmodo_pago)
         {
             Id_cliente = Pid_cliente;
             Id_usuario = Pid_usuario;
@@ -53,7 +53,7 @@ namespace CapaLogica.LogicaNegocio
 
         }
 
-        public Venta(int Pid_cliente, DateTime Pfecha, int id_bill)
+        public Venta(int Pid_cliente, string Pfecha, int id_bill)
         {
             Id_cliente = Pid_cliente;
         
@@ -61,7 +61,7 @@ namespace CapaLogica.LogicaNegocio
             Id_bill = id_bill;
 
         }
-        public Venta(int id_bill, DateTime Pfecha, string Pmodo_pago, double Psaldo, double Pestado)
+        public Venta(int id_bill, string Pfecha, string Pmodo_pago, double Psaldo, double Pestado)
         {
             Id_bill = id_bill;
             fecha = Pfecha;
@@ -80,7 +80,7 @@ namespace CapaLogica.LogicaNegocio
             Estado = Pestado;
         }
 
-        public Venta(int Pid_venta, int Pid_cliente, int Pid_usuario, DateTime Pfecha, string Pmodo_pago, float Psaldo, double Pestado)
+        public Venta(int Pid_venta, int Pid_cliente, int Pid_usuario, string Pfecha, string Pmodo_pago, float Psaldo, double Pestado)
         {
             Id_venta = Pid_venta;
             Id_cliente = Pid_cliente;
@@ -99,7 +99,7 @@ namespace CapaLogica.LogicaNegocio
         #region set and get
         public int Id_venta { get => id_venta; set => id_venta = value; }
         public int Id_cliente { get => id_cliente; set => id_cliente = value; }
-        public DateTime Fecha { get => fecha; set => fecha = value; }
+        public string Fecha { get => fecha; set => fecha = value; }
         public int Id_usuario { get => id_usuario; set => id_usuario = value; }
         public string Modo_pago { get => modo_pago; set => modo_pago = value; }
         public double Saldo { get => saldo; set => saldo = value; }

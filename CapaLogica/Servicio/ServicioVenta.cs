@@ -41,7 +41,7 @@ namespace SistemaGDL.CapaLogica.Servicio
             miComando.Parameters.Add("@id_bill", MySqlDbType.Int16);
             miComando.Parameters["@id_bill"].Value = elVenta.Id_bill;
 
-            miComando.Parameters.Add("@fecha", MySqlDbType.DateTime);
+            miComando.Parameters.Add("@fecha", MySqlDbType.VarChar);
             miComando.Parameters["@fecha"].Value = elVenta.Fecha;
 
             miComando.Parameters.Add("@details", MySqlDbType.VarChar);
@@ -142,7 +142,7 @@ namespace SistemaGDL.CapaLogica.Servicio
             miComando.Parameters.Add("@id_bill", MySqlDbType.Int32);
             miComando.Parameters["@id_bill"].Value = Venta.Id_bill;
                         
-            miComando.Parameters.Add("@fecha", MySqlDbType.DateTime);
+            miComando.Parameters.Add("@fecha", MySqlDbType.VarChar);
             miComando.Parameters["@fecha"].Value = Venta.Fecha;
 
             miComando.Parameters.Add("@detalle", MySqlDbType.VarChar);

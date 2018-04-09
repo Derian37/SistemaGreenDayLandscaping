@@ -18,6 +18,7 @@ namespace CapaPresentacion
         public static double subtotal;
         double staticprice;
         double precio = 0;
+        string f1 = "";
         DateTime fecha = DateTime.Now;
         public static double iva;
         private DataTable dtVentas = new DataTable();
@@ -144,7 +145,9 @@ namespace CapaPresentacion
         }
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
-     
+            f1 = Date.Text;
+            f1 = f1.Replace("/", "-");
+
 
             if (radioButton1.Checked)
             {
@@ -162,7 +165,7 @@ namespace CapaPresentacion
                 {
                     amount = amount + Convert.ToDouble(dgv_ventas.Rows[i].Cells[3].Value);
                 }
-                insertbills.InsertarVenta(id_lastbill, Date.Value, txtDetails.Text + " Guys " + txt_guys.Text + " Hours " + txt_hours.Text, precio, amount);
+                insertbills.InsertarVenta(id_lastbill, f1, txtDetails.Text + " Guys " + txt_guys.Text + " Hours " + txt_hours.Text, precio, amount);
 
 
                 MessageBox.Show("Sirve", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
@@ -273,6 +276,8 @@ namespace CapaPresentacion
 
         private void btnExpediente_Click(object sender, EventArgs e)
         {
+            f1 = Date.Text;
+            f1 = f1.Replace("/", "-");
 
             if (txtDetails.Text != "" && txtPrice.Text != "")
             {
@@ -280,7 +285,7 @@ namespace CapaPresentacion
                 {
                                     
                     
-                    laVenta.ModifyBill(int.Parse(label1.Text),int.Parse(label27.Text), Date.Value, txtDetails.Text + " Guys " + txt_guys.Text + " Hours " + txt_hours.Text, double.Parse(txtPrice.Text), amount());
+                    laVenta.ModifyBill(int.Parse(label1.Text),int.Parse(label27.Text), f1, txtDetails.Text + " Guys " + txt_guys.Text + " Hours " + txt_hours.Text, double.Parse(txtPrice.Text), amount());
                     MessageBox.Show("Sirve", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
                     CargarFactura();
                     LimpiarCampos();

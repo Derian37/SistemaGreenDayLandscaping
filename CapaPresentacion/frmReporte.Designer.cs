@@ -82,7 +82,9 @@
             this.Controls.Add(this.crv_Report);
             this.Controls.Add(this.menuStrip1);
             this.Name = "frmReporte";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmReporte";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmReporte_FormClosing);
             this.Load += new System.EventHandler(this.frmReporte_Load);
             this.menuStrip1.ResumeLayout(false);

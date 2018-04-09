@@ -13,6 +13,7 @@ namespace CapaPresentacion
         string usuario;
         double precio = 0;
         string cargo;
+        string f1 = "";
         public static int cont_fila = 0;
         public static double total;
         public static double subtotal;
@@ -308,8 +309,9 @@ namespace CapaPresentacion
 
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
-    
-            
+            f1 = Date.Text;
+            f1 = f1.Replace("/", "-");
+
             try
             {
                 if (radioButton1.Checked)
@@ -334,7 +336,7 @@ namespace CapaPresentacion
                 {
                     amount = amount + Convert.ToDouble(dgv_ventas.Rows[i].Cells[3].Value);
                 }
-                insertbills.InsertarVenta(id_lastbill, Date.Value, txtDetails.Text+" Guys "+txt_guys.Text+" Hours "+txt_hours.Text, precio, amount);
+                insertbills.InsertarVenta(id_lastbill, f1, txtDetails.Text+" Guys "+txt_guys.Text+" Hours "+txt_hours.Text, precio, amount);
 
                 MessageBox.Show("Sirve", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
                 CargarFactura();
@@ -428,7 +430,7 @@ namespace CapaPresentacion
         {
             using (GestorVenta insertnewsavebills = new GestorVenta())
             {
-                insertnewsavebills.InsertNewSaveBills(id_customer, fecha.Date,id_lastbill);
+                insertnewsavebills.InsertNewSaveBills(id_customer, fecha.Date.ToString(),id_lastbill);
                 MessageBox.Show("Saved successfully", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
                 frmListaClientes volver = new frmListaClientes(id_usuario,usuario,cargo,id_customer);
                 volver.Show();
@@ -447,11 +449,13 @@ namespace CapaPresentacion
         {
             if (txtDetails.Text != "" && txtPrice.Text != "")
             {
+                f1 = Date.Text;
+                f1 = f1.Replace("/", "-");
                 using (GestorVenta laVenta = new GestorVenta())
                 {
 
 
-                    laVenta.ModifyBill(int.Parse(label1.Text), int.Parse(variable.Text), Date.Value, txtDetails.Text + " Guys " + txt_guys.Text + " Hours " + txt_hours.Text, double.Parse(txtPrice.Text), amount());
+                    laVenta.ModifyBill(int.Parse(label1.Text), int.Parse(variable.Text), f1, txtDetails.Text + " Guys " + txt_guys.Text + " Hours " + txt_hours.Text, double.Parse(txtPrice.Text), amount());
                     MessageBox.Show("Sirve", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
                     CargarFactura();
                     LimpiarCampos();

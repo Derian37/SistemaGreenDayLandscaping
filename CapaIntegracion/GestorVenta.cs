@@ -13,21 +13,21 @@ namespace SistemaGDL.CapaIntegracion
         public void Dispose() { }
 
 
-        public string InsertarVenta(int id_bill, DateTime fecha, string detalle, double saldo, double total)
+        public string InsertarVenta(int id_bill, string fecha, string detalle, double saldo, double total)
         {
             Venta nuevaVenta = new Venta(id_bill, fecha, detalle, saldo, total);
             using (ServicioVenta elVenta = new ServicioVenta())
                 return elVenta.InsertarVenta(nuevaVenta);
         }
 
-        public string InsertarNewVenta(int id_customer, int id_usuario, DateTime fecha, string detalle)
+        public string InsertarNewVenta(int id_customer, int id_usuario, string fecha, string detalle)
         {
             Venta nuevaVenta = new Venta(id_customer, id_usuario, fecha, detalle);
             using (ServicioVenta elVenta = new ServicioVenta())
                 return elVenta.InsertarNewVenta(nuevaVenta);
         }
 
-        public string InsertNewSaveBills(int id_customer, DateTime fecha, int bill)
+        public string InsertNewSaveBills(int id_customer, string fecha, int bill)
         {
             Venta nuevaVenta = new Venta(id_customer, fecha, bill);
             using (ServicioVenta elVenta = new ServicioVenta())
@@ -43,7 +43,7 @@ namespace SistemaGDL.CapaIntegracion
         //        return elVenta.InsertarDetalleVenta(nuevaVenta);
         //}
 
-        public string ModifyBill(int id_Venta, int id_cliente, DateTime fecha,string details, Double price, Double amount)
+        public string ModifyBill(int id_Venta, int id_cliente, string fecha,string details, Double price, Double amount)
         {
             Venta Venta = new Venta(id_Venta, id_cliente, fecha,  details,  price,  amount);
             using (ServicioVenta elVenta = new ServicioVenta())

@@ -172,7 +172,7 @@ namespace CapaPresentacion
             {
                 using (GestorVenta venta = new GestorVenta())
                 {
-                    venta.InsertarNewVenta(id_cliente, id_usuario, DateTime.Parse("2018-02-01"), textBox5.Text);
+                    venta.InsertarNewVenta(id_cliente, id_usuario, DateTime.Parse("2018-02-01").ToString(), textBox5.Text);
                     CargarUltimoIdBill();
                 }
 
@@ -219,7 +219,7 @@ namespace CapaPresentacion
                 this.dsRegistro = customer.GetBillByDate(int.Parse(id_cliente.ToString()), Fecha1, Fecha2);
                 this.dtRegistro = this.dsRegistro.Tables[0];
                 dgvCliente.DataSource = dtRegistro;
-                dgvCliente.Columns["id_bill"].Visible = false;
+                dgvCliente.Columns["id_saveBills"].Visible = false;
                 dgvCliente.Columns["name"].HeaderText = "Name";
                 dgvCliente.Columns["details"].HeaderText = "Details";
                 dgvCliente.Columns["fecha"].HeaderText = "Date";
