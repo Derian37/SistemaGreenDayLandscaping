@@ -309,8 +309,18 @@ namespace CapaPresentacion
 
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
+            string Fecha1 = "";
+            string[] fechone;
+
             f1 = Date.Text;
             f1 = f1.Replace("/", "-");
+            fechone = f1.Split('-');
+
+            foreach (string i in fechone)
+            {
+                Fecha1 = fechone[1] + "-" + fechone[0] + "-" + fechone[2];
+
+            }
 
             try
             {
@@ -337,7 +347,7 @@ namespace CapaPresentacion
                     amount = amount + Convert.ToDouble(dgv_ventas.Rows[i].Cells[3].Value);
                 }
                 
-                insertbills.InsertarVenta(id_lastbill, f1, txtDetails.Text+" Guys "+txt_guys.Text+" Hours "+txt_hours.Text, precio, amount);
+                insertbills.InsertarVenta(id_lastbill, Fecha1, txtDetails.Text+" Guys "+txt_guys.Text+" Hours "+txt_hours.Text, precio, amount);
 
                 MessageBox.Show("Sirve", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
                 CargarFactura();
@@ -462,13 +472,23 @@ namespace CapaPresentacion
         {
             if (txtDetails.Text != "" && txtPrice.Text != "")
             {
+                string Fecha1 = "";
+                string[] fechone;
+
                 f1 = Date.Text;
                 f1 = f1.Replace("/", "-");
+                fechone = f1.Split('-');
+
+                foreach (string i in fechone)
+                {
+                    Fecha1 = fechone[1] + "-" + fechone[0] + "-" + fechone[2];
+
+                }
                 using (GestorVenta laVenta = new GestorVenta())
                 {
 
 
-                    laVenta.ModifyBill(int.Parse(label1.Text), int.Parse(variable.Text), f1, txtDetails.Text + " Guys " + txt_guys.Text + " Hours " + txt_hours.Text, double.Parse(txtPrice.Text), amount());
+                    laVenta.ModifyBill(int.Parse(label1.Text), int.Parse(variable.Text), Fecha1, txtDetails.Text + " Guys " + txt_guys.Text + " Hours " + txt_hours.Text, double.Parse(txtPrice.Text), amount());
                     MessageBox.Show("Sirve", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
                     CargarFactura();
                     LimpiarCampos();
@@ -490,7 +510,7 @@ namespace CapaPresentacion
         {
             label1.Text = dgv_ventas.CurrentRow.Cells[5].Value.ToString();
             variable.Text = dgv_ventas.CurrentRow.Cells[0].Value.ToString();
-            Date.Text = dgv_ventas.CurrentRow.Cells[1].Value.ToString();
+            //Date.Text = dgv_ventas.CurrentRow.Cells[1].Value.ToString();
             txtDetails.Text = dgv_ventas.CurrentRow.Cells[2].Value.ToString();
             txtPrice.Text = dgv_ventas.CurrentRow.Cells[3].Value.ToString();
             btnExpediente.Visible = true;
@@ -563,37 +583,10 @@ namespace CapaPresentacion
 
         private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
         {
-            try
-            {
-                if (Char.IsDigit(e.KeyChar))
-                {
-                    e.Handled = false;
-                    
-                }
-                else if (Char.IsControl(e.KeyChar))
-                {
-                    e.Handled = false;
-      
-                }
-                else if (Char.IsSeparator(e.KeyChar))
-                {
-                    e.Handled = false;
-       
-                }
-                else
-                {
-                    e.Handled = true;
-                    MessageBox.Show("Debe introducir solo numeros");
-                }
-            }
-            catch (Exception u)
-            {
-                Console.WriteLine(u);
-                MessageBox.Show("Debe introducir solo numeros");
-            }
+           
         }
 
-        private void txt_guys_KeyPress(object sender, KeyPressEventArgs e)
+            private void txt_guys_KeyPress(object sender, KeyPressEventArgs e)
         {
             try
             {
@@ -691,6 +684,21 @@ namespace CapaPresentacion
             {
                 Console.WriteLine(u);
                 MessageBox.Show("Debe introducir solo numeros");
+            }
+        }
+
+        private void txtPrice_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Decimal price = 0;
+            try
+            {
+                price = Decimal.Parse(txtPrice.Text);
+                txtPrice.Text = price.ToString();
+            }
+            catch
+            {
+                MessageBox.Show("Debe introducir solo numeros");
+                txtPrice.Text = price.ToString();
             }
         }
     }
