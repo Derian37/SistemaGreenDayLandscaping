@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVentasModificar));
             this.dgv_ventas = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
@@ -92,18 +92,18 @@
             this.dgv_ventas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_ventas.BackgroundColor = System.Drawing.Color.White;
             this.dgv_ventas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_ventas.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_ventas.Location = new System.Drawing.Point(340, 208);
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_ventas.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dgv_ventas.Location = new System.Drawing.Point(12, 208);
             this.dgv_ventas.Name = "dgv_ventas";
             this.dgv_ventas.ReadOnly = true;
-            this.dgv_ventas.Size = new System.Drawing.Size(783, 397);
+            this.dgv_ventas.Size = new System.Drawing.Size(1346, 397);
             this.dgv_ventas.TabIndex = 1;
             this.dgv_ventas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ventas_CellClick);
             this.dgv_ventas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ventas_CellContentClick);
@@ -111,16 +111,16 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(955, 661);
+            this.label3.Location = new System.Drawing.Point(1168, 60);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 16);
+            this.label3.Size = new System.Drawing.Size(50, 16);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Tax:";
+            this.label3.Text = "Tax:   $";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(927, 696);
+            this.label4.Location = new System.Drawing.Point(1138, 95);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 16);
             this.label4.TabIndex = 8;
@@ -129,16 +129,16 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(927, 625);
+            this.label5.Location = new System.Drawing.Point(1138, 24);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 16);
+            this.label5.Size = new System.Drawing.Size(80, 16);
             this.label5.TabIndex = 12;
-            this.label5.Text = "Sub-total:";
+            this.label5.Text = "Sub-total:   $";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(8, 50);
+            this.label11.Location = new System.Drawing.Point(9, 55);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(53, 16);
             this.label11.TabIndex = 32;
@@ -149,9 +149,9 @@
             this.label12.BackColor = System.Drawing.SystemColors.MenuText;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label12.Location = new System.Drawing.Point(340, 208);
+            this.label12.Location = new System.Drawing.Point(12, 208);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(110, 24);
+            this.label12.Size = new System.Drawing.Size(265, 24);
             this.label12.TabIndex = 35;
             this.label12.Text = "         DATE";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -161,9 +161,9 @@
             this.label13.BackColor = System.Drawing.SystemColors.MenuText;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label13.Location = new System.Drawing.Point(444, 208);
+            this.label13.Location = new System.Drawing.Point(268, 208);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(287, 24);
+            this.label13.Size = new System.Drawing.Size(455, 24);
             this.label13.TabIndex = 36;
             this.label13.Text = "     DETAILS";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -175,7 +175,7 @@
             this.label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label14.Location = new System.Drawing.Point(723, 208);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(206, 24);
+            this.label14.Size = new System.Drawing.Size(255, 24);
             this.label14.TabIndex = 37;
             this.label14.Text = "PRICE";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -185,9 +185,9 @@
             this.label17.BackColor = System.Drawing.SystemColors.MenuText;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label17.Location = new System.Drawing.Point(926, 208);
+            this.label17.Location = new System.Drawing.Point(972, 208);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(197, 24);
+            this.label17.Size = new System.Drawing.Size(386, 24);
             this.label17.TabIndex = 39;
             this.label17.Text = "AMOUNT";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -197,7 +197,7 @@
             this.lbl_subtotal.BackColor = System.Drawing.SystemColors.HighlightText;
             this.lbl_subtotal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbl_subtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_subtotal.Location = new System.Drawing.Point(1007, 613);
+            this.lbl_subtotal.Location = new System.Drawing.Point(1224, 14);
             this.lbl_subtotal.Name = "lbl_subtotal";
             this.lbl_subtotal.Size = new System.Drawing.Size(116, 30);
             this.lbl_subtotal.TabIndex = 45;
@@ -209,7 +209,7 @@
             this.lbl_iva.BackColor = System.Drawing.SystemColors.HighlightText;
             this.lbl_iva.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbl_iva.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_iva.Location = new System.Drawing.Point(1007, 651);
+            this.lbl_iva.Location = new System.Drawing.Point(1224, 50);
             this.lbl_iva.Name = "lbl_iva";
             this.lbl_iva.Size = new System.Drawing.Size(116, 30);
             this.lbl_iva.TabIndex = 46;
@@ -221,7 +221,7 @@
             this.lbl_total.BackColor = System.Drawing.SystemColors.HighlightText;
             this.lbl_total.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbl_total.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_total.Location = new System.Drawing.Point(1007, 686);
+            this.lbl_total.Location = new System.Drawing.Point(1224, 85);
             this.lbl_total.Name = "lbl_total";
             this.lbl_total.Size = new System.Drawing.Size(116, 30);
             this.lbl_total.TabIndex = 47;
@@ -233,10 +233,10 @@
             this.btn_Agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Agregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Agregar.Image = global::CapaPresentacion.Properties.Resources.agregar_min;
-            this.btn_Agregar.Location = new System.Drawing.Point(511, 41);
+            this.btn_Agregar.Location = new System.Drawing.Point(526, 34);
             this.btn_Agregar.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Agregar.Name = "btn_Agregar";
-            this.btn_Agregar.Size = new System.Drawing.Size(50, 36);
+            this.btn_Agregar.Size = new System.Drawing.Size(77, 63);
             this.btn_Agregar.TabIndex = 34;
             this.btn_Agregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Agregar.UseVisualStyleBackColor = false;
@@ -299,16 +299,16 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(8, 75);
+            this.label18.Location = new System.Drawing.Point(9, 97);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(98, 16);
+            this.label18.Size = new System.Drawing.Size(108, 16);
             this.label18.TabIndex = 55;
-            this.label18.Text = "Price Services:";
+            this.label18.Text = "Price Services: $";
             // 
             // Date
             // 
             this.Date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.Date.Location = new System.Drawing.Point(112, 14);
+            this.Date.Location = new System.Drawing.Point(121, 15);
             this.Date.Name = "Date";
             this.Date.Size = new System.Drawing.Size(100, 22);
             this.Date.TabIndex = 57;
@@ -316,7 +316,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(8, 18);
+            this.label19.Location = new System.Drawing.Point(9, 20);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(40, 16);
             this.label19.TabIndex = 58;
@@ -325,14 +325,20 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txt_Price);
+            this.groupBox1.Controls.Add(this.lbl_total);
             this.groupBox1.Controls.Add(this.txt_hours);
+            this.groupBox1.Controls.Add(this.lbl_iva);
+            this.groupBox1.Controls.Add(this.lbl_subtotal);
             this.groupBox1.Controls.Add(this.label30);
             this.groupBox1.Controls.Add(this.label29);
             this.groupBox1.Controls.Add(this.label31);
             this.groupBox1.Controls.Add(this.txt_guys);
             this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtPrice);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label26);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtDetails);
             this.groupBox1.Controls.Add(this.btnExpediente);
             this.groupBox1.Controls.Add(this.label19);
@@ -343,15 +349,15 @@
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label27);
-            this.groupBox1.Location = new System.Drawing.Point(340, 611);
+            this.groupBox1.Location = new System.Drawing.Point(12, 611);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(581, 105);
+            this.groupBox1.Size = new System.Drawing.Size(1346, 126);
             this.groupBox1.TabIndex = 59;
             this.groupBox1.TabStop = false;
             // 
             // txt_Price
             // 
-            this.txt_Price.Location = new System.Drawing.Point(319, 50);
+            this.txt_Price.Location = new System.Drawing.Point(331, 54);
             this.txt_Price.Name = "txt_Price";
             this.txt_Price.Size = new System.Drawing.Size(34, 22);
             this.txt_Price.TabIndex = 116;
@@ -361,7 +367,7 @@
             // 
             // txt_hours
             // 
-            this.txt_hours.Location = new System.Drawing.Point(266, 49);
+            this.txt_hours.Location = new System.Drawing.Point(277, 53);
             this.txt_hours.Name = "txt_hours";
             this.txt_hours.Size = new System.Drawing.Size(34, 22);
             this.txt_hours.TabIndex = 115;
@@ -371,7 +377,7 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(316, 33);
+            this.label30.Location = new System.Drawing.Point(328, 36);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(42, 16);
             this.label30.TabIndex = 114;
@@ -380,7 +386,7 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(263, 33);
+            this.label29.Location = new System.Drawing.Point(273, 36);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(47, 16);
             this.label29.TabIndex = 113;
@@ -389,7 +395,7 @@
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(223, 33);
+            this.label31.Location = new System.Drawing.Point(224, 36);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(42, 16);
             this.label31.TabIndex = 112;
@@ -397,7 +403,7 @@
             // 
             // txt_guys
             // 
-            this.txt_guys.Location = new System.Drawing.Point(226, 49);
+            this.txt_guys.Location = new System.Drawing.Point(227, 53);
             this.txt_guys.Name = "txt_guys";
             this.txt_guys.Size = new System.Drawing.Size(34, 22);
             this.txt_guys.TabIndex = 111;
@@ -406,7 +412,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(223, 73);
+            this.radioButton1.Location = new System.Drawing.Point(227, 97);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(93, 20);
             this.radioButton1.TabIndex = 100;
@@ -417,7 +423,7 @@
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(112, 70);
+            this.txtPrice.Location = new System.Drawing.Point(121, 94);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(100, 22);
             this.txtPrice.TabIndex = 97;
@@ -428,7 +434,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(460, 77);
+            this.label26.Location = new System.Drawing.Point(538, 97);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(53, 19);
             this.label26.TabIndex = 75;
@@ -438,7 +444,7 @@
             // 
             // txtDetails
             // 
-            this.txtDetails.Location = new System.Drawing.Point(112, 42);
+            this.txtDetails.Location = new System.Drawing.Point(121, 53);
             this.txtDetails.Name = "txtDetails";
             this.txtDetails.Size = new System.Drawing.Size(100, 22);
             this.txtDetails.TabIndex = 96;
@@ -450,9 +456,9 @@
             this.btnExpediente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExpediente.FlatAppearance.BorderSize = 0;
             this.btnExpediente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExpediente.Location = new System.Drawing.Point(466, 41);
+            this.btnExpediente.Location = new System.Drawing.Point(526, 31);
             this.btnExpediente.Name = "btnExpediente";
-            this.btnExpediente.Size = new System.Drawing.Size(42, 37);
+            this.btnExpediente.Size = new System.Drawing.Size(77, 63);
             this.btnExpediente.TabIndex = 74;
             this.btnExpediente.UseVisualStyleBackColor = false;
             this.btnExpediente.Visible = false;
@@ -461,7 +467,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(519, 80);
+            this.label2.Location = new System.Drawing.Point(549, 97);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(33, 16);
             this.label2.TabIndex = 59;
@@ -511,7 +517,7 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(1293, 150);
+            this.label28.Location = new System.Drawing.Point(1287, 148);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(34, 16);
             this.label28.TabIndex = 105;
@@ -532,10 +538,10 @@
             this.btn_Print.BackgroundImage = global::CapaPresentacion.Properties.Resources.print_64;
             this.btn_Print.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Print.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Print.Location = new System.Drawing.Point(1280, 111);
+            this.btn_Print.Location = new System.Drawing.Point(1262, 85);
             this.btn_Print.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Print.Name = "btn_Print";
-            this.btn_Print.Size = new System.Drawing.Size(50, 39);
+            this.btn_Print.Size = new System.Drawing.Size(77, 63);
             this.btn_Print.TabIndex = 104;
             this.btn_Print.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Print.UseVisualStyleBackColor = false;
@@ -621,18 +627,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1370, 717);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.lbl_total);
-            this.Controls.Add(this.lbl_iva);
-            this.Controls.Add(this.lbl_subtotal);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgv_ventas);
             this.Controls.Add(this.groupBox2);

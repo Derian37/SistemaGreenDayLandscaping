@@ -40,9 +40,18 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.configuraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolstrip_usuarios = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.GrpPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctUsuario)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -71,11 +80,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.GrpPrincipal.AutoSize = true;
             this.GrpPrincipal.BackColor = System.Drawing.Color.AliceBlue;
+            this.GrpPrincipal.Controls.Add(this.button1);
+            this.GrpPrincipal.Controls.Add(this.label3);
             this.GrpPrincipal.Controls.Add(this.btnControlTrabajo);
             this.GrpPrincipal.Controls.Add(this.lblVeterinario);
-            this.GrpPrincipal.Location = new System.Drawing.Point(55, 116);
+            this.GrpPrincipal.Location = new System.Drawing.Point(12, 187);
             this.GrpPrincipal.Name = "GrpPrincipal";
-            this.GrpPrincipal.Size = new System.Drawing.Size(1091, 574);
+            this.GrpPrincipal.Size = new System.Drawing.Size(1187, 497);
             this.GrpPrincipal.TabIndex = 11;
             this.GrpPrincipal.TabStop = false;
             this.GrpPrincipal.Enter += new System.EventHandler(this.GrpPrincipal_Enter);
@@ -162,6 +173,92 @@
             this.toolstrip_usuarios.Text = "Usuarios";
             this.toolstrip_usuarios.Click += new System.EventHandler(this.toolstrip_usuarios_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.Location = new System.Drawing.Point(372, 37);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(612, 144);
+            this.groupBox1.TabIndex = 81;
+            this.groupBox1.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(175, 16);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(327, 31);
+            this.label6.TabIndex = 53;
+            this.label6.Text = "Green Day Landscaping";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(269, 83);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(111, 13);
+            this.label7.TabIndex = 54;
+            this.label7.Text = "29 Aiken ST UNIT 3B";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(244, 58);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(137, 13);
+            this.label8.TabIndex = 55;
+            this.label8.Text = "Address: Norwalk,CT06851";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(220, 128);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(210, 13);
+            this.label10.TabIndex = 57;
+            this.label10.Text = "E-mail: greendaylandscaoingllc@gmail.com";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(244, 108);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(140, 13);
+            this.label9.TabIndex = 56;
+            this.label9.Text = "Tele.Phone: (203 515 6157)";
+            // 
+            // button1
+            // 
+            this.button1.AutoSize = true;
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::CapaPresentacion.Properties.Resources.login;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(224, 30);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(108, 112);
+            this.button1.TabIndex = 22;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Impact", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(240, 145);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 22);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Expenses";
+            // 
             // frmPrincipal
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -169,6 +266,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1211, 696);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lbl_usuarioNombre);
             this.Controls.Add(this.lbl_usuarioCargo);
             this.Controls.Add(this.GrpPrincipal);
@@ -191,6 +289,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pctUsuario)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,5 +309,13 @@
         private System.Windows.Forms.ToolStripMenuItem toolstrip_usuarios;
         private System.Windows.Forms.Button btnControlTrabajo;
         private System.Windows.Forms.Label lblVeterinario;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label3;
     }
 }

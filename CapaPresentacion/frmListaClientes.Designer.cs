@@ -45,6 +45,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label16 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -69,7 +70,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -283,6 +283,16 @@
             this.tabPage1.Text = "Selected Bill";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(1132, 105);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(135, 19);
+            this.label4.TabIndex = 82;
+            this.label4.Text = "Continue with the bill";
             // 
             // tabPage2
             // 
@@ -520,6 +530,7 @@
             this.label6.Size = new System.Drawing.Size(327, 31);
             this.label6.TabIndex = 53;
             this.label6.Text = "Green Day Landscaping";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -528,7 +539,8 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(111, 13);
             this.label7.TabIndex = 54;
-            this.label7.Text = "29 Aiken ST UNIT 2B";
+            this.label7.Text = "29 Aiken ST UNIT 3B";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -538,6 +550,7 @@
             this.label8.Size = new System.Drawing.Size(137, 13);
             this.label8.TabIndex = 55;
             this.label8.Text = "Address: Norwalk,CT06851";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label10
             // 
@@ -556,16 +569,6 @@
             this.label9.Size = new System.Drawing.Size(140, 13);
             this.label9.TabIndex = 56;
             this.label9.Text = "Tele.Phone: (203 515 6157)";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1132, 105);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(135, 19);
-            this.label4.TabIndex = 82;
-            this.label4.Text = "Continue with the bill";
             // 
             // frmListaClientes
             // 

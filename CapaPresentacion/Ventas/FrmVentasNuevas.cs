@@ -372,11 +372,7 @@ namespace CapaPresentacion
         private void FrmVentas_FormClosing(object sender, FormClosingEventArgs e)
         {
 
-       
-
-                frmListaClientes volver = new frmListaClientes(id_usuario, usuario, cargo, id_customer);
-                volver.Show();
-                this.SetVisibleCore(false);
+            Application.Exit();
          
         }
 
@@ -529,8 +525,9 @@ namespace CapaPresentacion
 
         private void btn_Print_Click(object sender, EventArgs e)
         {
-            Imprimir();
             Guardar();
+            Imprimir();
+           
         }
 
         private void Imprimir()
@@ -700,6 +697,11 @@ namespace CapaPresentacion
                 MessageBox.Show("Debe introducir solo numeros");
                 txtPrice.Text = price.ToString();
             }
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
