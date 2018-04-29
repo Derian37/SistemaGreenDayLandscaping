@@ -36,7 +36,7 @@ namespace CapaPresentacion
             using (GestorUsuario usuario  = new GestorUsuario())
             {
                 dgv_Usuarios.DataSource = usuario.ListarUsuarios();
-
+                aaw
                 dgv_Usuarios.Columns["id_usuario"].Visible = false;
                 dgv_Usuarios.Columns["cedula"].HeaderText = "CEDULA";
                 dgv_Usuarios.Columns["contrasenna"].HeaderText = "CONTRASEÑA";
