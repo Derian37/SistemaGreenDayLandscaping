@@ -119,5 +119,12 @@ namespace CapaPresentacion
             frm_cliente.Show();
             this.SetVisibleCore(false);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmExpenses frm_expenses = new frmExpenses(id_usuario, usuario, cargo);
+            frm_expenses.Show();
+            this.SetVisibleCore(false);
+        }
     }
 }

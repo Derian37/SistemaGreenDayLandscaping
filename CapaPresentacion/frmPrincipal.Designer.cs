@@ -32,6 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.GrpPrincipal = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnControlTrabajo = new System.Windows.Forms.Button();
             this.lblVeterinario = new System.Windows.Forms.Label();
             this.pctUsuario = new System.Windows.Forms.PictureBox();
@@ -46,8 +48,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.GrpPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctUsuario)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -60,7 +60,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(66, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 16);
+            this.label1.Size = new System.Drawing.Size(50, 20);
             this.label1.TabIndex = 7;
             this.label1.Text = "User:";
             // 
@@ -70,7 +70,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(66, 64);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 16);
+            this.label2.Size = new System.Drawing.Size(49, 20);
             this.label2.TabIndex = 8;
             this.label2.Text = "Area:";
             // 
@@ -84,12 +84,39 @@
             this.GrpPrincipal.Controls.Add(this.label3);
             this.GrpPrincipal.Controls.Add(this.btnControlTrabajo);
             this.GrpPrincipal.Controls.Add(this.lblVeterinario);
-            this.GrpPrincipal.Location = new System.Drawing.Point(12, 187);
+            this.GrpPrincipal.Location = new System.Drawing.Point(12, 201);
             this.GrpPrincipal.Name = "GrpPrincipal";
-            this.GrpPrincipal.Size = new System.Drawing.Size(1187, 497);
+            this.GrpPrincipal.Size = new System.Drawing.Size(1187, 483);
             this.GrpPrincipal.TabIndex = 11;
             this.GrpPrincipal.TabStop = false;
             this.GrpPrincipal.Enter += new System.EventHandler(this.GrpPrincipal_Enter);
+            // 
+            // button1
+            // 
+            this.button1.AutoSize = true;
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::CapaPresentacion.Properties.Resources.login;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(227, 30);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(108, 112);
+            this.button1.TabIndex = 22;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Impact", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(240, 145);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(95, 27);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Expenses";
             // 
             // btnControlTrabajo
             // 
@@ -100,7 +127,7 @@
             this.btnControlTrabajo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnControlTrabajo.FlatAppearance.BorderSize = 0;
             this.btnControlTrabajo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnControlTrabajo.Location = new System.Drawing.Point(49, 30);
+            this.btnControlTrabajo.Location = new System.Drawing.Point(58, 30);
             this.btnControlTrabajo.Name = "btnControlTrabajo";
             this.btnControlTrabajo.Size = new System.Drawing.Size(108, 112);
             this.btnControlTrabajo.TabIndex = 20;
@@ -114,7 +141,7 @@
             this.lblVeterinario.Font = new System.Drawing.Font("Impact", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVeterinario.Location = new System.Drawing.Point(59, 145);
             this.lblVeterinario.Name = "lblVeterinario";
-            this.lblVeterinario.Size = new System.Drawing.Size(87, 22);
+            this.lblVeterinario.Size = new System.Drawing.Size(110, 27);
             this.lblVeterinario.TabIndex = 19;
             this.lblVeterinario.Text = "Customers";
             // 
@@ -136,7 +163,7 @@
             this.lbl_usuarioCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_usuarioCargo.Location = new System.Drawing.Point(212, 61);
             this.lbl_usuarioCargo.Name = "lbl_usuarioCargo";
-            this.lbl_usuarioCargo.Size = new System.Drawing.Size(0, 20);
+            this.lbl_usuarioCargo.Size = new System.Drawing.Size(0, 25);
             this.lbl_usuarioCargo.TabIndex = 14;
             // 
             // lbl_usuarioNombre
@@ -145,16 +172,17 @@
             this.lbl_usuarioNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_usuarioNombre.Location = new System.Drawing.Point(212, 37);
             this.lbl_usuarioNombre.Name = "lbl_usuarioNombre";
-            this.lbl_usuarioNombre.Size = new System.Drawing.Size(0, 20);
+            this.lbl_usuarioNombre.Size = new System.Drawing.Size(0, 25);
             this.lbl_usuarioNombre.TabIndex = 15;
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.configuraciónToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1211, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1211, 28);
             this.menuStrip1.TabIndex = 16;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -163,13 +191,13 @@
             this.configuraciónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolstrip_usuarios});
             this.configuraciónToolStripMenuItem.Name = "configuraciónToolStripMenuItem";
-            this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
+            this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(91, 24);
             this.configuraciónToolStripMenuItem.Text = "Configurar";
             // 
             // toolstrip_usuarios
             // 
             this.toolstrip_usuarios.Name = "toolstrip_usuarios";
-            this.toolstrip_usuarios.Size = new System.Drawing.Size(119, 22);
+            this.toolstrip_usuarios.Size = new System.Drawing.Size(140, 26);
             this.toolstrip_usuarios.Text = "Usuarios";
             this.toolstrip_usuarios.Click += new System.EventHandler(this.toolstrip_usuarios_Click);
             // 
@@ -183,7 +211,7 @@
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Location = new System.Drawing.Point(372, 37);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(612, 144);
+            this.groupBox1.Size = new System.Drawing.Size(612, 158);
             this.groupBox1.TabIndex = 81;
             this.groupBox1.TabStop = false;
             // 
@@ -193,7 +221,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(175, 16);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(327, 31);
+            this.label6.Size = new System.Drawing.Size(405, 39);
             this.label6.TabIndex = 53;
             this.label6.Text = "Green Day Landscaping";
             // 
@@ -202,7 +230,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(269, 83);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(111, 13);
+            this.label7.Size = new System.Drawing.Size(142, 17);
             this.label7.TabIndex = 54;
             this.label7.Text = "29 Aiken ST UNIT 3B";
             // 
@@ -211,7 +239,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(244, 58);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(137, 13);
+            this.label8.Size = new System.Drawing.Size(180, 17);
             this.label8.TabIndex = 55;
             this.label8.Text = "Address: Norwalk,CT06851";
             // 
@@ -220,7 +248,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(220, 128);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(210, 13);
+            this.label10.Size = new System.Drawing.Size(281, 17);
             this.label10.TabIndex = 57;
             this.label10.Text = "E-mail: greendaylandscaoingllc@gmail.com";
             // 
@@ -229,35 +257,9 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(244, 108);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(140, 13);
+            this.label9.Size = new System.Drawing.Size(187, 17);
             this.label9.TabIndex = 56;
             this.label9.Text = "Tele.Phone: (203 515 6157)";
-            // 
-            // button1
-            // 
-            this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::CapaPresentacion.Properties.Resources.login;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(224, 30);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 112);
-            this.button1.TabIndex = 22;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Impact", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(240, 145);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 22);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "Expenses";
             // 
             // frmPrincipal
             // 

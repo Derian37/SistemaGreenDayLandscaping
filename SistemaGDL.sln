@@ -20,8 +20,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaPresentacion", "CapaPre
 		{192B7051-AE0D-40C3-B20C-E7691D61C856} = {192B7051-AE0D-40C3-B20C-E7691D61C856}
 	EndProjectSection
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SystemGDL", "SystemGDL\SystemGDL.vdproj", "{9DC812CB-45EF-41C0-A54D-DE5F4F5B4CB1}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,8 +42,6 @@ Global
 		{7F641A79-E39E-4EEC-83D9-12F607E87C1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F641A79-E39E-4EEC-83D9-12F607E87C1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F641A79-E39E-4EEC-83D9-12F607E87C1B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9DC812CB-45EF-41C0-A54D-DE5F4F5B4CB1}.Debug|Any CPU.ActiveCfg = Debug
-		{9DC812CB-45EF-41C0-A54D-DE5F4F5B4CB1}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

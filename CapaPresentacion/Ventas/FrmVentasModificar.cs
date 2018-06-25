@@ -285,8 +285,8 @@ namespace CapaPresentacion
         {
             label1.Text = dgv_ventas.CurrentRow.Cells[5].Value.ToString();
             label27.Text= dgv_ventas.CurrentRow.Cells[0].Value.ToString();
-          //  Date.Text = dgv_ventas.CurrentRow.Cells[1].Value.ToString();
-            txtDetails.Text = dgv_ventas.CurrentRow.Cells[2].Value.ToString();
+            Date.Text =  dgv_ventas.CurrentRow.Cells[1].Value.ToString();
+           // txtDetails.Text = dgv_ventas.CurrentRow.Cells[2].Value.ToString();
             txtPrice.Text = dgv_ventas.CurrentRow.Cells[3].Value.ToString();
             btnExpediente.Visible = true;
             label26.Visible = true;

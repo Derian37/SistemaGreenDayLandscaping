@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVentasModificar));
             this.dgv_ventas = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
@@ -92,14 +92,14 @@
             this.dgv_ventas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_ventas.BackgroundColor = System.Drawing.Color.White;
             this.dgv_ventas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_ventas.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_ventas.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_ventas.Location = new System.Drawing.Point(12, 208);
             this.dgv_ventas.Name = "dgv_ventas";
             this.dgv_ventas.ReadOnly = true;
@@ -113,7 +113,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(1168, 60);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 16);
+            this.label3.Size = new System.Drawing.Size(65, 20);
             this.label3.TabIndex = 6;
             this.label3.Text = "Tax:   $";
             // 
@@ -122,7 +122,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(1138, 95);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 16);
+            this.label4.Size = new System.Drawing.Size(101, 20);
             this.label4.TabIndex = 8;
             this.label4.Text = "Total Due: $";
             // 
@@ -131,7 +131,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(1138, 24);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 16);
+            this.label5.Size = new System.Drawing.Size(105, 20);
             this.label5.TabIndex = 12;
             this.label5.Text = "Sub-total:   $";
             // 
@@ -140,7 +140,7 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(9, 55);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(53, 16);
+            this.label11.Size = new System.Drawing.Size(67, 20);
             this.label11.TabIndex = 32;
             this.label11.Text = "Details:";
             // 
@@ -247,7 +247,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(639, 85);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(134, 16);
+            this.label7.Size = new System.Drawing.Size(168, 20);
             this.label7.TabIndex = 49;
             this.label7.Text = "29 Aiken ST UNIT 2B";
             // 
@@ -256,7 +256,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(614, 60);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(170, 16);
+            this.label8.Size = new System.Drawing.Size(212, 20);
             this.label8.TabIndex = 50;
             this.label8.Text = "Address: Norwalk,CT06851";
             // 
@@ -265,7 +265,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(614, 110);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(168, 16);
+            this.label9.Size = new System.Drawing.Size(214, 20);
             this.label9.TabIndex = 51;
             this.label9.Text = "Tele.Phone: (203 515 6157)";
             // 
@@ -274,7 +274,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(583, 142);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(273, 16);
+            this.label10.Size = new System.Drawing.Size(334, 20);
             this.label10.TabIndex = 52;
             this.label10.Text = "E-mail: greendaylandscaoingllc@gmail.com";
             // 
@@ -283,7 +283,7 @@
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(1207, 18);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(40, 16);
+            this.label15.Size = new System.Drawing.Size(50, 20);
             this.label15.TabIndex = 53;
             this.label15.Text = "Date:";
             // 
@@ -292,7 +292,7 @@
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(1253, 18);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(46, 16);
+            this.label16.Size = new System.Drawing.Size(55, 20);
             this.label16.TabIndex = 54;
             this.label16.Text = "Fecha";
             // 
@@ -301,7 +301,7 @@
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(9, 97);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(108, 16);
+            this.label18.Size = new System.Drawing.Size(137, 20);
             this.label18.TabIndex = 55;
             this.label18.Text = "Price Services: $";
             // 
@@ -310,7 +310,7 @@
             this.Date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Date.Location = new System.Drawing.Point(121, 15);
             this.Date.Name = "Date";
-            this.Date.Size = new System.Drawing.Size(100, 22);
+            this.Date.Size = new System.Drawing.Size(100, 26);
             this.Date.TabIndex = 57;
             // 
             // label19
@@ -318,7 +318,7 @@
             this.label19.AutoSize = true;
             this.label19.Location = new System.Drawing.Point(9, 20);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(40, 16);
+            this.label19.Size = new System.Drawing.Size(50, 20);
             this.label19.TabIndex = 58;
             this.label19.Text = "Date:";
             // 
@@ -359,7 +359,7 @@
             // 
             this.txt_Price.Location = new System.Drawing.Point(331, 54);
             this.txt_Price.Name = "txt_Price";
-            this.txt_Price.Size = new System.Drawing.Size(34, 22);
+            this.txt_Price.Size = new System.Drawing.Size(34, 26);
             this.txt_Price.TabIndex = 116;
             this.txt_Price.TextChanged += new System.EventHandler(this.txt_Price_TextChanged);
             this.txt_Price.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Price_KeyPress);
@@ -369,7 +369,7 @@
             // 
             this.txt_hours.Location = new System.Drawing.Point(277, 53);
             this.txt_hours.Name = "txt_hours";
-            this.txt_hours.Size = new System.Drawing.Size(34, 22);
+            this.txt_hours.Size = new System.Drawing.Size(34, 26);
             this.txt_hours.TabIndex = 115;
             this.txt_hours.TextChanged += new System.EventHandler(this.txt_hours_TextChanged);
             this.txt_hours.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_hours_KeyPress);
@@ -379,7 +379,7 @@
             this.label30.AutoSize = true;
             this.label30.Location = new System.Drawing.Point(328, 36);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(42, 16);
+            this.label30.Size = new System.Drawing.Size(53, 20);
             this.label30.TabIndex = 114;
             this.label30.Text = "Price:";
             // 
@@ -388,16 +388,16 @@
             this.label29.AutoSize = true;
             this.label29.Location = new System.Drawing.Point(273, 36);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(47, 16);
+            this.label29.Size = new System.Drawing.Size(60, 20);
             this.label29.TabIndex = 113;
             this.label29.Text = "Hours:";
             // 
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(224, 36);
+            this.label31.Location = new System.Drawing.Point(223, 34);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(42, 16);
+            this.label31.Size = new System.Drawing.Size(53, 20);
             this.label31.TabIndex = 112;
             this.label31.Text = "Guys:";
             // 
@@ -405,7 +405,7 @@
             // 
             this.txt_guys.Location = new System.Drawing.Point(227, 53);
             this.txt_guys.Name = "txt_guys";
-            this.txt_guys.Size = new System.Drawing.Size(34, 22);
+            this.txt_guys.Size = new System.Drawing.Size(34, 26);
             this.txt_guys.TabIndex = 111;
             this.txt_guys.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_guys_KeyPress);
             // 
@@ -414,7 +414,7 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(227, 97);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(93, 20);
+            this.radioButton1.Size = new System.Drawing.Size(117, 24);
             this.radioButton1.TabIndex = 100;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Static Price";
@@ -425,7 +425,7 @@
             // 
             this.txtPrice.Location = new System.Drawing.Point(121, 94);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(100, 22);
+            this.txtPrice.Size = new System.Drawing.Size(100, 26);
             this.txtPrice.TabIndex = 97;
             this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             this.txtPrice.Validated += new System.EventHandler(this.txtPrice_Validated);
@@ -436,7 +436,7 @@
             this.label26.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.Location = new System.Drawing.Point(538, 97);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(53, 19);
+            this.label26.Size = new System.Drawing.Size(68, 22);
             this.label26.TabIndex = 75;
             this.label26.Text = "Modify";
             this.label26.Visible = false;
@@ -446,7 +446,7 @@
             // 
             this.txtDetails.Location = new System.Drawing.Point(121, 53);
             this.txtDetails.Name = "txtDetails";
-            this.txtDetails.Size = new System.Drawing.Size(100, 22);
+            this.txtDetails.Size = new System.Drawing.Size(100, 26);
             this.txtDetails.TabIndex = 96;
             // 
             // btnExpediente
@@ -469,7 +469,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(549, 97);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 16);
+            this.label2.Size = new System.Drawing.Size(38, 20);
             this.label2.TabIndex = 59;
             this.label2.Text = "Add";
             // 
@@ -478,7 +478,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(289, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 16);
+            this.label1.Size = new System.Drawing.Size(0, 20);
             this.label1.TabIndex = 98;
             this.label1.Visible = false;
             // 
@@ -487,7 +487,7 @@
             this.label27.AutoSize = true;
             this.label27.Location = new System.Drawing.Point(365, 40);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(0, 16);
+            this.label27.Size = new System.Drawing.Size(0, 20);
             this.label27.TabIndex = 99;
             this.label27.Visible = false;
             // 
@@ -519,7 +519,7 @@
             this.label28.AutoSize = true;
             this.label28.Location = new System.Drawing.Point(1287, 148);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(34, 16);
+            this.label28.Size = new System.Drawing.Size(44, 20);
             this.label28.TabIndex = 105;
             this.label28.Text = "Print";
             // 
@@ -528,7 +528,7 @@
             this.label25.AutoSize = true;
             this.label25.Location = new System.Drawing.Point(88, 122);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(40, 16);
+            this.label25.Size = new System.Drawing.Size(50, 20);
             this.label25.TabIndex = 60;
             this.label25.Text = "Date:";
             // 
@@ -552,7 +552,7 @@
             this.label24.AutoSize = true;
             this.label24.Location = new System.Drawing.Point(18, 122);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(65, 16);
+            this.label24.Size = new System.Drawing.Size(81, 20);
             this.label24.TabIndex = 59;
             this.label24.Text = "Address: ";
             // 
@@ -561,7 +561,7 @@
             this.label23.AutoSize = true;
             this.label23.Location = new System.Drawing.Point(88, 75);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(40, 16);
+            this.label23.Size = new System.Drawing.Size(50, 20);
             this.label23.TabIndex = 58;
             this.label23.Text = "Date:";
             // 
@@ -570,7 +570,7 @@
             this.label22.AutoSize = true;
             this.label22.Location = new System.Drawing.Point(18, 75);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(73, 16);
+            this.label22.Size = new System.Drawing.Size(93, 20);
             this.label22.TabIndex = 57;
             this.label22.Text = "Last name:";
             // 
@@ -579,7 +579,7 @@
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(88, 33);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(40, 16);
+            this.label21.Size = new System.Drawing.Size(50, 20);
             this.label21.TabIndex = 56;
             this.label21.Text = "Date:";
             // 
@@ -588,7 +588,7 @@
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(18, 31);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(48, 16);
+            this.label20.Size = new System.Drawing.Size(58, 20);
             this.label20.TabIndex = 55;
             this.label20.Text = "Name:";
             // 
@@ -598,18 +598,19 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(545, 18);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(327, 31);
+            this.label6.Size = new System.Drawing.Size(405, 39);
             this.label6.TabIndex = 2;
             this.label6.Text = "Green Day Landscaping";
             // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.volverToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1370, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1370, 33);
             this.menuStrip1.TabIndex = 95;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -618,13 +619,13 @@
             this.volverToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 13F);
             this.volverToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("volverToolStripMenuItem.Image")));
             this.volverToolStripMenuItem.Name = "volverToolStripMenuItem";
-            this.volverToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
+            this.volverToolStripMenuItem.Size = new System.Drawing.Size(101, 29);
             this.volverToolStripMenuItem.Text = "Volver";
             this.volverToolStripMenuItem.Click += new System.EventHandler(this.volverToolStripMenuItem_Click);
             // 
             // FrmVentasModificar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1370, 749);
