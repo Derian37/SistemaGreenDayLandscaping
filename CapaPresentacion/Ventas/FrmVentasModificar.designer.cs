@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVentasModificar));
             this.dgv_ventas = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,12 +53,6 @@
             this.Date = new System.Windows.Forms.DateTimePicker();
             this.label19 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txt_Price = new System.Windows.Forms.TextBox();
-            this.txt_hours = new System.Windows.Forms.TextBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.txt_guys = new System.Windows.Forms.TextBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
@@ -92,14 +86,14 @@
             this.dgv_ventas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_ventas.BackgroundColor = System.Drawing.Color.White;
             this.dgv_ventas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_ventas.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_ventas.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_ventas.Location = new System.Drawing.Point(12, 208);
             this.dgv_ventas.Name = "dgv_ventas";
             this.dgv_ventas.ReadOnly = true;
@@ -299,16 +293,16 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(9, 97);
+            this.label18.Location = new System.Drawing.Point(5, 130);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(137, 20);
+            this.label18.Size = new System.Drawing.Size(67, 20);
             this.label18.TabIndex = 55;
-            this.label18.Text = "Price Services: $";
+            this.label18.Text = "Price: $";
             // 
             // Date
             // 
             this.Date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.Date.Location = new System.Drawing.Point(121, 15);
+            this.Date.Location = new System.Drawing.Point(82, 18);
             this.Date.Name = "Date";
             this.Date.Size = new System.Drawing.Size(100, 26);
             this.Date.TabIndex = 57;
@@ -324,15 +318,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txt_Price);
             this.groupBox1.Controls.Add(this.lbl_total);
-            this.groupBox1.Controls.Add(this.txt_hours);
             this.groupBox1.Controls.Add(this.lbl_iva);
             this.groupBox1.Controls.Add(this.lbl_subtotal);
-            this.groupBox1.Controls.Add(this.label30);
-            this.groupBox1.Controls.Add(this.label29);
-            this.groupBox1.Controls.Add(this.label31);
-            this.groupBox1.Controls.Add(this.txt_guys);
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtPrice);
@@ -351,68 +339,14 @@
             this.groupBox1.Controls.Add(this.label27);
             this.groupBox1.Location = new System.Drawing.Point(12, 611);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1346, 126);
+            this.groupBox1.Size = new System.Drawing.Size(1342, 181);
             this.groupBox1.TabIndex = 59;
             this.groupBox1.TabStop = false;
-            // 
-            // txt_Price
-            // 
-            this.txt_Price.Location = new System.Drawing.Point(331, 54);
-            this.txt_Price.Name = "txt_Price";
-            this.txt_Price.Size = new System.Drawing.Size(34, 26);
-            this.txt_Price.TabIndex = 116;
-            this.txt_Price.TextChanged += new System.EventHandler(this.txt_Price_TextChanged);
-            this.txt_Price.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Price_KeyPress);
-            this.txt_Price.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_Price_KeyUp);
-            // 
-            // txt_hours
-            // 
-            this.txt_hours.Location = new System.Drawing.Point(277, 53);
-            this.txt_hours.Name = "txt_hours";
-            this.txt_hours.Size = new System.Drawing.Size(34, 26);
-            this.txt_hours.TabIndex = 115;
-            this.txt_hours.TextChanged += new System.EventHandler(this.txt_hours_TextChanged);
-            this.txt_hours.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_hours_KeyPress);
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(328, 36);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(53, 20);
-            this.label30.TabIndex = 114;
-            this.label30.Text = "Price:";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(273, 36);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(60, 20);
-            this.label29.TabIndex = 113;
-            this.label29.Text = "Hours:";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(223, 34);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(53, 20);
-            this.label31.TabIndex = 112;
-            this.label31.Text = "Guys:";
-            // 
-            // txt_guys
-            // 
-            this.txt_guys.Location = new System.Drawing.Point(227, 53);
-            this.txt_guys.Name = "txt_guys";
-            this.txt_guys.Size = new System.Drawing.Size(34, 26);
-            this.txt_guys.TabIndex = 111;
-            this.txt_guys.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_guys_KeyPress);
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(227, 97);
+            this.radioButton1.Location = new System.Drawing.Point(188, 128);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(117, 24);
             this.radioButton1.TabIndex = 100;
@@ -423,7 +357,7 @@
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(121, 94);
+            this.txtPrice.Location = new System.Drawing.Point(82, 130);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(100, 26);
             this.txtPrice.TabIndex = 97;
@@ -444,9 +378,10 @@
             // 
             // txtDetails
             // 
-            this.txtDetails.Location = new System.Drawing.Point(121, 53);
+            this.txtDetails.Location = new System.Drawing.Point(82, 53);
+            this.txtDetails.Multiline = true;
             this.txtDetails.Name = "txtDetails";
-            this.txtDetails.Size = new System.Drawing.Size(100, 26);
+            this.txtDetails.Size = new System.Drawing.Size(271, 71);
             this.txtDetails.TabIndex = 96;
             // 
             // btnExpediente
@@ -707,11 +642,5 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Button btn_Print;
-        private System.Windows.Forms.TextBox txt_Price;
-        private System.Windows.Forms.TextBox txt_hours;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TextBox txt_guys;
     }
 }

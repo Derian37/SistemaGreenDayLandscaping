@@ -301,9 +301,6 @@ namespace CapaPresentacion
             radioButton1.Checked = false;
             txtDetails.Text = "";
             txtPrice.Text = "";
-            txt_guys.Text = "";
-            txt_hours.Text = "";
-            txt_Price.Text = "";
             txtPrice.Enabled = true;
         }
 
@@ -312,13 +309,13 @@ namespace CapaPresentacion
             string Fecha1 = "";
             string[] fechone;
 
-            f1 = Date.Text;
-            f1 = f1.Replace("/", "-");
+            f1 = Date.Value.ToString("dd/MM/yyyy");
+            f1 = f1.Replace(" ", "-");
             fechone = f1.Split('-');
 
             foreach (string i in fechone)
             {
-                Fecha1 = fechone[1] + "-" + fechone[0] + "-" + fechone[2];
+                Fecha1 = fechone[2] + "-" + fechone[0] + "-" + fechone[1];
 
             }
 
@@ -327,7 +324,6 @@ namespace CapaPresentacion
                 if (radioButton1.Checked)
                 {
 
-                    CalHours();
                     precio = double.Parse(txtPrice.Text);
 
                 }
@@ -347,7 +343,7 @@ namespace CapaPresentacion
                     amount = amount + Convert.ToDouble(dgv_ventas.Rows[i].Cells[3].Value);
                 }
                 
-                insertbills.InsertarVenta(id_lastbill, Fecha1, txtDetails.Text+" Guys "+txt_guys.Text+" Hours "+txt_hours.Text, precio, amount);
+                insertbills.InsertarVenta(id_lastbill, Fecha1, txtDetails.Text, precio, amount);
 
                 MessageBox.Show("Sirve", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
                 CargarFactura();
@@ -437,11 +433,11 @@ namespace CapaPresentacion
         {
             using (GestorVenta insertnewsavebills = new GestorVenta())
             {
-                f1 = fecha.ToShortDateString();
+                f1 = fecha.ToString("dd/MM/yyyy");
                 string Fecha = "";
                 string[] fechone;
 
-                f1 = f1.Replace("/", "-");
+                f1 = f1.Replace(" ", "-");
    
                 fechone = f1.Split('-');
                 foreach (string i in fechone)
@@ -471,8 +467,8 @@ namespace CapaPresentacion
                 string Fecha1 = "";
                 string[] fechone;
 
-                f1 = Date.Text;
-                f1 = f1.Replace("/", "-");
+                f1 = Date.Value.ToString("dd/MM/yyyy");
+                f1 = f1.Replace(" ", "-");
                 fechone = f1.Split('-');
 
                 foreach (string i in fechone)
@@ -484,7 +480,7 @@ namespace CapaPresentacion
                 {
 
 
-                    laVenta.ModifyBill(int.Parse(label1.Text), int.Parse(variable.Text), Fecha1, txtDetails.Text + " Guys " + txt_guys.Text + " Hours " + txt_hours.Text, double.Parse(txtPrice.Text), amount());
+                    laVenta.ModifyBill(int.Parse(label1.Text), int.Parse(variable.Text), Fecha1, txtDetails.Text, double.Parse(txtPrice.Text), amount());
                     MessageBox.Show("Sirve", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
                     CargarFactura();
                     LimpiarCampos();
@@ -504,9 +500,18 @@ namespace CapaPresentacion
 
         private void dgv_ventas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            String Day = dgv_ventas.CurrentRow.Cells[1].Value.ToString();
+            string[] fech;
+            fech = Day.Split('-');
+            string Fec = "";
+            foreach (string i in fech)
+            {
+                Fec = fech[1] + "-" + fech[0] + "-" + fech[2];
+            }
+
             label1.Text = dgv_ventas.CurrentRow.Cells[5].Value.ToString();
-            variable.Text = dgv_ventas.CurrentRow.Cells[0].Value.ToString();
-            //Date.Text = dgv_ventas.CurrentRow.Cells[1].Value.ToString();
+            label27.Text = dgv_ventas.CurrentRow.Cells[0].Value.ToString();
+            Date.Text = Fec;
             txtDetails.Text = dgv_ventas.CurrentRow.Cells[2].Value.ToString();
             txtPrice.Text = dgv_ventas.CurrentRow.Cells[3].Value.ToString();
             btnExpediente.Visible = true;
@@ -517,8 +522,7 @@ namespace CapaPresentacion
         {
             txtPrice.Enabled = false;
             precio = staticprice;
-            txt_Price.Text = precio.ToString();
-            CalHours();
+            
             
           
         }
@@ -552,21 +556,9 @@ namespace CapaPresentacion
 
         private void txt_Price_KeyUp(object sender, KeyEventArgs e)
         {
-            try
-            {
-                CalHours();
-            }
-            catch (Exception u) {
-                Console.WriteLine(u);
-            }
         }
 
-        private void CalHours()
-        {
-            int resultado;
-            resultado = int.Parse(txt_hours.Text) * int.Parse(txt_Price.Text);
-            txtPrice.Text = resultado.ToString();
-        }
+
 
         private void txt_Price_TextChanged(object sender, EventArgs e)
         {

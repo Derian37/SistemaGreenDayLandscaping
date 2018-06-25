@@ -199,8 +199,8 @@ namespace CapaPresentacion
 
         private void button5_Click(object sender, EventArgs e)
         {
-            f1 = dateTimePicker1.Text;
-            f2 = dateTimePicker2.Text;
+            f1 = dateTimePicker1.Value.ToString("dd/MM/yyyy"); ;
+            f2 = dateTimePicker2.Value.ToString("dd/MM/yyyy"); ;
             consultafecha(f1, f2);
         }
 
@@ -211,8 +211,8 @@ namespace CapaPresentacion
             string[] fechone;
             string[] fechtwo;
 
-            f1 = f1.Replace("/", "-");
-            f2 = f2.Replace("/", "-");
+            f1 = f1.Replace(" ", "-");
+            f2 = f2.Replace(" ", "-");
             fechone = f1.Split('-');
             fechtwo = f2.Split('-');
 
