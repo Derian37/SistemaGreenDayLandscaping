@@ -97,7 +97,7 @@ namespace CapaPresentacion
         {
             //try
             //{
-            //    using (GestorProducto producto = new GestorProducto())
+            //    using (GestorGasto producto = new GestorGasto())
             //    {
             //        dsVentas = producto.ConsultarProductoCodigo(txt_codigoProducto.Text);
             //        dtVentas = dsVentas.Tables[0];
@@ -110,7 +110,7 @@ namespace CapaPresentacion
 
             //        if (cantidad == 0)
             //        {
-            //            MessageBox.Show("Existencias del Producto agotadas", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Error);
+            //            MessageBox.Show("Existencias del Gasto agotadas", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Error);
             //        }
             //        else
             //        {

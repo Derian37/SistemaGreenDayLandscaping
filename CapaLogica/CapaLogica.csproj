@@ -48,7 +48,7 @@
     <Compile Include="LogicaNegocio\General.cs" />
     <Compile Include="LogicaNegocio\Graduacion.cs" />
     <Compile Include="LogicaNegocio\Impresora.cs" />
-    <Compile Include="LogicaNegocio\Producto.cs" />
+    <Compile Include="LogicaNegocio\Gasto.cs" />
     <Compile Include="LogicaNegocio\Recibo.cs" />
     <Compile Include="LogicaNegocio\Tarjeta.cs" />
     <Compile Include="LogicaNegocio\Usuario.cs" />
@@ -61,7 +61,7 @@
     <Compile Include="Servicio\ServicioGeneral.cs" />
     <Compile Include="Servicio\ServicioGraduacion.cs" />
     <Compile Include="Servicio\ServicioImpresora.cs" />
-    <Compile Include="Servicio\ServicioProducto.cs" />
+    <Compile Include="Servicio\ServicioGasto.cs" />
     <Compile Include="Servicio\ServicioRecibo.cs" />
     <Compile Include="Servicio\ServicioReporte.cs" />
     <Compile Include="Servicio\ServicioTarjeta.cs" />
