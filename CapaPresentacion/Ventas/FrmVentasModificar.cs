@@ -300,24 +300,7 @@ namespace CapaPresentacion
 
         private void btnExpediente_Click(object sender, EventArgs e)
         {
-            f1 = Date.Value.ToString("dd/MM/yyyy"); ;
-            f1 = f1.Replace(" ", "-");
-            string[] fechone;
-
-
-
-            f1 = Date.Value.ToString("dd/MM/yyyy");
-            f1 = f1.Replace(" ", "-"); 
-            fechone = f1.Split('-');
-
-            string Fecha1 = "";
-
-          
-
-            foreach (string i in fechone)
-            {
-                Fecha1 = fechone[2] + "-" + fechone[0] + "-" + fechone[1];
-            }
+            f1 = Date.Value.ToString("MM/dd/yyyy");
 
             if (txtDetails.Text != "" && txtPrice.Text != "")
             {
@@ -325,7 +308,7 @@ namespace CapaPresentacion
                 {
                                     
                     
-                    laVenta.ModifyBill(int.Parse(label1.Text),int.Parse(label27.Text), Fecha1, txtDetails.Text, double.Parse(txtPrice.Text), amount());
+                    laVenta.ModifyBill(int.Parse(label1.Text),int.Parse(label27.Text), f1, txtDetails.Text, double.Parse(txtPrice.Text), amount());
                     MessageBox.Show("Sirve", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
                     CargarFactura();
                     LimpiarCampos();

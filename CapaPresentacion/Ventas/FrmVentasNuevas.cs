@@ -307,18 +307,8 @@ namespace CapaPresentacion
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
             string Fecha1 = "";
-            string[] fechone;
-
-            f1 = Date.Value.ToString("dd/MM/yyyy");
-            f1 = f1.Replace(" ", "-");
-            fechone = f1.Split('-');
-
-            foreach (string i in fechone)
-            {
-                Fecha1 = fechone[2] + "-" + fechone[0] + "-" + fechone[1];
-
-            }
-
+            f1 = Date.Value.ToString("MM-dd-yyyy");
+                    
             try
             {
                 if (radioButton1.Checked)
@@ -343,7 +333,7 @@ namespace CapaPresentacion
                     amount = amount + Convert.ToDouble(dgv_ventas.Rows[i].Cells[3].Value);
                 }
                 
-                insertbills.InsertarVenta(id_lastbill, Fecha1, txtDetails.Text, precio, amount);
+                insertbills.InsertarVenta(id_lastbill, f1, txtDetails.Text, precio, amount);
 
                 MessageBox.Show("Sirve", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
                 CargarFactura();
@@ -433,19 +423,10 @@ namespace CapaPresentacion
         {
             using (GestorVenta insertnewsavebills = new GestorVenta())
             {
-                f1 = fecha.ToString("dd/MM/yyyy");
-                string Fecha = "";
-                string[] fechone;
+                f1 = fecha.ToString("MM/dd/yyyy");
+                
 
-                f1 = f1.Replace(" ", "-");
-   
-                fechone = f1.Split('-');
-                foreach (string i in fechone)
-                {
-                    Fecha = fechone[2] + "-" + fechone[1] + "-" + fechone[0];
-                };
-
-                insertnewsavebills.InsertNewSaveBills(id_customer, Fecha, id_lastbill);
+                insertnewsavebills.InsertNewSaveBills(id_customer, f1, id_lastbill);
                 MessageBox.Show("Saved successfully", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
                 frmListaClientes volver = new frmListaClientes(id_usuario,usuario,cargo,id_customer);
                 volver.Show();
