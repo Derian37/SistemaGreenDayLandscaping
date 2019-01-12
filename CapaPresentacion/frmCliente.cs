@@ -289,13 +289,13 @@ namespace CapaPresentacion
         {
             try
             {
-                frmListaClientes custormeslist = new frmListaClientes(id_usuario, usuario, cargo, int.Parse(lblCode.Text));
+                frmListaFactura custormeslist = new frmListaFactura(id_usuario, usuario, cargo, int.Parse(lblCode.Text));
                 custormeslist.Show();
                 this.SetVisibleCore(false);
             }
             catch (Exception g) {
                 MessageBox.Show("Este cliente no posee facturas");
-                frmListaClientes custormeslist = new frmListaClientes(id_usuario, usuario, cargo, int.Parse(lblCode.Text));
+                frmListaFactura custormeslist = new frmListaFactura(id_usuario, usuario, cargo, int.Parse(lblCode.Text));
                 custormeslist.Show();
                 this.SetVisibleCore(false);
             }

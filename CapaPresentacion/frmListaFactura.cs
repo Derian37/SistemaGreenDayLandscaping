@@ -11,7 +11,7 @@ using SistemaGDL.CapaIntegracion;
 
 namespace CapaPresentacion
 {
-    public partial class frmListaClientes : Form
+    public partial class frmListaFactura : Form
     {
         string f1 = "";
         string f2 = "";
@@ -24,7 +24,7 @@ namespace CapaPresentacion
         string usuario;
         string cargo;
         int id_cliente = 0;
-        public frmListaClientes(int id_usuario, string usuario, string cargo, int id_cliente)
+        public frmListaFactura(int id_usuario, string usuario, string cargo, int id_cliente)
         {
             this.id_usuario = id_usuario;
             this.usuario = usuario;
@@ -58,9 +58,9 @@ namespace CapaPresentacion
 
         private void CargarGridCliente()
         {
-            using (GestorCliente elCliente = new GestorCliente())
+            using (GestorCliente facturas = new GestorCliente())
             {
-                dgvCliente.DataSource = elCliente.ListarClienteSinTarjeta(id_cliente);
+                dgvCliente.DataSource = facturas.ListarFacturas(id_cliente);
                 dgvCliente.Columns["id_bill"].Visible = false;
                 dgvCliente.Columns["name"].HeaderText = "Name";
                 dgvCliente.Columns["details"].HeaderText = "Details" ;

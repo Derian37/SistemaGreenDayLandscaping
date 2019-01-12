@@ -68,7 +68,7 @@ namespace CapaPresentacion
 
         private void volverToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmListaClientes cust = new frmListaClientes(id_usuario, usuario, cargo,id_cliente);
+            frmListaFactura cust = new frmListaFactura(id_usuario, usuario, cargo,id_cliente);
             cust.Show();
             this.SetVisibleCore(false);
         }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVentasModificar));
             this.dgv_ventas = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
@@ -73,10 +73,18 @@
             this.label6 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.volverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.txtGuys = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.txtHours = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.txtPriceH = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ventas)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgv_ventas
@@ -86,14 +94,14 @@
             this.dgv_ventas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_ventas.BackgroundColor = System.Drawing.Color.White;
             this.dgv_ventas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_ventas.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_ventas.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_ventas.Location = new System.Drawing.Point(12, 208);
             this.dgv_ventas.Name = "dgv_ventas";
             this.dgv_ventas.ReadOnly = true;
@@ -105,7 +113,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1168, 60);
+            this.label3.Location = new System.Drawing.Point(1153, 60);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 20);
             this.label3.TabIndex = 6;
@@ -114,7 +122,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1138, 95);
+            this.label4.Location = new System.Drawing.Point(1117, 94);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 20);
             this.label4.TabIndex = 8;
@@ -123,7 +131,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1138, 24);
+            this.label5.Location = new System.Drawing.Point(1113, 23);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(105, 20);
             this.label5.TabIndex = 12;
@@ -215,9 +223,9 @@
             this.lbl_total.BackColor = System.Drawing.SystemColors.HighlightText;
             this.lbl_total.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbl_total.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_total.Location = new System.Drawing.Point(1224, 85);
+            this.lbl_total.Location = new System.Drawing.Point(1224, 86);
             this.lbl_total.Name = "lbl_total";
-            this.lbl_total.Size = new System.Drawing.Size(116, 30);
+            this.lbl_total.Size = new System.Drawing.Size(118, 30);
             this.lbl_total.TabIndex = 47;
             this.lbl_total.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -293,7 +301,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(5, 130);
+            this.label18.Location = new System.Drawing.Point(16, 191);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(67, 20);
             this.label18.TabIndex = 55;
@@ -304,7 +312,7 @@
             this.Date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Date.Location = new System.Drawing.Point(82, 18);
             this.Date.Name = "Date";
-            this.Date.Size = new System.Drawing.Size(100, 26);
+            this.Date.Size = new System.Drawing.Size(128, 26);
             this.Date.TabIndex = 57;
             // 
             // label19
@@ -318,6 +326,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.lbl_total);
             this.groupBox1.Controls.Add(this.lbl_iva);
             this.groupBox1.Controls.Add(this.lbl_subtotal);
@@ -339,7 +348,7 @@
             this.groupBox1.Controls.Add(this.label27);
             this.groupBox1.Location = new System.Drawing.Point(12, 611);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1342, 181);
+            this.groupBox1.Size = new System.Drawing.Size(1342, 214);
             this.groupBox1.TabIndex = 59;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
@@ -347,7 +356,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(188, 128);
+            this.radioButton1.Location = new System.Drawing.Point(188, 187);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(117, 24);
             this.radioButton1.TabIndex = 100;
@@ -358,7 +367,7 @@
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(82, 130);
+            this.txtPrice.Location = new System.Drawing.Point(82, 185);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(100, 26);
             this.txtPrice.TabIndex = 97;
@@ -382,7 +391,7 @@
             this.txtDetails.Location = new System.Drawing.Point(82, 53);
             this.txtDetails.Multiline = true;
             this.txtDetails.Name = "txtDetails";
-            this.txtDetails.Size = new System.Drawing.Size(271, 71);
+            this.txtDetails.Size = new System.Drawing.Size(271, 124);
             this.txtDetails.TabIndex = 96;
             // 
             // btnExpediente
@@ -560,12 +569,77 @@
             this.volverToolStripMenuItem.Text = "Volver";
             this.volverToolStripMenuItem.Click += new System.EventHandler(this.volverToolStripMenuItem_Click);
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label30);
+            this.groupBox3.Controls.Add(this.txtGuys);
+            this.groupBox3.Controls.Add(this.label29);
+            this.groupBox3.Controls.Add(this.txtHours);
+            this.groupBox3.Controls.Add(this.label31);
+            this.groupBox3.Controls.Add(this.txtPriceH);
+            this.groupBox3.Location = new System.Drawing.Point(365, 15);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(155, 193);
+            this.groupBox3.TabIndex = 120;
+            this.groupBox3.TabStop = false;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(45, 126);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(53, 20);
+            this.label30.TabIndex = 118;
+            this.label30.Text = "Price:";
+            // 
+            // txtGuys
+            // 
+            this.txtGuys.Location = new System.Drawing.Point(27, 45);
+            this.txtGuys.Name = "txtGuys";
+            this.txtGuys.Size = new System.Drawing.Size(100, 26);
+            this.txtGuys.TabIndex = 113;
+            this.txtGuys.Text = "0";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(45, 74);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(60, 20);
+            this.label29.TabIndex = 117;
+            this.label29.Text = "Hours:";
+            // 
+            // txtHours
+            // 
+            this.txtHours.Location = new System.Drawing.Point(27, 97);
+            this.txtHours.Name = "txtHours";
+            this.txtHours.Size = new System.Drawing.Size(100, 26);
+            this.txtHours.TabIndex = 114;
+            this.txtHours.Text = "0";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(45, 17);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(53, 20);
+            this.label31.TabIndex = 116;
+            this.label31.Text = "Guys:";
+            // 
+            // txtPriceH
+            // 
+            this.txtPriceH.Location = new System.Drawing.Point(27, 149);
+            this.txtPriceH.Name = "txtPriceH";
+            this.txtPriceH.Size = new System.Drawing.Size(100, 26);
+            this.txtPriceH.TabIndex = 115;
+            this.txtPriceH.Text = "0";
+            // 
             // FrmVentasModificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1370, 828);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label14);
@@ -595,6 +669,8 @@
             this.groupBox2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -644,5 +720,12 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Button btn_Print;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox txtGuys;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TextBox txtHours;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TextBox txtPriceH;
     }
 }

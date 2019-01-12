@@ -85,11 +85,11 @@
     <Compile Include="frmExpenses.Designer.cs">
       <DependentUpon>frmExpenses.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmListaClientes.cs">
+    <Compile Include="frmListaFactura.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmListaClientes.Designer.cs">
-      <DependentUpon>frmListaClientes.cs</DependentUpon>
+    <Compile Include="frmListaFactura.Designer.cs">
+      <DependentUpon>frmListaFactura.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -147,8 +147,8 @@
     <EmbeddedResource Include="frmExpenses.resx">
       <DependentUpon>frmExpenses.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmListaClientes.resx">
-      <DependentUpon>frmListaClientes.cs</DependentUpon>
+    <EmbeddedResource Include="frmListaFactura.resx">
+      <DependentUpon>frmListaFactura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -237,6 +237,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icono.ico" />
+    <None Include="Resources\family_tyrol_2.jpg" />
+    <None Include="Resources\windows-cloud-bliss-3.jpg" />
+    <None Include="Resources\52869_1920_1080.jpg" />
     <None Include="Resources\modificar.jpg" />
     <None Include="Resources\search_64.png" />
     <None Include="Resources\impresora.PNG" />

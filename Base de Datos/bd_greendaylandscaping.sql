@@ -288,7 +288,7 @@ CREATE TABLE IF NOT EXISTS `tbl_bill` (
   CONSTRAINT `id_user` FOREIGN KEY (`id_user`) REFERENCES `tbl_users` (`id_user`)
 ) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
--- Volcando datos para la tabla bd_greendaylandscaping.tbl_bill: ~15 rows (aproximadamente)
+-- Volcando datos para la tabla bd_greendaylandscaping.tbl_bill: ~17 rows (aproximadamente)
 /*!40000 ALTER TABLE `tbl_bill` DISABLE KEYS */;
 REPLACE INTO `tbl_bill` (`id_bill`, `id_customer`, `id_user`, `fecha`, `details`) VALUES
 	(1, 11, 1, '0000-00-00', 'April 2018'),
@@ -353,7 +353,7 @@ CREATE TABLE IF NOT EXISTS `tbl_elementbill` (
   CONSTRAINT `id_bill` FOREIGN KEY (`id_bill`) REFERENCES `tbl_bill` (`id_bill`)
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
--- Volcando datos para la tabla bd_greendaylandscaping.tbl_elementbill: ~11 rows (aproximadamente)
+-- Volcando datos para la tabla bd_greendaylandscaping.tbl_elementbill: ~13 rows (aproximadamente)
 /*!40000 ALTER TABLE `tbl_elementbill` DISABLE KEYS */;
 REPLACE INTO `tbl_elementbill` (`id_billFac`, `id_bill`, `fecha`, `details`, `servicePrice`, `amount`) VALUES
 	(1, 1, '4-17-2018', 'Spring clean up  Guys 3 Hours ', 400, 1150.99),
@@ -384,7 +384,7 @@ CREATE TABLE IF NOT EXISTS `tbl_savebills` (
   CONSTRAINT `id_customer` FOREIGN KEY (`id_customer`) REFERENCES `tbl_customers` (`code`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
--- Volcando datos para la tabla bd_greendaylandscaping.tbl_savebills: ~7 rows (aproximadamente)
+-- Volcando datos para la tabla bd_greendaylandscaping.tbl_savebills: ~10 rows (aproximadamente)
 /*!40000 ALTER TABLE `tbl_savebills` DISABLE KEYS */;
 REPLACE INTO `tbl_savebills` (`id_saveBills`, `id_customer`, `fecha`, `id_bill`) VALUES
 	(1, 11, '2018-04-17', 1),
@@ -408,7 +408,7 @@ CREATE TABLE IF NOT EXISTS `tbl_users` (
   PRIMARY KEY (`id_user`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
--- Volcando datos para la tabla bd_greendaylandscaping.tbl_users: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla bd_greendaylandscaping.tbl_users: ~1 rows (aproximadamente)
 /*!40000 ALTER TABLE `tbl_users` DISABLE KEYS */;
 REPLACE INTO `tbl_users` (`id_user`, `name`, `lastName`, `passwordd`) VALUES
 	(1, 'Derian', 'Chavarría', '123');

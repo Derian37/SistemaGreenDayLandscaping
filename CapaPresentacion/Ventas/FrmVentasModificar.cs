@@ -175,8 +175,15 @@ namespace CapaPresentacion
                     {
                         amount = amount + Convert.ToDouble(dgv_ventas.Rows[i].Cells[3].Value);
                     }
-                    insertbills.InsertarVenta(id_lastbill, Fecha1, txtDetails.Text, precio, amount);
-
+                    
+                    if (txtGuys.Text != "0" && txtHours.Text != "0")
+                    {
+                        insertbills.InsertarVenta(id_lastbill, Fecha1, txtDetails.Text + " Guys: " + txtGuys.Text + " Hours: " + txtHours.Text, precio, amount);
+                    }
+                    else
+                    {
+                        insertbills.InsertarVenta(id_lastbill, Fecha1, txtDetails.Text, precio, amount);
+                    }
 
                     MessageBox.Show("Sirve", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
                     CargarFactura();
@@ -273,7 +280,7 @@ namespace CapaPresentacion
 
         private void volverToolStripMenuItem_Click(object sender, EventArgs e)
         {
-             frmListaClientes volver = new frmListaClientes(id_usuario,usuario,cargo,id_customer);
+             frmListaFactura volver = new frmListaFactura(id_usuario,usuario,cargo,id_customer);
                 volver.Show();
                 this.SetVisibleCore(false);
         }

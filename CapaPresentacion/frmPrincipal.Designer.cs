@@ -57,20 +57,22 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(66, 36);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(77, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 20);
+            this.label1.Size = new System.Drawing.Size(64, 25);
             this.label1.TabIndex = 7;
             this.label1.Text = "User:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(66, 64);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(77, 67);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 20);
+            this.label2.Size = new System.Drawing.Size(65, 25);
             this.label2.TabIndex = 8;
             this.label2.Text = "Area:";
             // 
@@ -79,7 +81,7 @@
             this.GrpPrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.GrpPrincipal.AutoSize = true;
-            this.GrpPrincipal.BackColor = System.Drawing.Color.AliceBlue;
+            this.GrpPrincipal.BackColor = System.Drawing.Color.Transparent;
             this.GrpPrincipal.Controls.Add(this.button1);
             this.GrpPrincipal.Controls.Add(this.label3);
             this.GrpPrincipal.Controls.Add(this.btnControlTrabajo);
@@ -151,9 +153,9 @@
             this.pctUsuario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pctUsuario.BackgroundImage")));
             this.pctUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pctUsuario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pctUsuario.Location = new System.Drawing.Point(11, 36);
+            this.pctUsuario.Location = new System.Drawing.Point(12, 36);
             this.pctUsuario.Name = "pctUsuario";
-            this.pctUsuario.Size = new System.Drawing.Size(45, 42);
+            this.pctUsuario.Size = new System.Drawing.Size(59, 56);
             this.pctUsuario.TabIndex = 6;
             this.pctUsuario.TabStop = false;
             // 
@@ -203,15 +205,17 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.BackgroundImage = global::CapaPresentacion.Properties.Resources.family_tyrol_2;
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Location = new System.Drawing.Point(372, 37);
+            this.groupBox1.Location = new System.Drawing.Point(257, 37);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(612, 158);
+            this.groupBox1.Size = new System.Drawing.Size(813, 158);
             this.groupBox1.TabIndex = 81;
             this.groupBox1.TabStop = false;
             // 
@@ -267,6 +271,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Window;
+            this.BackgroundImage = global::CapaPresentacion.Properties.Resources._52869_1920_1080;
             this.ClientSize = new System.Drawing.Size(1211, 696);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lbl_usuarioNombre);

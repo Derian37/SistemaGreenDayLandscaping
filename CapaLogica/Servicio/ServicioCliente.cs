@@ -259,7 +259,7 @@ namespace CapaLogica.Servicio
             return miTablaDatos;
         }
 
-        public DataTable ListarClienteSinTarjeta(int id_cliente)
+        public DataTable ListarFacturas(int id_cliente)
         {
             miComando = new MySqlCommand();
             Console.WriteLine("Gestor list_savebillsbyid");

@@ -63,10 +63,10 @@ namespace SistemaGDL.CapaIntegracion
                 return elCliente.ListarCliente();
         }
 
-        public DataTable ListarClienteSinTarjeta(int id_cliente)
+        public DataTable ListarFacturas(int id_cliente)
         {
-            using (ServicioCliente elCliente = new ServicioCliente())
-                return elCliente.ListarClienteSinTarjeta(id_cliente);
+            using (ServicioCliente facturaCliente = new ServicioCliente())
+                return facturaCliente.ListarFacturas(id_cliente);
         }
 
         public DataSet GetLastCustomer()

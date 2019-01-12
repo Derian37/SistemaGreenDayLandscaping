@@ -79,18 +79,21 @@
             this.gbx_datosUsuario.Controls.Add(this.label2);
             this.gbx_datosUsuario.Controls.Add(this.label1);
             this.gbx_datosUsuario.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbx_datosUsuario.Location = new System.Drawing.Point(46, 60);
+            this.gbx_datosUsuario.Location = new System.Drawing.Point(61, 74);
+            this.gbx_datosUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbx_datosUsuario.Name = "gbx_datosUsuario";
-            this.gbx_datosUsuario.Size = new System.Drawing.Size(712, 265);
+            this.gbx_datosUsuario.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbx_datosUsuario.Size = new System.Drawing.Size(949, 326);
             this.gbx_datosUsuario.TabIndex = 71;
             this.gbx_datosUsuario.TabStop = false;
             this.gbx_datosUsuario.Text = "Menú Usuario";
             // 
             // lbl_editarUsuario
             // 
-            this.lbl_editarUsuario.Location = new System.Drawing.Point(474, 184);
+            this.lbl_editarUsuario.Location = new System.Drawing.Point(632, 226);
+            this.lbl_editarUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_editarUsuario.Name = "lbl_editarUsuario";
-            this.lbl_editarUsuario.Size = new System.Drawing.Size(58, 23);
+            this.lbl_editarUsuario.Size = new System.Drawing.Size(77, 28);
             this.lbl_editarUsuario.TabIndex = 71;
             this.lbl_editarUsuario.Text = "Editar";
             this.lbl_editarUsuario.Visible = false;
@@ -98,9 +101,10 @@
             // lbl_guardarUsuario
             // 
             this.lbl_guardarUsuario.AutoSize = true;
-            this.lbl_guardarUsuario.Location = new System.Drawing.Point(576, 184);
+            this.lbl_guardarUsuario.Location = new System.Drawing.Point(768, 226);
+            this.lbl_guardarUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_guardarUsuario.Name = "lbl_guardarUsuario";
-            this.lbl_guardarUsuario.Size = new System.Drawing.Size(65, 19);
+            this.lbl_guardarUsuario.Size = new System.Drawing.Size(82, 23);
             this.lbl_guardarUsuario.TabIndex = 80;
             this.lbl_guardarUsuario.Text = "Guardar";
             this.lbl_guardarUsuario.Visible = false;
@@ -111,9 +115,10 @@
             this.btn_guardarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_guardarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_guardarUsuario.FlatAppearance.BorderSize = 0;
-            this.btn_guardarUsuario.Location = new System.Drawing.Point(579, 125);
+            this.btn_guardarUsuario.Location = new System.Drawing.Point(772, 154);
+            this.btn_guardarUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_guardarUsuario.Name = "btn_guardarUsuario";
-            this.btn_guardarUsuario.Size = new System.Drawing.Size(62, 56);
+            this.btn_guardarUsuario.Size = new System.Drawing.Size(83, 69);
             this.btn_guardarUsuario.TabIndex = 79;
             this.btn_guardarUsuario.UseVisualStyleBackColor = true;
             this.btn_guardarUsuario.Visible = false;
@@ -121,9 +126,10 @@
             // 
             // lbl_agregarUsuario
             // 
-            this.lbl_agregarUsuario.Location = new System.Drawing.Point(466, 100);
+            this.lbl_agregarUsuario.Location = new System.Drawing.Point(621, 123);
+            this.lbl_agregarUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_agregarUsuario.Name = "lbl_agregarUsuario";
-            this.lbl_agregarUsuario.Size = new System.Drawing.Size(72, 23);
+            this.lbl_agregarUsuario.Size = new System.Drawing.Size(96, 28);
             this.lbl_agregarUsuario.TabIndex = 69;
             this.lbl_agregarUsuario.Text = "Agregar";
             // 
@@ -133,10 +139,10 @@
             this.btn_EditarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_EditarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_EditarUsuario.FlatAppearance.BorderSize = 0;
-            this.btn_EditarUsuario.Location = new System.Drawing.Point(470, 125);
+            this.btn_EditarUsuario.Location = new System.Drawing.Point(627, 154);
             this.btn_EditarUsuario.Margin = new System.Windows.Forms.Padding(0);
             this.btn_EditarUsuario.Name = "btn_EditarUsuario";
-            this.btn_EditarUsuario.Size = new System.Drawing.Size(62, 56);
+            this.btn_EditarUsuario.Size = new System.Drawing.Size(83, 69);
             this.btn_EditarUsuario.TabIndex = 60;
             this.btn_EditarUsuario.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btn_EditarUsuario.UseVisualStyleBackColor = true;
@@ -146,9 +152,10 @@
             // txt_contrasenaUsuario2
             // 
             this.txt_contrasenaUsuario2.Enabled = false;
-            this.txt_contrasenaUsuario2.Location = new System.Drawing.Point(262, 205);
+            this.txt_contrasenaUsuario2.Location = new System.Drawing.Point(349, 252);
+            this.txt_contrasenaUsuario2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_contrasenaUsuario2.Name = "txt_contrasenaUsuario2";
-            this.txt_contrasenaUsuario2.Size = new System.Drawing.Size(123, 26);
+            this.txt_contrasenaUsuario2.Size = new System.Drawing.Size(163, 30);
             this.txt_contrasenaUsuario2.TabIndex = 78;
             // 
             // btnInsertarUsuario
@@ -157,10 +164,10 @@
             this.btnInsertarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnInsertarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInsertarUsuario.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnInsertarUsuario.Location = new System.Drawing.Point(470, 40);
-            this.btnInsertarUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.btnInsertarUsuario.Location = new System.Drawing.Point(627, 49);
+            this.btnInsertarUsuario.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnInsertarUsuario.Name = "btnInsertarUsuario";
-            this.btnInsertarUsuario.Size = new System.Drawing.Size(62, 57);
+            this.btnInsertarUsuario.Size = new System.Drawing.Size(83, 70);
             this.btnInsertarUsuario.TabIndex = 68;
             this.btnInsertarUsuario.Text = " ";
             this.btnInsertarUsuario.UseVisualStyleBackColor = true;
@@ -168,9 +175,10 @@
             // 
             // lbl_eliminarUsuario
             // 
-            this.lbl_eliminarUsuario.Location = new System.Drawing.Point(574, 100);
+            this.lbl_eliminarUsuario.Location = new System.Drawing.Point(765, 123);
+            this.lbl_eliminarUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_eliminarUsuario.Name = "lbl_eliminarUsuario";
-            this.lbl_eliminarUsuario.Size = new System.Drawing.Size(67, 23);
+            this.lbl_eliminarUsuario.Size = new System.Drawing.Size(89, 28);
             this.lbl_eliminarUsuario.TabIndex = 70;
             this.lbl_eliminarUsuario.Text = "Eliminar";
             this.lbl_eliminarUsuario.Visible = false;
@@ -178,25 +186,28 @@
             // txt_contrasenaUsuario1
             // 
             this.txt_contrasenaUsuario1.Enabled = false;
-            this.txt_contrasenaUsuario1.Location = new System.Drawing.Point(262, 164);
+            this.txt_contrasenaUsuario1.Location = new System.Drawing.Point(349, 202);
+            this.txt_contrasenaUsuario1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_contrasenaUsuario1.Name = "txt_contrasenaUsuario1";
-            this.txt_contrasenaUsuario1.Size = new System.Drawing.Size(123, 26);
+            this.txt_contrasenaUsuario1.Size = new System.Drawing.Size(163, 30);
             this.txt_contrasenaUsuario1.TabIndex = 77;
             // 
             // txt_cargoUsuario
             // 
             this.txt_cargoUsuario.Enabled = false;
-            this.txt_cargoUsuario.Location = new System.Drawing.Point(134, 123);
+            this.txt_cargoUsuario.Location = new System.Drawing.Point(179, 151);
+            this.txt_cargoUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_cargoUsuario.Name = "txt_cargoUsuario";
-            this.txt_cargoUsuario.Size = new System.Drawing.Size(251, 26);
+            this.txt_cargoUsuario.Size = new System.Drawing.Size(333, 30);
             this.txt_cargoUsuario.TabIndex = 76;
             // 
             // txt_nombreUsuario
             // 
             this.txt_nombreUsuario.Enabled = false;
-            this.txt_nombreUsuario.Location = new System.Drawing.Point(134, 83);
+            this.txt_nombreUsuario.Location = new System.Drawing.Point(179, 102);
+            this.txt_nombreUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_nombreUsuario.Name = "txt_nombreUsuario";
-            this.txt_nombreUsuario.Size = new System.Drawing.Size(251, 26);
+            this.txt_nombreUsuario.Size = new System.Drawing.Size(333, 30);
             this.txt_nombreUsuario.TabIndex = 75;
             // 
             // btn_EliminarUsuario
@@ -205,9 +216,10 @@
             this.btn_EliminarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_EliminarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_EliminarUsuario.FlatAppearance.BorderSize = 0;
-            this.btn_EliminarUsuario.Location = new System.Drawing.Point(578, 40);
+            this.btn_EliminarUsuario.Location = new System.Drawing.Point(771, 49);
+            this.btn_EliminarUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_EliminarUsuario.Name = "btn_EliminarUsuario";
-            this.btn_EliminarUsuario.Size = new System.Drawing.Size(62, 57);
+            this.btn_EliminarUsuario.Size = new System.Drawing.Size(83, 70);
             this.btn_EliminarUsuario.TabIndex = 61;
             this.btn_EliminarUsuario.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btn_EliminarUsuario.UseVisualStyleBackColor = true;
@@ -217,53 +229,59 @@
             // txt_cedulaUsuario
             // 
             this.txt_cedulaUsuario.Enabled = false;
-            this.txt_cedulaUsuario.Location = new System.Drawing.Point(134, 41);
+            this.txt_cedulaUsuario.Location = new System.Drawing.Point(179, 50);
+            this.txt_cedulaUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_cedulaUsuario.Name = "txt_cedulaUsuario";
-            this.txt_cedulaUsuario.Size = new System.Drawing.Size(251, 26);
+            this.txt_cedulaUsuario.Size = new System.Drawing.Size(333, 30);
             this.txt_cedulaUsuario.TabIndex = 74;
             // 
             // lbl_contrasenaUsuario2
             // 
             this.lbl_contrasenaUsuario2.AutoSize = true;
-            this.lbl_contrasenaUsuario2.Location = new System.Drawing.Point(37, 208);
+            this.lbl_contrasenaUsuario2.Location = new System.Drawing.Point(49, 256);
+            this.lbl_contrasenaUsuario2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_contrasenaUsuario2.Name = "lbl_contrasenaUsuario2";
-            this.lbl_contrasenaUsuario2.Size = new System.Drawing.Size(219, 19);
+            this.lbl_contrasenaUsuario2.Size = new System.Drawing.Size(275, 23);
             this.lbl_contrasenaUsuario2.TabIndex = 73;
             this.lbl_contrasenaUsuario2.Text = "Vuelva a escribir la contraseña:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(37, 168);
+            this.label4.Location = new System.Drawing.Point(49, 207);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(195, 19);
+            this.label4.Size = new System.Drawing.Size(244, 23);
             this.label4.TabIndex = 72;
             this.label4.Text = "Digite su nueva contraseña:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(37, 86);
+            this.label3.Location = new System.Drawing.Point(49, 106);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 19);
+            this.label3.Size = new System.Drawing.Size(104, 23);
             this.label3.TabIndex = 71;
             this.label3.Text = "LastName:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 126);
+            this.label2.Location = new System.Drawing.Point(49, 155);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 19);
+            this.label2.Size = new System.Drawing.Size(69, 23);
             this.label2.TabIndex = 70;
             this.label2.Text = "Cargo:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 46);
+            this.label1.Location = new System.Drawing.Point(49, 57);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 19);
+            this.label1.Size = new System.Drawing.Size(75, 23);
             this.label1.TabIndex = 69;
             this.label1.Text = "Cédula:";
             // 
@@ -275,8 +293,8 @@
             this.dgv_Usuarios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dgv_Usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Usuarios.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dgv_Usuarios.Location = new System.Drawing.Point(46, 332);
-            this.dgv_Usuarios.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_Usuarios.Location = new System.Drawing.Point(61, 409);
+            this.dgv_Usuarios.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.dgv_Usuarios.MultiSelect = false;
             this.dgv_Usuarios.Name = "dgv_Usuarios";
             this.dgv_Usuarios.ReadOnly = true;
@@ -285,19 +303,20 @@
             this.dgv_Usuarios.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Usuarios.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgv_Usuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Usuarios.Size = new System.Drawing.Size(853, 191);
+            this.dgv_Usuarios.Size = new System.Drawing.Size(1137, 235);
             this.dgv_Usuarios.TabIndex = 70;
             this.dgv_Usuarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Usuarios_CellDoubleClick);
             // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btn_volver});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(945, 30);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(12, 4, 0, 4);
+            this.menuStrip1.Size = new System.Drawing.Size(1260, 37);
             this.menuStrip1.TabIndex = 72;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -306,25 +325,26 @@
             this.btn_volver.Font = new System.Drawing.Font("Times New Roman", 13F);
             this.btn_volver.Image = ((System.Drawing.Image)(resources.GetObject("btn_volver.Image")));
             this.btn_volver.Name = "btn_volver";
-            this.btn_volver.Size = new System.Drawing.Size(83, 24);
+            this.btn_volver.Size = new System.Drawing.Size(101, 29);
             this.btn_volver.Text = "Volver";
             this.btn_volver.Click += new System.EventHandler(this.btn_volver_Click);
             // 
             // frmUsuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(945, 553);
+            this.ClientSize = new System.Drawing.Size(1260, 681);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.gbx_datosUsuario);
             this.Controls.Add(this.dgv_Usuarios);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Usuarios";
+            this.Text = "System Green Day Landscaping";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmUsuarios_FormClosing);
             this.Load += new System.EventHandler(this.frmUsuarios_Load);
             this.gbx_datosUsuario.ResumeLayout(false);
