@@ -10,6 +10,7 @@ namespace CapaPresentacion
         int id_usuario;
         int id_customer;//variable local para registrar el usuario
         int id_lastbill;
+        double tax;
         string usuario;
         double precio = 0;
         string cargo;
@@ -32,6 +33,7 @@ namespace CapaPresentacion
             this.usuario = usuario;
             this.id_cliente = id_cliente;
             this.cargo = cargo;
+            this.tax = 0.0635;
         }
 
         private void FrmFacturacion_Load(object sender, EventArgs e)
@@ -44,10 +46,10 @@ namespace CapaPresentacion
         public Double amount()
         {
             double amount = double.Parse(txtPrice.Text);
-            for (int i = 0; i <= dgv_ventas.RowCount - 1; i++)
-            {
-                amount = amount + Convert.ToDouble(dgv_ventas.Rows[i].Cells[3].Value);
-            }
+            //for (int i = 0; i <= dgv_ventas.RowCount - 1; i++)
+            //{
+            //    amount = amount + Convert.ToDouble(dgv_ventas.Rows[i].Cells[3].Value);
+            //}
             return amount;
         }
         private void CargarFactura()
@@ -305,6 +307,8 @@ namespace CapaPresentacion
             txtGuys.Text = "0";
             txtPriceH.Text = "0";
             txtHours.Text = "0";
+            textUnits.Text = "0";
+            textUnitPrice.Text = "0";
         }
 
         private void btn_Agregar_Click(object sender, EventArgs e)
@@ -330,14 +334,15 @@ namespace CapaPresentacion
             using (GestorVenta insertbills = new GestorVenta())
             {
                 double amount = precio;
-                for (int i = 0; i <= dgv_ventas.RowCount - 1; i++)
-                {
-                    amount = amount + Convert.ToDouble(dgv_ventas.Rows[i].Cells[3].Value);
-                }
+
                 if (txtGuys.Text != "0" && txtHours.Text != "0")
                 {
                     insertbills.InsertarVenta(id_lastbill, f1, txtDetails.Text + " Guys: " + txtGuys.Text + " Hours: " + txtHours.Text, precio, amount);
 
+                } else if (txtGuys.Text == "0" && txtHours.Text == "0" && textUnitPrice.Text !="0" && textUnits.Text != "0") {
+                    insertbills.InsertarVenta(id_lastbill, f1, txtDetails.Text +" Units: " + textUnits.Text, Double.Parse(textUnitPrice.Text), amount);
+
+                    
                 }
                 else {
                     insertbills.InsertarVenta(id_lastbill, f1, txtDetails.Text, precio, amount);
@@ -355,13 +360,16 @@ namespace CapaPresentacion
         /// </summary>
         private void CalcularTotales()
         {
+
             double total = 0;
          
             for (int i = 0; i <= dgv_ventas.RowCount - 1; i++)
             {
                 total = total + Convert.ToDouble(dgv_ventas.Rows[i].Cells[3].Value);
             }
-            lbl_total.Text = total.ToString();
+            lbl_iva.Text = (total * tax).ToString();
+            lbl_subtotal.Text = total.ToString();
+            lbl_total.Text = Convert.ToString(total + (total * tax));
         }
 
         private void FrmVentas_FormClosing(object sender, FormClosingEventArgs e)
@@ -695,6 +703,30 @@ namespace CapaPresentacion
                 hours = Convert.ToInt32(txtHours.Text);
                 priceH = Decimal.Parse(txtPriceH.Text);
                 price = hours * priceH;
+                txtPrice.Text = price.ToString();
+            }
+            catch
+            {
+                MessageBox.Show("Debe introducir solo numeros");
+                txtPrice.Text = price.ToString();
+            }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textUnitPrice_KeyUp(object sender, KeyEventArgs e)
+        {
+            Decimal price = 0;
+            Decimal priceU = 0;
+            int unit = 0;
+            try
+            {
+                unit = Convert.ToInt32(textUnits.Text);
+                priceU = Decimal.Parse(textUnitPrice.Text);
+                price = unit * priceU;
                 txtPrice.Text = price.ToString();
             }
             catch

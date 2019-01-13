@@ -19,6 +19,7 @@ namespace CapaPresentacion
         double staticprice;
         double precio = 0;
         string f1 = "";
+        double tax;
         DateTime fecha = DateTime.Now;
         public static double iva;
         private DataTable dtVentas = new DataTable();
@@ -32,6 +33,7 @@ namespace CapaPresentacion
             this.usuario = usuario;
             this.id_cliente = id_cliente;
             this.cargo = cargo;
+            this.tax = 0.0635;
         }
 
         private void FrmFacturacion_Load(object sender, EventArgs e)
@@ -142,18 +144,10 @@ namespace CapaPresentacion
         }
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
-            string Fecha1 = "";
-            string[] fechone;
+            
 
-            f1 = Date.Value.ToString("dd/MM/yyyy");
-            f1 = f1.Replace(" ", "-");
-            fechone = f1.Split('-');
-
-            foreach (string i in fechone)
-            {
-                Fecha1 = fechone[2] + "-" + fechone[1] + "-" + fechone[0];
-
-            }
+            f1 = Date.Value.ToString("MM-dd-yyyy");
+            
 
 
             if (txtPrice.Text != "" || txtDetails.Text != "")
@@ -171,18 +165,14 @@ namespace CapaPresentacion
                 using (GestorVenta insertbills = new GestorVenta())
                 {
                     double amount = precio;
-                    for (int i = 0; i <= dgv_ventas.RowCount - 1; i++)
-                    {
-                        amount = amount + Convert.ToDouble(dgv_ventas.Rows[i].Cells[3].Value);
-                    }
-                    
+                        
                     if (txtGuys.Text != "0" && txtHours.Text != "0")
                     {
-                        insertbills.InsertarVenta(id_lastbill, Fecha1, txtDetails.Text + " Guys: " + txtGuys.Text + " Hours: " + txtHours.Text, precio, amount);
+                        insertbills.InsertarVenta(id_lastbill, f1, txtDetails.Text + " Guys: " + txtGuys.Text + " Hours: " + txtHours.Text, precio, amount);
                     }
                     else
                     {
-                        insertbills.InsertarVenta(id_lastbill, Fecha1, txtDetails.Text, precio, amount);
+                        insertbills.InsertarVenta(id_lastbill, f1, txtDetails.Text, precio, amount);
                     }
 
                     MessageBox.Show("Sirve", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
@@ -214,11 +204,13 @@ namespace CapaPresentacion
             {
                 total = total + Convert.ToDouble(dgv_ventas.Rows[i].Cells[3].Value);
             }
-            lbl_total.Text = total.ToString();
+            lbl_iva.Text = (total * tax).ToString();
+            lbl_subtotal.Text = total.ToString();
+            lbl_total.Text = Convert.ToString(total + (total * tax));
 
-          
-           
-          
+
+
+
         }
 
         private void FrmVentas_FormClosing(object sender, FormClosingEventArgs e)
@@ -511,6 +503,25 @@ namespace CapaPresentacion
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtPrice_KeyUp(object sender, KeyEventArgs e)
+        {
+            Decimal price = 0;
+            Decimal priceH = 0;
+            int hours = 0;
+            try
+            {
+                hours = Convert.ToInt32(txtHours.Text);
+                priceH = Decimal.Parse(txtPriceH.Text);
+                price = hours * priceH;
+                txtPrice.Text = price.ToString();
+            }
+            catch
+            {
+                MessageBox.Show("Debe introducir solo numeros");
+                txtPrice.Text = price.ToString();
+            }
         }
     }
 }
