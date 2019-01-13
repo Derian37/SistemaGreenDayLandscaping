@@ -88,11 +88,11 @@
             this.dgvCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCliente.BackgroundColor = System.Drawing.Color.White;
             this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCliente.Location = new System.Drawing.Point(16, 407);
-            this.dgvCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvCliente.Location = new System.Drawing.Point(56, 396);
+            this.dgvCliente.Margin = new System.Windows.Forms.Padding(4);
             this.dgvCliente.Name = "dgvCliente";
             this.dgvCliente.ReadOnly = true;
-            this.dgvCliente.Size = new System.Drawing.Size(1779, 391);
+            this.dgvCliente.Size = new System.Drawing.Size(1800, 500);
             this.dgvCliente.TabIndex = 74;
             this.dgvCliente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellClick);
             this.dgvCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellContentClick);
@@ -115,7 +115,7 @@
             this.textBox2.Enabled = false;
             this.textBox2.ForeColor = System.Drawing.SystemColors.WindowText;
             this.textBox2.Location = new System.Drawing.Point(111, 25);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(224, 22);
@@ -130,7 +130,7 @@
             this.btnExpediente.FlatAppearance.BorderSize = 0;
             this.btnExpediente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExpediente.Location = new System.Drawing.Point(1573, 60);
-            this.btnExpediente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExpediente.Margin = new System.Windows.Forms.Padding(4);
             this.btnExpediente.Name = "btnExpediente";
             this.btnExpediente.Size = new System.Drawing.Size(68, 65);
             this.btnExpediente.TabIndex = 73;
@@ -142,7 +142,7 @@
             this.textBox1.BackColor = System.Drawing.Color.White;
             this.textBox1.ForeColor = System.Drawing.SystemColors.WindowText;
             this.textBox1.Location = new System.Drawing.Point(111, 80);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(224, 22);
@@ -184,7 +184,7 @@
             this.btnRecuperarDuenno.FlatAppearance.BorderSize = 0;
             this.btnRecuperarDuenno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRecuperarDuenno.Location = new System.Drawing.Point(1733, 7);
-            this.btnRecuperarDuenno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRecuperarDuenno.Margin = new System.Windows.Forms.Padding(4);
             this.btnRecuperarDuenno.Name = "btnRecuperarDuenno";
             this.btnRecuperarDuenno.Size = new System.Drawing.Size(23, 22);
             this.btnRecuperarDuenno.TabIndex = 68;
@@ -223,7 +223,7 @@
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 33);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1827, 815);
             this.panel1.TabIndex = 95;
@@ -234,9 +234,9 @@
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Location = new System.Drawing.Point(1433, 4);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(356, 204);
             this.groupBox2.TabIndex = 83;
             this.groupBox2.TabStop = false;
@@ -251,7 +251,7 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Location = new System.Drawing.Point(151, 71);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(68, 65);
             this.button4.TabIndex = 82;
@@ -274,11 +274,11 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(16, 188);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Location = new System.Drawing.Point(56, 188);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1779, 196);
+            this.tabControl1.Size = new System.Drawing.Size(1800, 200);
             this.tabControl1.TabIndex = 76;
             this.tabControl1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabControl1_MouseClick);
             // 
@@ -293,10 +293,10 @@
             this.tabPage1.Controls.Add(this.textBox2);
             this.tabPage1.Controls.Add(this.label_id);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage1.Size = new System.Drawing.Size(1771, 167);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage1.Size = new System.Drawing.Size(1792, 171);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Selected Bill";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -321,9 +321,9 @@
             this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage2.Size = new System.Drawing.Size(1771, 167);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Create new bill";
@@ -347,7 +347,7 @@
             this.textBox5.BackColor = System.Drawing.Color.White;
             this.textBox5.ForeColor = System.Drawing.SystemColors.WindowText;
             this.textBox5.Location = new System.Drawing.Point(109, 31);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(224, 22);
             this.textBox5.TabIndex = 79;
@@ -371,7 +371,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(1653, 68);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(68, 65);
             this.button1.TabIndex = 76;
@@ -385,7 +385,7 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(1737, 15);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(23, 22);
             this.button2.TabIndex = 75;
@@ -406,9 +406,9 @@
             this.tabPage3.Controls.Add(this.dateTimePicker2);
             this.tabPage3.Controls.Add(this.dateTimePicker1);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage3.Size = new System.Drawing.Size(1771, 167);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Report";
@@ -445,7 +445,7 @@
             this.textBox3.BackColor = System.Drawing.Color.White;
             this.textBox3.ForeColor = System.Drawing.SystemColors.WindowText;
             this.textBox3.Location = new System.Drawing.Point(108, 79);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(224, 22);
@@ -483,7 +483,7 @@
             this.textBox4.Enabled = false;
             this.textBox4.ForeColor = System.Drawing.SystemColors.WindowText;
             this.textBox4.Location = new System.Drawing.Point(108, 23);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(224, 22);
@@ -492,7 +492,7 @@
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(484, 84);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(100, 28);
             this.button5.TabIndex = 77;
@@ -519,7 +519,7 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Location = new System.Drawing.Point(1647, 66);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(68, 65);
             this.button3.TabIndex = 75;
@@ -530,7 +530,7 @@
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker2.Location = new System.Drawing.Point(475, 52);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(123, 22);
             this.dateTimePicker2.TabIndex = 1;
@@ -539,7 +539,7 @@
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(476, 21);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(121, 22);
             this.dateTimePicker1.TabIndex = 0;
@@ -554,9 +554,9 @@
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Location = new System.Drawing.Point(505, 4);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(816, 185);
             this.groupBox1.TabIndex = 80;
             this.groupBox1.TabStop = false;
@@ -624,7 +624,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmListaFactura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "System Green Day Landscaping";
