@@ -46,10 +46,10 @@ namespace CapaPresentacion
         public Double amount()
         {
             double amount = double.Parse(txtPrice.Text);
-            //for (int i = 0; i <= dgv_ventas.RowCount - 1; i++)
-            //{
-            //    amount = amount + Convert.ToDouble(dgv_ventas.Rows[i].Cells[3].Value);
-            //}
+            for (int i = 0; i <= dgv_ventas.RowCount - 1; i++)
+            {
+                amount = amount + Convert.ToDouble(dgv_ventas.Rows[i].Cells[3].Value);
+            }
             return amount;
         }
         private void CargarFactura()
@@ -365,7 +365,7 @@ namespace CapaPresentacion
          
             for (int i = 0; i <= dgv_ventas.RowCount - 1; i++)
             {
-                total = total + Convert.ToDouble(dgv_ventas.Rows[i].Cells[3].Value);
+                total = total + Convert.ToDouble(dgv_ventas.Rows[i].Cells[4].Value);
             }
             lbl_iva.Text = (total * tax).ToString();
             lbl_subtotal.Text = total.ToString();
