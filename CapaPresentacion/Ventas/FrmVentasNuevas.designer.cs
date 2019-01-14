@@ -47,6 +47,11 @@
             this.Date = new System.Windows.Forms.DateTimePicker();
             this.label19 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.textUnits = new System.Windows.Forms.TextBox();
+            this.textUnitPrice = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -79,16 +84,13 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.textUnits = new System.Windows.Forms.TextBox();
-            this.textUnitPrice = new System.Windows.Forms.TextBox();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ventas)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgv_ventas
@@ -292,6 +294,62 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.radioButton4);
+            this.groupBox4.Controls.Add(this.label31);
+            this.groupBox4.Controls.Add(this.label32);
+            this.groupBox4.Controls.Add(this.textUnits);
+            this.groupBox4.Controls.Add(this.textUnitPrice);
+            this.groupBox4.Location = new System.Drawing.Point(540, 13);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(155, 193);
+            this.groupBox4.TabIndex = 120;
+            this.groupBox4.TabStop = false;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(23, 134);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(98, 20);
+            this.label31.TabIndex = 118;
+            this.label31.Text = "  Unit Price:";
+            this.label31.Click += new System.EventHandler(this.label31_Click);
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(43, 27);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(53, 20);
+            this.label32.TabIndex = 117;
+            this.label32.Text = "Units:";
+            this.label32.Click += new System.EventHandler(this.label32_Click);
+            // 
+            // textUnits
+            // 
+            this.textUnits.Enabled = false;
+            this.textUnits.Location = new System.Drawing.Point(21, 53);
+            this.textUnits.Name = "textUnits";
+            this.textUnits.ReadOnly = true;
+            this.textUnits.Size = new System.Drawing.Size(100, 26);
+            this.textUnits.TabIndex = 114;
+            this.textUnits.Text = "0";
+            this.textUnits.TextChanged += new System.EventHandler(this.textUnits_TextChanged);
+            // 
+            // textUnitPrice
+            // 
+            this.textUnitPrice.Enabled = false;
+            this.textUnitPrice.Location = new System.Drawing.Point(27, 157);
+            this.textUnitPrice.Name = "textUnitPrice";
+            this.textUnitPrice.ReadOnly = true;
+            this.textUnitPrice.Size = new System.Drawing.Size(100, 26);
+            this.textUnitPrice.TabIndex = 115;
+            this.textUnitPrice.Text = "0";
+            this.textUnitPrice.TextChanged += new System.EventHandler(this.textUnitPrice_TextChanged);
+            this.textUnitPrice.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textUnitPrice_KeyUp);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -387,22 +445,23 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.radioButton3);
             this.groupBox3.Controls.Add(this.label30);
             this.groupBox3.Controls.Add(this.txtGuys);
             this.groupBox3.Controls.Add(this.label29);
             this.groupBox3.Controls.Add(this.txtHours);
             this.groupBox3.Controls.Add(this.label28);
             this.groupBox3.Controls.Add(this.txtPriceH);
-            this.groupBox3.Location = new System.Drawing.Point(376, 12);
+            this.groupBox3.Location = new System.Drawing.Point(376, 13);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(155, 193);
+            this.groupBox3.Size = new System.Drawing.Size(155, 192);
             this.groupBox3.TabIndex = 119;
             this.groupBox3.TabStop = false;
             // 
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(45, 126);
+            this.label30.Location = new System.Drawing.Point(45, 135);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(53, 20);
             this.label30.TabIndex = 118;
@@ -410,8 +469,10 @@
             // 
             // txtGuys
             // 
-            this.txtGuys.Location = new System.Drawing.Point(27, 45);
+            this.txtGuys.Enabled = false;
+            this.txtGuys.Location = new System.Drawing.Point(27, 54);
             this.txtGuys.Name = "txtGuys";
+            this.txtGuys.ReadOnly = true;
             this.txtGuys.Size = new System.Drawing.Size(100, 26);
             this.txtGuys.TabIndex = 113;
             this.txtGuys.Text = "0";
@@ -419,7 +480,7 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(45, 74);
+            this.label29.Location = new System.Drawing.Point(45, 83);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(60, 20);
             this.label29.TabIndex = 117;
@@ -427,8 +488,10 @@
             // 
             // txtHours
             // 
-            this.txtHours.Location = new System.Drawing.Point(27, 97);
+            this.txtHours.Enabled = false;
+            this.txtHours.Location = new System.Drawing.Point(27, 106);
             this.txtHours.Name = "txtHours";
+            this.txtHours.ReadOnly = true;
             this.txtHours.Size = new System.Drawing.Size(100, 26);
             this.txtHours.TabIndex = 114;
             this.txtHours.Text = "0";
@@ -436,7 +499,7 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(45, 17);
+            this.label28.Location = new System.Drawing.Point(45, 28);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(53, 20);
             this.label28.TabIndex = 116;
@@ -444,8 +507,10 @@
             // 
             // txtPriceH
             // 
-            this.txtPriceH.Location = new System.Drawing.Point(27, 149);
+            this.txtPriceH.Enabled = false;
+            this.txtPriceH.Location = new System.Drawing.Point(27, 158);
             this.txtPriceH.Name = "txtPriceH";
+            this.txtPriceH.ReadOnly = true;
             this.txtPriceH.Size = new System.Drawing.Size(100, 26);
             this.txtPriceH.TabIndex = 115;
             this.txtPriceH.Text = "0";
@@ -638,52 +703,27 @@
             this.label12.Text = "         DATE";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // groupBox4
+            // radioButton3
             // 
-            this.groupBox4.Controls.Add(this.label31);
-            this.groupBox4.Controls.Add(this.label32);
-            this.groupBox4.Controls.Add(this.textUnits);
-            this.groupBox4.Controls.Add(this.textUnitPrice);
-            this.groupBox4.Location = new System.Drawing.Point(540, 13);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(155, 193);
-            this.groupBox4.TabIndex = 120;
-            this.groupBox4.TabStop = false;
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(132, 13);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(17, 16);
+            this.radioButton3.TabIndex = 119;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
-            // label31
+            // radioButton4
             // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(23, 125);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(98, 20);
-            this.label31.TabIndex = 118;
-            this.label31.Text = "  Unit Price:";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(43, 22);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(53, 20);
-            this.label32.TabIndex = 117;
-            this.label32.Text = "Units:";
-            // 
-            // textUnits
-            // 
-            this.textUnits.Location = new System.Drawing.Point(27, 53);
-            this.textUnits.Name = "textUnits";
-            this.textUnits.Size = new System.Drawing.Size(100, 26);
-            this.textUnits.TabIndex = 114;
-            this.textUnits.Text = "0";
-            // 
-            // textUnitPrice
-            // 
-            this.textUnitPrice.Location = new System.Drawing.Point(27, 149);
-            this.textUnitPrice.Name = "textUnitPrice";
-            this.textUnitPrice.Size = new System.Drawing.Size(100, 26);
-            this.textUnitPrice.TabIndex = 115;
-            this.textUnitPrice.Text = "0";
-            this.textUnitPrice.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textUnitPrice_KeyUp);
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(132, 14);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(17, 16);
+            this.radioButton4.TabIndex = 120;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
             // FrmVentasNuevas
             // 
@@ -715,12 +755,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ventas)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -780,5 +820,7 @@
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.TextBox textUnits;
         private System.Windows.Forms.TextBox textUnitPrice;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton4;
     }
 }

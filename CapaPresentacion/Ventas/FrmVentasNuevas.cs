@@ -301,6 +301,8 @@ namespace CapaPresentacion
         {
            
             radioButton1.Checked = false;
+            radioButton3.Checked = false;
+            radioButton4.Checked = false;
             txtDetails.Text = "";
             txtPrice.Text = "";
             txtPrice.Enabled = true;
@@ -509,9 +511,11 @@ namespace CapaPresentacion
         {
             txtPrice.Enabled = false;
             precio = staticprice;
-            
-            
-          
+            txtPrice.Text = staticprice.ToString();
+
+
+
+
         }
 
         private void btn_Print_Click(object sender, EventArgs e)
@@ -734,6 +738,61 @@ namespace CapaPresentacion
                 MessageBox.Show("Debe introducir solo numeros");
                 txtPrice.Text = price.ToString();
             }
+        }
+
+        private void label32_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textUnits_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label31_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textUnitPrice_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            radioButton4.Checked = false;
+
+            txtGuys.Enabled = true;
+            txtGuys.ReadOnly = false;
+            txtHours.Enabled = true;
+            txtHours.ReadOnly = false;
+            txtPriceH.Enabled = true;
+            txtPriceH.ReadOnly = false;
+
+            textUnits.Enabled = false;
+            textUnits.ReadOnly = true;
+            textUnitPrice.Enabled = false;
+            textUnitPrice.ReadOnly = true;
+
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            radioButton3.Checked = false;
+
+            txtGuys.Enabled = false;
+            txtGuys.ReadOnly = true;
+            txtHours.Enabled = false;
+            txtHours.ReadOnly = true;
+            txtPriceH.Enabled = false;
+            txtPriceH.ReadOnly = true;
+
+            textUnits.Enabled = true;
+            textUnits.ReadOnly = false;
+            textUnitPrice.Enabled = true;
+            textUnitPrice.ReadOnly = false;
         }
     }
 }
