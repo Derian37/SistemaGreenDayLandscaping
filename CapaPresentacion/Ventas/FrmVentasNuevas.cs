@@ -464,11 +464,25 @@ namespace CapaPresentacion
         {
             if (txtDetails.Text != "" && txtPrice.Text != "")
             {
-                f1 = Date.Value.ToString("MM/dd/yyyy");
+                f1 = Date.Value.ToString("MM-dd-yyyy");
                 using (GestorVenta laVenta = new GestorVenta())
                 {
-                    laVenta.ModifyBill(int.Parse(label1.Text), id_usuario, f1, txtDetails.Text, double.Parse(txtPrice.Text), amount());
-                    MessageBox.Show("Sirve", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+                    if (txtGuys.Text != "0" && txtHours.Text != "0")
+                    {
+                        laVenta.ModifyBill(int.Parse(label1.Text), int.Parse(label27.Text), f1, txtDetails.Text + " Guys: " + txtGuys.Text + " Hours: " + txtHours.Text, double.Parse(txtPrice.Text), amount());
+                        MessageBox.Show("Modify successful", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+                    }
+                    else if (txtGuys.Text == "0" && txtHours.Text == "0" && textUnitPrice.Text != "0" && textUnits.Text != "0")
+                    {
+                        laVenta.ModifyBill(int.Parse(label1.Text), int.Parse(label27.Text), f1, txtDetails.Text + " Units: " + textUnits.Text, double.Parse(txtPrice.Text), amount());
+                        MessageBox.Show("Modify successful", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        laVenta.ModifyBill(int.Parse(label1.Text), int.Parse(label27.Text), f1, txtDetails.Text, double.Parse(txtPrice.Text), amount());
+                        MessageBox.Show("Modify successful", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+
+                    }
                     CargarFactura();
                     LimpiarCampos();
                     btnExpediente.Visible = false;
@@ -755,11 +769,6 @@ namespace CapaPresentacion
 
         }
 
-        private void textUnitPrice_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
             radioButton4.Checked = false;
@@ -793,6 +802,11 @@ namespace CapaPresentacion
             textUnits.ReadOnly = false;
             textUnitPrice.Enabled = true;
             textUnitPrice.ReadOnly = false;
+        }
+
+        private void textUnitPrice_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -175,7 +175,7 @@
             this.btn_Agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Agregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Agregar.Image = global::CapaPresentacion.Properties.Resources.agregar_min;
-            this.btn_Agregar.Location = new System.Drawing.Point(749, 25);
+            this.btn_Agregar.Location = new System.Drawing.Point(730, 26);
             this.btn_Agregar.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Agregar.Name = "btn_Agregar";
             this.btn_Agregar.Size = new System.Drawing.Size(77, 63);
@@ -393,7 +393,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(759, 91);
+            this.label26.Location = new System.Drawing.Point(740, 92);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(68, 22);
             this.label26.TabIndex = 77;
@@ -407,7 +407,7 @@
             this.btnExpediente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExpediente.FlatAppearance.BorderSize = 0;
             this.btnExpediente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExpediente.Location = new System.Drawing.Point(749, 25);
+            this.btnExpediente.Location = new System.Drawing.Point(730, 26);
             this.btnExpediente.Name = "btnExpediente";
             this.btnExpediente.Size = new System.Drawing.Size(77, 63);
             this.btnExpediente.TabIndex = 76;
@@ -437,7 +437,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(772, 91);
+            this.label2.Location = new System.Drawing.Point(753, 92);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 20);
             this.label2.TabIndex = 59;

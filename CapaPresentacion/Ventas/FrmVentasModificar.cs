@@ -129,9 +129,17 @@ namespace CapaPresentacion
         private void LimpiarCampos()
         {
             radioButton1.Checked = false;
+            radioButton2.Checked = false;
+            radioButton4.Checked = false;
             txtDetails.Text = "";
             txtPrice.Text = "";
             txtPrice.Enabled = true;
+            txtGuys.Text = "0";
+            txtPriceH.Text = "0";
+            txtHours.Text = "0";
+            textUnits.Text = "0";
+            textUnitPrice.Text = "0";
+
         }
 
         public Double amount() {
@@ -168,9 +176,14 @@ namespace CapaPresentacion
                         
                     if (txtGuys.Text != "0" && txtHours.Text != "0")
                     {
-                        insertbills.InsertarVenta(id_lastbill, f1, txtDetails.Text + " Guys: " + txtGuys.Text + " Hours: " + txtHours.Text, precio, amount);
+                        insertbills.InsertarVenta(id_lastbill, f1, txtDetails.Text + " Guys: " + txtGuys.Text + " Hours: " + txtHours.Text, Double.Parse(textUnitPrice.Text), amount);
                     }
-                    else
+                    else if (txtGuys.Text == "0" && txtHours.Text == "0" && textUnitPrice.Text != "0" && textUnits.Text != "0")
+                    {
+                        insertbills.InsertarVenta(id_lastbill, f1, txtDetails.Text + " Units: " + textUnits.Text, Double.Parse(textUnitPrice.Text), amount);
+
+
+                    }else
                     {
                         insertbills.InsertarVenta(id_lastbill, f1, txtDetails.Text, precio, amount);
                     }
@@ -194,15 +207,11 @@ namespace CapaPresentacion
         {
             double total = 0;
             double amount = 0;
-            for (int i = 0; i <= dgv_ventas.RowCount - 1; i++)
-            {
-                amount = amount + Convert.ToDouble(dgv_ventas.Rows[i].Cells[3].Value);
-                dgv_ventas.Rows[i].Cells[4].Value = amount.ToString();
-            }
+
 
             for (int i = 0; i <= dgv_ventas.RowCount - 1; i++)
             {
-                total = total + Convert.ToDouble(dgv_ventas.Rows[i].Cells[3].Value);
+                total = total + Convert.ToDouble(dgv_ventas.Rows[i].Cells[4].Value);
             }
             lbl_iva.Text = (total * tax).ToString();
             lbl_subtotal.Text = total.ToString();
@@ -279,18 +288,12 @@ namespace CapaPresentacion
 
         private void dgv_ventas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            String Day = dgv_ventas.CurrentRow.Cells[1].Value.ToString();
-            string[] fech;
-            fech = Day.Split('-');
-            string Fec= "";
-            foreach (string i in fech)
-            {
-                Fec = fech[1] + "-" + fech[0] + "-" + fech[2];
-            }
+            //String Day = dgv_ventas.CurrentRow.Cells[1].Value.ToString();
+      
 
             label1.Text = dgv_ventas.CurrentRow.Cells[5].Value.ToString();
             label27.Text= dgv_ventas.CurrentRow.Cells[0].Value.ToString();
-            Date.Text= Fec;
+           // Date.Text = Day;
             txtDetails.Text = dgv_ventas.CurrentRow.Cells[2].Value.ToString();
             txtPrice.Text = dgv_ventas.CurrentRow.Cells[3].Value.ToString();
             btnExpediente.Visible = true;
@@ -299,16 +302,29 @@ namespace CapaPresentacion
 
         private void btnExpediente_Click(object sender, EventArgs e)
         {
-            f1 = Date.Value.ToString("MM/dd/yyyy");
+            f1 = Date.Value.ToString("MM-dd-yyyy");
 
             if (txtDetails.Text != "" && txtPrice.Text != "")
             {
                 using (GestorVenta laVenta = new GestorVenta())
                 {
-                                    
-                    
-                    laVenta.ModifyBill(int.Parse(label1.Text),int.Parse(label27.Text), f1, txtDetails.Text, double.Parse(txtPrice.Text), amount());
-                    MessageBox.Show("Sirve", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+
+                    if (txtGuys.Text != "0" && txtHours.Text != "0")
+                    {
+                        laVenta.ModifyBill(int.Parse(label1.Text), int.Parse(label27.Text), f1, txtDetails.Text + " Guys: " + txtGuys.Text + " Hours: " + txtHours.Text, double.Parse(txtPrice.Text), amount());
+                        MessageBox.Show("Modify successful", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+                    }
+                    else if (txtGuys.Text == "0" && txtHours.Text == "0" && textUnitPrice.Text != "0" && textUnits.Text != "0")
+                    {
+                        laVenta.ModifyBill(int.Parse(label1.Text), int.Parse(label27.Text), f1, txtDetails.Text + " Units: " + textUnits.Text, double.Parse(txtPrice.Text), amount());
+                        MessageBox.Show("Modify successful", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        laVenta.ModifyBill(int.Parse(label1.Text), int.Parse(label27.Text), f1, txtDetails.Text, double.Parse(txtPrice.Text), amount());
+                        MessageBox.Show("Modify successful", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+
+                    }
                     CargarFactura();
                     LimpiarCampos();
                     btnExpediente.Visible = false;
@@ -506,6 +522,64 @@ namespace CapaPresentacion
         }
 
         private void txtPrice_KeyUp(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            radioButton4.Checked = false;
+
+            txtGuys.Enabled = true;
+            txtGuys.ReadOnly = false;
+            txtHours.Enabled = true;
+            txtHours.ReadOnly = false;
+            txtPriceH.Enabled = true;
+            txtPriceH.ReadOnly = false;
+
+            textUnits.Enabled = false;
+            textUnits.ReadOnly = true;
+            textUnitPrice.Enabled = false;
+            textUnitPrice.ReadOnly = true;
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            radioButton2.Checked = false;
+
+            txtGuys.Enabled = false;
+            txtGuys.ReadOnly = true;
+            txtHours.Enabled = false;
+            txtHours.ReadOnly = true;
+            txtPriceH.Enabled = false;
+            txtPriceH.ReadOnly = true;
+
+            textUnits.Enabled = true;
+            textUnits.ReadOnly = false;
+            textUnitPrice.Enabled = true;
+            textUnitPrice.ReadOnly = false;
+        }
+
+        private void textUnitPrice_KeyUp(object sender, KeyEventArgs e)
+        {
+            Decimal price = 0;
+            Decimal priceU = 0;
+            int unit = 0;
+            try
+            {
+                unit = Convert.ToInt32(textUnits.Text);
+                priceU = Decimal.Parse(textUnitPrice.Text);
+                price = unit * priceU;
+                txtPrice.Text = price.ToString();
+            }
+            catch
+            {
+                MessageBox.Show("Debe introducir solo numeros");
+                txtPrice.Text = price.ToString();
+            }
+        }
+
+        private void txtPriceH_KeyUp(object sender, KeyEventArgs e)
         {
             Decimal price = 0;
             Decimal priceH = 0;
