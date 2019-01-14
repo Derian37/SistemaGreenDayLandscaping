@@ -139,15 +139,26 @@ namespace CapaPresentacion
             txtHours.Text = "0";
             textUnits.Text = "0";
             textUnitPrice.Text = "0";
+            txtGuys.Enabled = false;
+            txtGuys.ReadOnly = true;
+            txtHours.Enabled = false;
+            txtHours.ReadOnly = true;
+            txtPriceH.Enabled = false;
+            txtPriceH.ReadOnly = true;
+
+            textUnits.Enabled = false;
+            textUnits.ReadOnly = true;
+            textUnitPrice.Enabled = false;
+            textUnitPrice.ReadOnly = true;
 
         }
 
         public Double amount() {
             double amount = double.Parse(txtPrice.Text);
-            for (int i = 0; i <= dgv_ventas.RowCount - 1; i++)
-            {
-                amount = amount + Convert.ToDouble(dgv_ventas.Rows[i].Cells[3].Value);
-            }
+            //for (int i = 0; i <= dgv_ventas.RowCount - 1; i++)
+            //{
+            //    amount = amount + Convert.ToDouble(dgv_ventas.Rows[i].Cells[3].Value);
+            //}
             return amount;
         }
         private void btn_Agregar_Click(object sender, EventArgs e)
@@ -311,12 +322,12 @@ namespace CapaPresentacion
 
                     if (txtGuys.Text != "0" && txtHours.Text != "0")
                     {
-                        laVenta.ModifyBill(int.Parse(label1.Text), int.Parse(label27.Text), f1, txtDetails.Text + " Guys: " + txtGuys.Text + " Hours: " + txtHours.Text, double.Parse(txtPrice.Text), amount());
+                        laVenta.ModifyBill(int.Parse(label1.Text), int.Parse(label27.Text), f1, txtDetails.Text + " Guys: " + txtGuys.Text + " Hours: " + txtHours.Text, double.Parse(txtPriceH.Text), amount());
                         MessageBox.Show("Modify successful", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
                     }
                     else if (txtGuys.Text == "0" && txtHours.Text == "0" && textUnitPrice.Text != "0" && textUnits.Text != "0")
                     {
-                        laVenta.ModifyBill(int.Parse(label1.Text), int.Parse(label27.Text), f1, txtDetails.Text + " Units: " + textUnits.Text, double.Parse(txtPrice.Text), amount());
+                        laVenta.ModifyBill(int.Parse(label1.Text), int.Parse(label27.Text), f1, txtDetails.Text + " Units: " + textUnits.Text, double.Parse(textUnitPrice.Text), amount());
                         MessageBox.Show("Modify successful", caption: "Alerta", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
                     }
                     else

@@ -46,10 +46,10 @@ namespace CapaPresentacion
         public Double amount()
         {
             double amount = double.Parse(txtPrice.Text);
-            for (int i = 0; i <= dgv_ventas.RowCount - 1; i++)
-            {
-                amount = amount + Convert.ToDouble(dgv_ventas.Rows[i].Cells[3].Value);
-            }
+            //for (int i = 0; i <= dgv_ventas.RowCount - 1; i++)
+            //{
+            //    amount = amount + Convert.ToDouble(dgv_ventas.Rows[i].Cells[3].Value);
+            //}
             return amount;
         }
         private void CargarFactura()
@@ -311,6 +311,17 @@ namespace CapaPresentacion
             txtHours.Text = "0";
             textUnits.Text = "0";
             textUnitPrice.Text = "0";
+            txtGuys.Enabled = false;
+            txtGuys.ReadOnly = true;
+            txtHours.Enabled = false;
+            txtHours.ReadOnly = true;
+            txtPriceH.Enabled = false;
+            txtPriceH.ReadOnly = true;
+
+            textUnits.Enabled = false;
+            textUnits.ReadOnly = true;
+            textUnitPrice.Enabled = false;
+            textUnitPrice.ReadOnly = true;
         }
 
         private void btn_Agregar_Click(object sender, EventArgs e)
