@@ -36,7 +36,7 @@ namespace CapaPresentacion
 
         private void volverToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmPrincipal principal = new frmPrincipal(id_usuario, usuario, cargo);
+            frmMain principal = new frmMain(id_usuario, usuario, cargo);
             principal.Show();
             this.SetVisibleCore(false);
         }

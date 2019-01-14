@@ -11,7 +11,7 @@ using SistemaGDL.CapaIntegracion;
 
 namespace CapaPresentacion
 {
-    public partial class frmListaFactura : Form
+    public partial class frmBill : Form
     {
         string f1 = "";
         string f2 = "";
@@ -24,7 +24,7 @@ namespace CapaPresentacion
         string usuario;
         string cargo;
         int id_cliente = 0;
-        public frmListaFactura(int id_usuario, string usuario, string cargo, int id_cliente)
+        public frmBill(int id_usuario, string usuario, string cargo, int id_cliente)
         {
             this.id_usuario = id_usuario;
             this.usuario = usuario;
@@ -112,7 +112,7 @@ namespace CapaPresentacion
 
         private void volverToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCliente cust = new frmCliente(id_usuario,usuario,cargo);
+            frmCustomer cust = new frmCustomer(id_usuario,usuario,cargo);
             cust.Show();
             this.SetVisibleCore(false);
         }

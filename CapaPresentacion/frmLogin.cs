@@ -72,7 +72,7 @@ namespace CapaPresentacion
                 if (txt_usuario_Contrasena.Text == password)
                 {
                     name = cbx_usuario_nombre.Text.ToString();
-                    frmPrincipal principal = new frmPrincipal(user, name, "Desarrollador");
+                    frmMain principal = new frmMain(user, name, "Desarrollador");
                     principal.Show();
                     this.SetVisibleCore(false);
                 }

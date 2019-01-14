@@ -462,7 +462,7 @@ namespace CapaPresentacion
 
         private void volverToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmListaFactura volver = new frmListaFactura(id_usuario, usuario, cargo, id_customer);
+            frmBill volver = new frmBill(id_usuario, usuario, cargo, id_customer);
             volver.Show();
             this.SetVisibleCore(false);
         }

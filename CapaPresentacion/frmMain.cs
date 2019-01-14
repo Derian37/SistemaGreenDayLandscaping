@@ -14,13 +14,13 @@ using CapaLogica.LogicaNegocio;
 
 namespace CapaPresentacion
 {
-    public partial class frmPrincipal : Form
+    public partial class frmMain : Form
     {
         int id_usuario;
     	string usuario;
         string cargo;
     	
-        public frmPrincipal(int id_usuario, string nombre, string cargo)
+        public frmMain(int id_usuario, string nombre, string cargo)
         {
             this.id_usuario = id_usuario;
         	usuario = nombre;
@@ -54,7 +54,7 @@ namespace CapaPresentacion
 
             if (result == DialogResult.No)
             {
-                frmPrincipal principal = new frmPrincipal(id_usuario, usuario, cargo);
+                frmMain principal = new frmMain(id_usuario, usuario, cargo);
                 principal.Show();
             }
             else
@@ -100,7 +100,7 @@ namespace CapaPresentacion
 
         private void toolstrip_usuarios_Click(object sender, EventArgs e)
         {
-            frmUsuarios usuarios = new frmUsuarios();
+            frmUser usuarios = new frmUser();
             usuarios.Show();
         }
 
@@ -115,7 +115,7 @@ namespace CapaPresentacion
 
         private void btnControlTrabajo_Click_1(object sender, EventArgs e)
         {
-            frmCliente frm_cliente = new frmCliente(id_usuario, usuario, cargo);
+            frmCustomer frm_cliente = new frmCustomer(id_usuario, usuario, cargo);
             frm_cliente.Show();
             this.SetVisibleCore(false);
         }

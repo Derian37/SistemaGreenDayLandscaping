@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class frmUsuarios
+    partial class frmUser
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuarios));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUser));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbx_datosUsuario = new System.Windows.Forms.GroupBox();
             this.lbl_editarUsuario = new System.Windows.Forms.Label();

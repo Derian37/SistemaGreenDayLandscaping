@@ -6,7 +6,7 @@ using SistemaGDL.CapaIntegracion;
 
 namespace CapaPresentacion
 {
-    public partial class frmCliente : Form
+    public partial class frmCustomer : Form
     {
 
         DataTable dtCliente = new DataTable();
@@ -17,7 +17,7 @@ namespace CapaPresentacion
         int id_usuario;
         //int new_id;
 
-        public frmCliente(int id_usuario, string nombre, string cargo)
+        public frmCustomer(int id_usuario, string nombre, string cargo)
         {
             this.id_usuario = id_usuario;
             usuario = nombre;
@@ -27,7 +27,7 @@ namespace CapaPresentacion
 
         private void volverToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmPrincipal principal = new frmPrincipal(id_usuario, usuario, cargo);
+            frmMain principal = new frmMain(id_usuario, usuario, cargo);
             principal.Show();
             this.SetVisibleCore(false);
         }
@@ -289,13 +289,13 @@ namespace CapaPresentacion
         {
             try
             {
-                frmListaFactura custormeslist = new frmListaFactura(id_usuario, usuario, cargo, int.Parse(lblCode.Text));
+                frmBill custormeslist = new frmBill(id_usuario, usuario, cargo, int.Parse(lblCode.Text));
                 custormeslist.Show();
                 this.SetVisibleCore(false);
             }
             catch (Exception g) {
                 MessageBox.Show("Este cliente no posee facturas");
-                frmListaFactura custormeslist = new frmListaFactura(id_usuario, usuario, cargo, int.Parse(lblCode.Text));
+                frmBill custormeslist = new frmBill(id_usuario, usuario, cargo, int.Parse(lblCode.Text));
                 custormeslist.Show();
                 this.SetVisibleCore(false);
             }

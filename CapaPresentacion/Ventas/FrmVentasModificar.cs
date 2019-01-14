@@ -292,7 +292,7 @@ namespace CapaPresentacion
 
         private void volverToolStripMenuItem_Click(object sender, EventArgs e)
         {
-             frmListaFactura volver = new frmListaFactura(id_usuario,usuario,cargo,id_customer);
+             frmBill volver = new frmBill(id_usuario,usuario,cargo,id_customer);
                 volver.Show();
                 this.SetVisibleCore(false);
         }
@@ -372,7 +372,7 @@ namespace CapaPresentacion
 
             try
             {
-                frmReporte reporte = new frmReporte(dgv_ventas, subtotal, tax, total, nombre, apellido,id_usuario,usuario,cargo,id_cliente, label25.Text);
+                frmReport reporte = new frmReport(dgv_ventas, subtotal, tax, total, nombre, apellido,id_usuario,usuario,cargo,id_cliente, label25.Text);
                 reporte.Show();
                 this.SetVisibleCore(false);
             }

@@ -15,13 +15,13 @@ using CapaLogica.LogicaNegocio;
 
 namespace CapaPresentacion
 {
-    public partial class frmUsuarios : Form
+    public partial class frmUser : Form
     {
         private string accion;
         private int id_usuario;
         DataTable dtUsuario = new DataTable();
         DataSet dsUsuario = new DataSet();
-        public frmUsuarios()
+        public frmUser()
         {
             InitializeComponent();
         }

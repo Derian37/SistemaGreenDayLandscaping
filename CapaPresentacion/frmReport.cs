@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class frmReporte : Form
+    public partial class frmReport : Form
     {
         DsGDL tempreporte = new DsGDL();
         DataGridView temporal = new DataGridView();
@@ -19,7 +19,7 @@ namespace CapaPresentacion
         int id_cliente;
         string address;
 
-        public frmReporte(DataGridView NuevoData,double subtotal, double tax, double total,string name, string lastname, int id_usuario, string usuario, string cargo, int id_cliente,string address)
+        public frmReport(DataGridView NuevoData,double subtotal, double tax, double total,string name, string lastname, int id_usuario, string usuario, string cargo, int id_cliente,string address)
         {
             this.id_usuario = id_usuario;
             this.usuario = usuario;
@@ -68,7 +68,7 @@ namespace CapaPresentacion
 
         private void volverToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmListaFactura cust = new frmListaFactura(id_usuario, usuario, cargo,id_cliente);
+            frmBill cust = new frmBill(id_usuario, usuario, cargo,id_cliente);
             cust.Show();
             this.SetVisibleCore(false);
         }
