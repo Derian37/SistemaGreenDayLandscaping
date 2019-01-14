@@ -39,6 +39,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pctUsuario = new System.Windows.Forms.PictureBox();
             this.GrpPrincipal = new System.Windows.Forms.GroupBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.dgvExpenses = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -54,6 +60,8 @@
             this.label13 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -67,14 +75,6 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.lbl_usuarioNombre = new System.Windows.Forms.Label();
             this.lbl_usuarioCargo = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctUsuario)).BeginInit();
             this.GrpPrincipal.SuspendLayout();
@@ -199,6 +199,75 @@
             this.GrpPrincipal.Size = new System.Drawing.Size(1658, 696);
             this.GrpPrincipal.TabIndex = 85;
             this.GrpPrincipal.TabStop = false;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(1527, 259);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(19, 20);
+            this.label21.TabIndex = 89;
+            this.label21.Text = "\"\"";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(1435, 259);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(84, 20);
+            this.label20.TabIndex = 88;
+            this.label20.Text = "Total: $";
+            // 
+            // label17
+            // 
+            this.label17.BackColor = System.Drawing.SystemColors.MenuText;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label17.Location = new System.Drawing.Point(1127, 283);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(524, 27);
+            this.label17.TabIndex = 86;
+            this.label17.Text = "AMOUNT";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label15
+            // 
+            this.label15.BackColor = System.Drawing.SystemColors.MenuText;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label15.Location = new System.Drawing.Point(593, 283);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(653, 27);
+            this.label15.TabIndex = 85;
+            this.label15.Text = "DETAILS";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label16
+            // 
+            this.label16.BackColor = System.Drawing.SystemColors.MenuText;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label16.Location = new System.Drawing.Point(66, 283);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(672, 27);
+            this.label16.TabIndex = 84;
+            this.label16.Text = "DATE";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label18
+            // 
+            this.label18.BackColor = System.Drawing.SystemColors.MenuText;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label18.Location = new System.Drawing.Point(6, 283);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(88, 27);
+            this.label18.TabIndex = 87;
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label14
             // 
@@ -372,6 +441,25 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Record of Expenses.";
             // 
+            // button3
+            // 
+            this.button3.Enabled = false;
+            this.button3.Location = new System.Drawing.Point(242, 191);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(72, 24);
+            this.button3.TabIndex = 9;
+            this.button3.Text = "Print";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(7, 76);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(0, 17);
+            this.label19.TabIndex = 8;
+            this.label19.Visible = false;
+            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(164, 191);
@@ -482,99 +570,12 @@
             this.lbl_usuarioCargo.Size = new System.Drawing.Size(0, 25);
             this.lbl_usuarioCargo.TabIndex = 96;
             // 
-            // label17
-            // 
-            this.label17.BackColor = System.Drawing.SystemColors.MenuText;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label17.Location = new System.Drawing.Point(1127, 283);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(524, 27);
-            this.label17.TabIndex = 86;
-            this.label17.Text = "AMOUNT";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label15
-            // 
-            this.label15.BackColor = System.Drawing.SystemColors.MenuText;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label15.Location = new System.Drawing.Point(593, 283);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(653, 27);
-            this.label15.TabIndex = 85;
-            this.label15.Text = "DETAILS";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label16
-            // 
-            this.label16.BackColor = System.Drawing.SystemColors.MenuText;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label16.Location = new System.Drawing.Point(66, 283);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(672, 27);
-            this.label16.TabIndex = 84;
-            this.label16.Text = "DATE";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label18
-            // 
-            this.label18.BackColor = System.Drawing.SystemColors.MenuText;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label18.Location = new System.Drawing.Point(6, 283);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(88, 27);
-            this.label18.TabIndex = 87;
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(7, 76);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(0, 17);
-            this.label19.TabIndex = 8;
-            this.label19.Visible = false;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(1435, 259);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(84, 20);
-            this.label20.TabIndex = 88;
-            this.label20.Text = "Total: $";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(1527, 259);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(19, 20);
-            this.label21.TabIndex = 89;
-            this.label21.Text = "\"\"";
-            // 
-            // button3
-            // 
-            this.button3.Enabled = false;
-            this.button3.Location = new System.Drawing.Point(242, 191);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(72, 24);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Print";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // frmExpenses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::CapaPresentacion.Properties.Resources._52869_1920_1080;
             this.ClientSize = new System.Drawing.Size(1681, 673);
             this.Controls.Add(this.lbl_usuarioNombre);
             this.Controls.Add(this.lbl_usuarioCargo);

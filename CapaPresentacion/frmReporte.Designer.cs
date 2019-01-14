@@ -42,7 +42,7 @@
             this.crv_Report.Cursor = System.Windows.Forms.Cursors.Default;
             this.crv_Report.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crv_Report.Location = new System.Drawing.Point(0, 33);
-            this.crv_Report.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.crv_Report.Margin = new System.Windows.Forms.Padding(4);
             this.crv_Report.Name = "crv_Report";
             this.crv_Report.ShowCloseButton = false;
             this.crv_Report.ShowCopyButton = false;
@@ -81,11 +81,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::CapaPresentacion.Properties.Resources._52869_1920_1080;
             this.ClientSize = new System.Drawing.Size(983, 617);
             this.Controls.Add(this.crv_Report);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmReporte";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "System Green Day Landscaping";

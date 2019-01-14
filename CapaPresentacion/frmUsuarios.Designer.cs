@@ -80,9 +80,9 @@
             this.gbx_datosUsuario.Controls.Add(this.label1);
             this.gbx_datosUsuario.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbx_datosUsuario.Location = new System.Drawing.Point(61, 74);
-            this.gbx_datosUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbx_datosUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.gbx_datosUsuario.Name = "gbx_datosUsuario";
-            this.gbx_datosUsuario.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbx_datosUsuario.Padding = new System.Windows.Forms.Padding(4);
             this.gbx_datosUsuario.Size = new System.Drawing.Size(949, 326);
             this.gbx_datosUsuario.TabIndex = 71;
             this.gbx_datosUsuario.TabStop = false;
@@ -116,7 +116,7 @@
             this.btn_guardarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_guardarUsuario.FlatAppearance.BorderSize = 0;
             this.btn_guardarUsuario.Location = new System.Drawing.Point(772, 154);
-            this.btn_guardarUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_guardarUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.btn_guardarUsuario.Name = "btn_guardarUsuario";
             this.btn_guardarUsuario.Size = new System.Drawing.Size(83, 69);
             this.btn_guardarUsuario.TabIndex = 79;
@@ -153,7 +153,7 @@
             // 
             this.txt_contrasenaUsuario2.Enabled = false;
             this.txt_contrasenaUsuario2.Location = new System.Drawing.Point(349, 252);
-            this.txt_contrasenaUsuario2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_contrasenaUsuario2.Margin = new System.Windows.Forms.Padding(4);
             this.txt_contrasenaUsuario2.Name = "txt_contrasenaUsuario2";
             this.txt_contrasenaUsuario2.Size = new System.Drawing.Size(163, 30);
             this.txt_contrasenaUsuario2.TabIndex = 78;
@@ -165,7 +165,7 @@
             this.btnInsertarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInsertarUsuario.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnInsertarUsuario.Location = new System.Drawing.Point(627, 49);
-            this.btnInsertarUsuario.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnInsertarUsuario.Margin = new System.Windows.Forms.Padding(5);
             this.btnInsertarUsuario.Name = "btnInsertarUsuario";
             this.btnInsertarUsuario.Size = new System.Drawing.Size(83, 70);
             this.btnInsertarUsuario.TabIndex = 68;
@@ -187,7 +187,7 @@
             // 
             this.txt_contrasenaUsuario1.Enabled = false;
             this.txt_contrasenaUsuario1.Location = new System.Drawing.Point(349, 202);
-            this.txt_contrasenaUsuario1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_contrasenaUsuario1.Margin = new System.Windows.Forms.Padding(4);
             this.txt_contrasenaUsuario1.Name = "txt_contrasenaUsuario1";
             this.txt_contrasenaUsuario1.Size = new System.Drawing.Size(163, 30);
             this.txt_contrasenaUsuario1.TabIndex = 77;
@@ -196,7 +196,7 @@
             // 
             this.txt_cargoUsuario.Enabled = false;
             this.txt_cargoUsuario.Location = new System.Drawing.Point(179, 151);
-            this.txt_cargoUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_cargoUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txt_cargoUsuario.Name = "txt_cargoUsuario";
             this.txt_cargoUsuario.Size = new System.Drawing.Size(333, 30);
             this.txt_cargoUsuario.TabIndex = 76;
@@ -205,7 +205,7 @@
             // 
             this.txt_nombreUsuario.Enabled = false;
             this.txt_nombreUsuario.Location = new System.Drawing.Point(179, 102);
-            this.txt_nombreUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_nombreUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nombreUsuario.Name = "txt_nombreUsuario";
             this.txt_nombreUsuario.Size = new System.Drawing.Size(333, 30);
             this.txt_nombreUsuario.TabIndex = 75;
@@ -217,7 +217,7 @@
             this.btn_EliminarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_EliminarUsuario.FlatAppearance.BorderSize = 0;
             this.btn_EliminarUsuario.Location = new System.Drawing.Point(771, 49);
-            this.btn_EliminarUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_EliminarUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.btn_EliminarUsuario.Name = "btn_EliminarUsuario";
             this.btn_EliminarUsuario.Size = new System.Drawing.Size(83, 70);
             this.btn_EliminarUsuario.TabIndex = 61;
@@ -230,7 +230,7 @@
             // 
             this.txt_cedulaUsuario.Enabled = false;
             this.txt_cedulaUsuario.Location = new System.Drawing.Point(179, 50);
-            this.txt_cedulaUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_cedulaUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txt_cedulaUsuario.Name = "txt_cedulaUsuario";
             this.txt_cedulaUsuario.Size = new System.Drawing.Size(333, 30);
             this.txt_cedulaUsuario.TabIndex = 74;
@@ -294,7 +294,7 @@
             this.dgv_Usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Usuarios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgv_Usuarios.Location = new System.Drawing.Point(61, 409);
-            this.dgv_Usuarios.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dgv_Usuarios.Margin = new System.Windows.Forms.Padding(5);
             this.dgv_Usuarios.MultiSelect = false;
             this.dgv_Usuarios.Name = "dgv_Usuarios";
             this.dgv_Usuarios.ReadOnly = true;
@@ -334,12 +334,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::CapaPresentacion.Properties.Resources._52869_1920_1080;
             this.ClientSize = new System.Drawing.Size(1260, 681);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.gbx_datosUsuario);
             this.Controls.Add(this.dgv_Usuarios);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmUsuarios";

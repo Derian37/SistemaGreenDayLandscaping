@@ -730,6 +730,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackgroundImage = global::CapaPresentacion.Properties.Resources._52869_1920_1080;
             this.ClientSize = new System.Drawing.Size(1370, 828);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label14);
@@ -739,6 +740,7 @@
             this.Controls.Add(this.dgv_ventas);
             this.Controls.Add(this.groupBox2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Location = new System.Drawing.Point(0, 50);
