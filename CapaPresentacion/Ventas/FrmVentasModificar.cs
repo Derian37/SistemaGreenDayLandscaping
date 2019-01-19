@@ -224,7 +224,7 @@ namespace CapaPresentacion
             {
                 total = total + Convert.ToDouble(dgv_ventas.Rows[i].Cells[4].Value);
             }
-            lbl_iva.Text = (total * tax).ToString();
+            lbl_iva.Text = (total * tax).ToString("f2");
             lbl_subtotal.Text = total.ToString();
             lbl_total.Text = Convert.ToString(total + (total * tax));
 
